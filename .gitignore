@@ -1,0 +1,10 @@
+node_modules/
+.DS_Store
+*.log
+*.zip
+*.pdf
+.preview.pid
+.qa/
+.env
+.env.*
+!.env.example
