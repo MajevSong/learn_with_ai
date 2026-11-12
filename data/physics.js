@@ -1,4 +1,4 @@
-/* Sayısal hedef için özgün TYT/AYT kavramsal fizik mikro dersleri. */
+/* TYT/AYT fizik çalışma notları ve kontrol soruları. */
 window.LESSONS = (window.LESSONS || []).concat([
   {
     id: 'fiz-tyt-01', exam: 'TYT', subject: 'fizik', title: 'Ölçmek, birim seçmek, yön belirtmek', unit: 'Fizik bilimine giriş', minutes: 5,
@@ -12,12 +12,12 @@ window.LESSONS = (window.LESSONS || []).concat([
       { label: 'Vektörel', detail: 'Yer değiştirme, hız, ivme ve kuvvette büyüklüğün yanında doğrultu ve yön gerekir.' }
     ] },
     sections: [
-      { title: 'Sürat ile hız', text: 'Sürat alınan yolun zamana oranıyla, ortalama hız yer değiştirmenin zamana oranıyla bulunur. Başladığı yere dönen birinin aldığı yol sıfır olmayabilir; yer değiştirmesi sıfırdır.' },
+      { title: 'Fiziğin alt dalları', text: 'Mekanik hareket ve kuvveti, termodinamik ısıl olayları, optik ışığı inceler. Atom fiziğinde atomun yapısı ve elektronları, nükleer fizikte çekirdek olayları öne çıkar. Bir teknolojik uygulama birden fazla alt dalın bilgisini kullanabilir.' },
       { title: 'Birim kontrolü', text: 'Bir denklemde toplanan terimlerin birimleri uyumlu olmalıdır. Kütlenin SI birimi kilogram, sıcaklığın kelvindir. Ağırlık ise kütle değil bir kuvvettir; birimi newtondur.' }
     ],
     memory: 'Skaler: ne kadar? Vektör: ne kadar ve hangi yönde?',
-    question: { stem: 'Bir öğrenci bir tur koşup başladığı noktaya dönüyor. Bu hareket için hangisi doğrudur?', options: ['Yer değiştirmesi sıfır, aldığı yol sıfırdan büyüktür.', 'Aldığı yol sıfırdır.', 'Ortalama sürati kesinlikle sıfırdır.', 'Yer değiştirme ile alınan yol her zaman eşittir.'], answer: 0, explanation: 'Başlangıç ve bitiş aynı olduğundan yer değiştirme sıfırdır. Ancak öğrenci bir tur boyunca yol almıştır; ortalama sürati sıfır değildir.' },
-    cards: [{ front: 'Ağırlık skaler mi, vektörel mi?', back: 'Kuvvet olduğu için vektöreldir; SI birimi newtondur.' }, { front: 'Hız ile süratin temel ayrımı?', back: 'Hız yön bilgisi taşır ve yer değiştirmeyle; sürat alınan yolla ilişkilidir.' }],
+    question: { stem: 'SI sistemindeki büyüklük ve birim eşleştirmelerinden hangisi doğrudur?', options: ['Kütle — kilogram; kuvvet — newton', 'Kütle — newton; kuvvet — kilogram', 'Sıcaklık — joule; enerji — kelvin', 'Zaman — metre; uzunluk — saniye'], answer: 0, explanation: 'Kütle temel büyüklüktür ve SI birimi kilogramdır. Kuvvet türetilmiş büyüklüktür; birimi newton, temel birimlerle kg·m/s² olur. Sıcaklık kelvin, enerji joule, zaman saniye, uzunluk metreyle ölçülür.' },
+    cards: [{ front: 'Ağırlık skaler mi, vektörel mi?', back: 'Kuvvet olduğu için vektöreldir; SI birimi newtondur.' }, { front: 'SI sisteminin yedi temel büyüklüğü ve birimleri?', back: 'Uzunluk–metre, kütle–kilogram, zaman–saniye, sıcaklık–kelvin, elektrik akımı–amper, madde miktarı–mol, ışık şiddeti–kandela.' }],
     source: { book: 'TYT-fiz', page: 9 }
   },
   {
