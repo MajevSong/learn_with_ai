@@ -1,0 +1,1585 @@
+/* Kitap sırasını izleyen TYT matematik dersleri. */
+window.LESSONS = (window.LESSONS || []).concat([
+  {
+    "id": "mat-tyt-01",
+    "subject": "matematik",
+    "exam": "TYT",
+    "title": "Sayı kümeleri ve temel işlemler",
+    "unit": "Sayı kümeleri ve temel işlemler",
+    "minutes": 32,
+    "tags": [
+      "Sayı Kümeleri ve Sayı Doğrusu",
+      "Temel İşlemler",
+      "Tek, Çift, Pozitif ve Negatif Sayılar"
+    ],
+    "summary": "İç içe renkli bölgeler N ⊂ Z ⊂ Q ⊂ R ilişkisini gösteriyor. Bir sayının tam sayı olması onun aynı zamanda rasyonel ve gerçek sayı olmasına engel değildir: −3 = −3/1 yazılabildiği için üç kümeye de girer.",
+    "visual": {
+      "type": "flow",
+      "nodes": [
+        {
+          "label": "Tanım ve koşul",
+          "detail": "İç içe renkli bölgeler N ⊂ Z ⊂ Q ⊂ R ilişkisini gösteriyor. Bir sayının tam sayı olması onun aynı zamanda rasyonel ve gerçek sayı olmasına engel değildir: −3 = −3/1 yazılabildiği için üç kümeye de girer."
+        },
+        {
+          "label": "Yöntem ve örnek",
+          "detail": "Alt şekil √2 için birim kenarlı dik üçgen kuruyor. Pisagor bağıntısıyla hipotenüsün uzunluğu √(1²+1²) = √2 bulunur; pergel yayı bu uzunluğu sayı doğrusuna taşır."
+        },
+        {
+          "label": "Sonucu denetle",
+          "detail": "√9=3, −3/2 ve 0 rasyoneldir. √2 iki tam sayının oranı biçiminde yazılamadığı için irrasyoneldir."
+        }
+      ]
+    },
+    "sections": [
+      {
+        "title": "Sayı Kümeleri ve Sayı Doğrusu",
+        "text": "İç içe renkli bölgeler N ⊂ Z ⊂ Q ⊂ R ilişkisini gösteriyor. Bir sayının tam sayı olması onun aynı zamanda rasyonel ve gerçek sayı olmasına engel değildir: −3 = −3/1 yazılabildiği için üç kümeye de girer. Q ile Q′ ise ayrık bölgelerdir; bir gerçek sayı hem rasyonel hem irrasyonel olamaz. Ondalık açılımın sonlu veya devirli olması rasyonelliği gösterir; yalnız kök işareti görmek irrasyonellik kanıtı değildir, çünkü √9 = 3 olur. Alt şekil √2 için birim kenarlı dik üçgen kuruyor. Pisagor bağıntısıyla hipotenüsün uzunluğu √(1²+1²) = √2 bulunur; pergel yayı bu uzunluğu sayı doğrusuna taşır. Böylece irrasyonel sayının yaklaşık değerini bilmesek de belirli bir noktası olduğunu görürüz. √2, 1 ile 2 arasındadır; −√2 bunun sıfıra göre simetriğidir. Negatif bir sayının gerçek karekökü bulunmadığını, negatif bir gerçek sayının kendisinin elbette var olduğunu ayır."
+      },
+      {
+        "title": "Temel İşlemler",
+        "text": "10. sayfadaki özellikleri örnekle kontrol et: 4 + (−4) = 0 toplama tersini, 4·(1/4) = 1 çarpma tersini gösterir. Etkisiz eleman işlemden önceki sayıyı korur; yutan eleman 0 ise çarpmada bütün sayıları 0’a götürür. Sıfırın çarpma tersi yoktur, çünkü 0 ile hangi gerçek sayıyı çarparsan çarp sonuç 1 olamaz. Değişme ve birleşme özelliklerini çıkarma veya bölmeye gelişigüzel taşıma: 8−3 ile 3−8 eşit değildir. 11. sayfadaki işlem şeması (2³−5):3·5+2 ifadesini izler. Önce 2³=8, sonra parantez 3 olur; 3:3·5 soldan sağa 1·5=5 verir ve sonuç 7’dir. Aynı öncelikteki işlemlerin sırasını koru; 3:(3·5) farklı bir ifadedir. −2² ile (−2)² de farklıdır: ilki −4, ikincisi 4’tür. Dağılmada çarpan parantezin her terimine uygulanır; −2(x−3)=−2x+6 yazarken ikinci eksi de hesaba katılır."
+      },
+      {
+        "title": "Tek, Çift, Pozitif ve Negatif Sayılar",
+        "text": "12. sayfadaki iki tablo farklı sorulara yanıt verir: toplamın tek olması için terimlerin paritesi farklı; çarpımın tek olması için bütün çarpanların tek olması gerekir. Çift sayı 2k, tek sayı 2k+1 biçimindedir; k tam sayı olduğundan bu tanımlar negatif sayıları da kapsar. 13. sayfadaki sayı doğrusunda sıfır ne pozitif ne negatiftir. −7’nin mutlak değeri büyük olsa da −2’den küçüktür; sıralama sağa gittikçe büyümeye dayanır. 14. sayfanın örneğinde a ve b sıfırdan farklıdır. Bu koşul a² ve b⁸ ifadelerinin kesin pozitif olmasını sağlar. a²b⁵<0 için negatifliği b⁵ taşır, dolayısıyla b<0; a⁷b⁸>0 için işareti a⁷ belirler, dolayısıyla a>0 bulunur. Çift üs tabanın işaretini siler; tek üs korur. Toplamda ise yalnız işaret çarpımı kuralını kullanamazsın: 8+(−3)>0 iken 2+(−3)<0 olur. Ters işaretli toplamda mutlak değerce büyük terim belirleyicidir."
+      },
+      {
+        "title": "Ardışık Sayılar",
+        "text": "Terim sayısı formülündeki +1, başlangıç teriminin de sayılmasını sağlar. 24,26,28,30 örneğinde fark 2’dir; (30−24)/2=3 yalnız aralık sayısını verir, terim sayısı 4’tür. Ardışık tam sayıda fark 1, ardışık tek ve çift sayıda fark 2 olur. Soruda sayıların tam sayı, tek veya çift olduğu belirtilmeden sadece x,x+1,x+2 yazmak bu koşulları kendiliğinden sağlamaz. Toplam formülü, ilk ve son terimin ortalamasını terim sayısıyla çarpar. 24+26+28+30 = ((24+30)/2)·4 =108 bulunur. Eşit uzaklıktaki dış terimleri eşleştirdiğinde her çiftin toplamının aynı olduğunu görürsün. 1+3+…+(2n−1)=n² bağıntısında n son tek sayı değil terim sayısıdır. Örneğin 19’a kadar tek sayıların sayısı (19−1)/2+1=10 olduğundan toplam 100’dür; 19² almak yanlış olur."
+      }
+    ],
+    "memory": "√9=3, −3/2 ve 0 rasyoneldir. √2 iki tam sayının oranı biçiminde yazılamadığı için irrasyoneldir.",
+    "question": {
+      "stem": "Aşağıdakilerden hangisi irrasyonel bir gerçek sayıdır?",
+      "options": [
+        "√9",
+        "−3/2",
+        "√2",
+        "0"
+      ],
+      "answer": 2,
+      "explanation": "√9=3, −3/2 ve 0 rasyoneldir. √2 iki tam sayının oranı biçiminde yazılamadığı için irrasyoneldir."
+    },
+    "cards": [
+      {
+        "front": "−√9, √2 ve 0 sayılarının sayı kümelerindeki yerini açıkla.",
+        "back": "−√9 = −3 tam sayı, rasyonel ve gerçektir; doğal değildir. √2 irrasyonel ve gerçektir. Kitabın doğal sayı tanımı 0’ı içerdiği için 0 doğal, tam, rasyonel ve gerçektir."
+      },
+      {
+        "front": "7+10+13+…+40 toplamını bul.",
+        "back": "Ortak fark 3’tür. Terim sayısı (40−7)/3+1=12; ortalama (7+40)/2=23,5 olur. Toplam 12·23,5=282’dir."
+      }
+    ],
+    "source": {
+      "book": "TYT-mat",
+      "page": 9
+    }
+  },
+  {
+    "id": "mat-tyt-02",
+    "subject": "matematik",
+    "exam": "TYT",
+    "title": "Sayı basamakları, asal ve aralarında asal sayılar",
+    "unit": "Sayı basamakları, asal ve aralarında asal sayılar",
+    "minutes": 16,
+    "tags": [
+      "Sayı Basamakları",
+      "Asal ve Aralarında Asal Sayılar"
+    ],
+    "summary": "abcde tablosunda sayı değeri rakamın kendisi, basamak değeri bulunduğu yerle çarpımıdır. Örneğin 40725’te 7’nin sayı değeri 7, basamak değeri 700’dür.",
+    "visual": {
+      "type": "flow",
+      "nodes": [
+        {
+          "label": "Tanım ve koşul",
+          "detail": "abcde tablosunda sayı değeri rakamın kendisi, basamak değeri bulunduğu yerle çarpımıdır. Örneğin 40725’te 7’nin sayı değeri 7, basamak değeri 700’dür."
+        },
+        {
+          "label": "Yöntem ve örnek",
+          "detail": "Dikkat kutusundaki AB+BA ve AB−BA eşitliklerini çözümlemeyle üret: AB=10A+B, BA=10B+A olduğundan toplam 11(A+B), fark 9(A−B) olur. Örneğin 72−27=9(7−2)=45’tir."
+        },
+        {
+          "label": "Sonucu denetle",
+          "detail": "AB−BA=9(A−B) olduğundan A−B=4’tür. A+B=10 ile A=7,B=3 bulunur; sayı 73’tür."
+        }
+      ]
+    },
+    "sections": [
+      {
+        "title": "Sayı Basamakları",
+        "text": "abcde tablosunda sayı değeri rakamın kendisi, basamak değeri bulunduğu yerle çarpımıdır. Örneğin 40725’te 7’nin sayı değeri 7, basamak değeri 700’dür. Soldaki ilk rakamın sıfır olamaması, beş basamaklı olma koşulunun parçasıdır; diğer basamaklarda sıfır bulunabilir. abcde ifadesi rakamların çarpımı değildir: 10000a+1000b+100c+10d+e biçiminde açılır. Dikkat kutusundaki AB+BA ve AB−BA eşitliklerini çözümlemeyle üret: AB=10A+B, BA=10B+A olduğundan toplam 11(A+B), fark 9(A−B) olur. Örneğin 72−27=9(7−2)=45’tir. ABCDE=1000·AB+CDE yazımında CDE son üç basamağın sayısal değeridir; 12005=1000·12+5 örneğinde bu blok 005’tir. Blok gösterimini üç basamaklı bağımsız sayı varsayarak gereksiz C≠0 koşulu koyma."
+      },
+      {
+        "title": "Asal ve Aralarında Asal Sayılar",
+        "text": "Asal sayı tanımı tek bir sayının pozitif bölenlerini sınırlar: tam olarak 1 ve kendisi, ayrıca sayı 1’den büyük olmalıdır. Aralarında asallık ise iki sayının ortak bölenleriyle ilgilidir. 8 ile 9 bileşik sayılar oldukları hâlde ortak pozitif bölenleri yalnız 1 olduğundan aralarında asaldır. 2 tek çift asaldır; iki asalın farkı 1 ise sayılar 2 ve 3’tür. Ardışık çift sayılar ortak 2 çarpanı taşıdığından aralarında asal değildir. Sayfanın ikinci örneğinde X=2a+3b ve Y=2a−3b diyelim. 22Y=18X sadeleşince X/Y=11/9 olur. X ve Y pozitif, aralarında asal sayılar olduğundan ortak ölçek çarpanı 1’dir; X=11,Y=9 alınır. Denklemler toplanınca 4a=20 ve a=5 çıkar. Oranı sadeleştirmek tek başına sayıları belirlemez: aralarında asal koşulu olmasaydı X=22,Y=18 gibi katlar da mümkün olurdu."
+      }
+    ],
+    "memory": "AB−BA=9(A−B) olduğundan A−B=4’tür. A+B=10 ile A=7,B=3 bulunur; sayı 73’tür.",
+    "question": {
+      "stem": "AB−BA=36 ve A+B=10 ise iki basamaklı AB sayısı kaçtır?",
+      "options": [
+        "37",
+        "73",
+        "64",
+        "82"
+      ],
+      "answer": 1,
+      "explanation": "AB−BA=9(A−B) olduğundan A−B=4’tür. A+B=10 ile A=7,B=3 bulunur; sayı 73’tür."
+    },
+    "cards": [
+      {
+        "front": "İki basamaklı AB ve BA sayıları için AB−BA=36 ve A+B=10 ise AB kaçtır?",
+        "back": "9(A−B)=36 olduğundan A−B=4’tür. A+B=10 ile toplanınca 2A=14, A=7 ve B=3 bulunur; AB=73 olur."
+      },
+      {
+        "front": "12 ve 25 aralarında asal mıdır; bu, ikisinin de asal olduğunu gösterir mi?",
+        "back": "EBOB(12,25)=1 olduğu için aralarında asaldır. Ancak 12=3·4 ve 25=5·5 olduğundan ikisi de asal değildir; asallık ile aralarında asallık farklı özelliklerdir."
+      }
+    ],
+    "source": {
+      "book": "TYT-mat",
+      "page": 16
+    }
+  },
+  {
+    "id": "mat-tyt-03",
+    "subject": "matematik",
+    "exam": "TYT",
+    "title": "Kalan, bölünebilme ve asal çarpanlar",
+    "unit": "Kalan, bölünebilme ve asal çarpanlar",
+    "minutes": 24,
+    "tags": [
+      "Tam Sayılarda Kalanlı Bölme İşlemi",
+      "Bölünebilme Kuralları 1",
+      "Bölünebilme Kuralları 2 ve Asal Çarpanlar"
+    ],
+    "summary": "Bölme şemasını A=B·C+K biçiminde yaz; bölen B pozitifken 0≤K<B olmalıdır. Bu aralık koşulu olmadan yazılan her eşitlik uygun bölme işlemi sayılmaz: 23=5·3+8 doğrudur ama 8 kalan değildir; 23=5·4+3 yazılmalıdır.",
+    "visual": {
+      "type": "flow",
+      "nodes": [
+        {
+          "label": "Tanım ve koşul",
+          "detail": "Bölme şemasını A=B·C+K biçiminde yaz; bölen B pozitifken 0≤K<B olmalıdır. Bu aralık koşulu olmadan yazılan her eşitlik uygun bölme işlemi sayılmaz: 23=5·3+8 doğrudur ama 8 kalan değildir; 23=5·4+3 yazılmalıdır."
+        },
+        {
+          "label": "Yöntem ve örnek",
+          "detail": "Alt örnekte A’nın 17 ile kalanı 4, B’nin kalanı 3’tür. A²+AB−2B için büyük sayıları bilmeye gerek yoktur: 4²+4·3−2·3=22 elde edilir."
+        },
+        {
+          "label": "Sonucu denetle",
+          "detail": "Kalanlarla işlem yapılır: A²’nin kalanı 5²=25’in 7 ile kalanıdır. 25=7·3+4 olduğundan kalan 4’tür."
+        }
+      ]
+    },
+    "sections": [
+      {
+        "title": "Tam Sayılarda Kalanlı Bölme İşlemi",
+        "text": "Bölme şemasını A=B·C+K biçiminde yaz; bölen B pozitifken 0≤K<B olmalıdır. Bu aralık koşulu olmadan yazılan her eşitlik uygun bölme işlemi sayılmaz: 23=5·3+8 doğrudur ama 8 kalan değildir; 23=5·4+3 yazılmalıdır. İç içe iki şemada önce her bölmeyi ayrı denkleme çevirip sonra yerine koymak, hangi harfin bölen veya bölüm olduğunu karıştırmayı önler. Alt örnekte A’nın 17 ile kalanı 4, B’nin kalanı 3’tür. A²+AB−2B için büyük sayıları bilmeye gerek yoktur: 4²+4·3−2·3=22 elde edilir. Ancak kalan 22 denemez; 22’nin yeniden 17 ile kalanı 5’tir. Negatif ara sonuçta da aynı aralık korunur: 3−4=−1 sonucu 17’ye göre 16 kalanı verir. Kalanlarla işlem yapmak, sonucu son kez bölen aralığına indirme adımını ortadan kaldırmaz."
+      },
+      {
+        "title": "Bölünebilme Kuralları 1",
+        "text": "Kuralları aynı ölçüte indirgeme: 2,5,10 son rakama; 4 son iki, 8 son üç basamağa bakar. 3 ve 9 için rakamlar toplamı kullanılır. Bu kurallar 10’un ilgili bölenlere göre kalanından doğar. Örneğin 100 sayısı 4’ün katı olduğu için yüzler ve daha büyük basamakların 4’e göre katkısı sıfırdır. 11 kuralında ise birler basamağından başlayarak işaretleri +,−,+,− diye sırala. 20. sayfadaki 34967 örneği bütün kuralları tek sayı üzerinde karşılaştırır: 4’e göre son iki basamak 67 olduğundan kalan 3; 8’e göre 967 olduğundan kalan 7; 9’a göre rakamlar toplamı 29 olduğundan kalan 2’dir. 11 için (3+9+7)−(4+6)=9 bulunur. İşaretli toplam negatif çıkarsa 11’in uygun katını ekleyerek 0–10 aralığına taşı. Bir sayının 12’ye bölünmesi onun 3 ve 4’e de bölünmesini gerektirir; tersi ancak ortak kat mantığıyla değerlendirilir."
+      },
+      {
+        "title": "Bölünebilme Kuralları 2 ve Asal Çarpanlar",
+        "text": "21. sayfadaki çarpım kuralının ana koşulu aralarında asallıktır: 3 ve 4’e bölünen sayı 12’ye bölünür. 4 ve 6’ya bölünme ise 24’e bölünmeyi garanti etmez; 12 karşı örnektir. Genel olarak ortak katın en küçüğü EKOK’tur. 25 için son iki basamağın 00,25,50,75 olması, basamakla kontrolün bir başka örneğidir. Birden çok koşulu birleştirirken önce bölenlerin ortak çarpanını araştır. 22. sayfadaki bölme algoritması 360=2³·3²·5’i verir. Her pozitif bölen 2 için 0–3, 3 için 0–2, 5 için 0–1 arasından üs seçer; bağımsız seçimlerin sayısı 4·3·2=24’tür. Negatif bölenler de 24 tane olduğundan toplam 48 tam sayı bölen vardır. Her d ile −d eşleştiği için tam sayı bölenlerinin toplamı 0’dır. Asal bölenler yalnız 2,3,5 olduğundan asal olmayan tam sayı bölenlerinin toplamı −10’dur; burada negatif bölenleri de saydığını unutma."
+      }
+    ],
+    "memory": "Kalanlarla işlem yapılır: A²’nin kalanı 5²=25’in 7 ile kalanıdır. 25=7·3+4 olduğundan kalan 4’tür.",
+    "question": {
+      "stem": "A sayısının 7 ile bölümünden kalan 5 ise A²’nin 7 ile bölümünden kalan kaçtır?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "answer": 2,
+      "explanation": "Kalanlarla işlem yapılır: A²’nin kalanı 5²=25’in 7 ile kalanıdır. 25=7·3+4 olduğundan kalan 4’tür."
+    },
+    "cards": [
+      {
+        "front": "A ve B’nin 7 ile kalanları 5 ve 6 ise A·B−A’nın kalanı nedir?",
+        "back": "Kalanlarla işlem yapılır: 5·6−5=25. 25=7·3+4 olduğundan istenen kalan 4’tür."
+      },
+      {
+        "front": "72=2³·3² sayısının pozitif bölen sayısı ve asal olmayan tam sayı bölenleri toplamı nedir?",
+        "back": "Pozitif bölen sayısı (3+1)(2+1)=12’dir. Bütün tam sayı bölenlerinin toplamı 0; asal bölenler 2 ve 3 olduğundan bunlar çıkarılınca kalan toplam −5’tir."
+      }
+    ],
+    "source": {
+      "book": "TYT-mat",
+      "page": 18
+    }
+  },
+  {
+    "id": "mat-tyt-04",
+    "subject": "matematik",
+    "exam": "TYT",
+    "title": "EBOB, EKOK ve periyodik problemler",
+    "unit": "EBOB, EKOK ve periyodik problemler",
+    "minutes": 16,
+    "tags": [
+      "EBOB-EKOK Kavramları ve Problemleri",
+      "Periyodik Problemler"
+    ],
+    "summary": "23. sayfada ortak asal çarpanların küçük üsleri EBOB’u, bütün asal çarpanların büyük üsleri EKOK’u oluşturur.",
+    "visual": {
+      "type": "flow",
+      "nodes": [
+        {
+          "label": "Tanım ve koşul",
+          "detail": "23. sayfada ortak asal çarpanların küçük üsleri EBOB’u, bütün asal çarpanların büyük üsleri EKOK’u oluşturur."
+        },
+        {
+          "label": "Yöntem ve örnek",
+          "detail": "24. sayfanın makineleri 45,50,60 saniyede bir ürün verir."
+        },
+        {
+          "label": "Sonucu denetle",
+          "detail": "Eş parçanın en büyük uzunluğu EBOB(18,24)=6 m’dir. 18/6+24/6=3+4=7 parça bulunur."
+        }
+      ]
+    },
+    "sections": [
+      {
+        "title": "EBOB-EKOK Kavramları ve Problemleri",
+        "text": "23. sayfada ortak asal çarpanların küçük üsleri EBOB’u, bütün asal çarpanların büyük üsleri EKOK’u oluşturur. 18=2·3² ve 24=2³·3 için EBOB=2·3=6, EKOK=2³·3²=72’dir. Pozitif iki sayıda 18·24=6·72 eşitliği kontrol sağlar; bu iki sayılık çarpım bağıntısını üç sayıya aynen uygulama. En büyük eş parçalara ayırmada ortak bölen, aynı anda tekrarda ortak kat aranır. 24. sayfanın makineleri 45,50,60 saniyede bir ürün verir. EKOK=900 saniye=15 dakikadır. Başlangıç 06.30’da makineler çalışmaya başlar; o anda ürün verdikleri söylenmez. Bu nedenle ilk ortak ürün 06.45, beşinci ortak ürün 06.30+5·15 dakika=07.45’tedir. Başlangıç anı da bir ortak olay olsaydı beşinci olay için yalnız dört aralık sayılırdı. “En az” kelimesini görünce otomatik EKOK seçmek yerine bölme mi birleştirme mi yapıldığını belirle."
+      },
+      {
+        "title": "Periyodik Problemler",
+        "text": "Burak’ın kurs örneğinde ilk katılım pazartesi gerçekleşmiştir. Dördüncü günde ikinci katılım, sekizinci günde üçüncü katılım olur; n’inci katılım için (n−1) aralık geçer. On ikinci katılımın süresi 11·4=44 gündür. 44’ün 7 ile kalanı 2 olduğundan haftanın günü pazartesiden iki gün sonra, çarşambadır. Tam hafta sayısı yalnız tarihi ilerletir, gün adını değiştirmez. İki asker örneğinde önce farklı periyotlar bir ortak periyoda çevrilir: EKOK(5,8)=40 gün. İlk ortak nöbet salı gerçekleştiği için altıncıya kadar 5·40=200 gün geçer. 200=28·7+4 olduğundan gün salıdan dört gün sonrası cumartesidir. Tekrar sayısı ile geçen aralık sayısını ayıran bu yöntem, saat ve haftanın günü problemlerinde de aynıdır. Sonucu gün adlarını tek tek ilerleterek kontrol etmek bir günlük kaymayı önler."
+      }
+    ],
+    "memory": "Eş parçanın en büyük uzunluğu EBOB(18,24)=6 m’dir. 18/6+24/6=3+4=7 parça bulunur.",
+    "question": {
+      "stem": "18 m ve 24 m ipler artmayacak biçimde eş, en uzun parçalara ayrılıyor. Kaç parça elde edilir?",
+      "options": [
+        "6",
+        "7",
+        "8",
+        "12"
+      ],
+      "answer": 1,
+      "explanation": "Eş parçanın en büyük uzunluğu EBOB(18,24)=6 m’dir. 18/6+24/6=3+4=7 parça bulunur."
+    },
+    "cards": [
+      {
+        "front": "18 m ve 24 m uzunluğundaki ipler artmayacak biçimde eş ve en uzun parçalara ayrılırsa kaç parça çıkar?",
+        "back": "Parça uzunluğu EBOB(18,24)=6 m’dir. Parça sayıları 18/6=3 ve 24/6=4 olduğundan toplam 7 parça elde edilir."
+      },
+      {
+        "front": "6 günde bir nöbet tutan biri ilk nöbetini cuma tuttuysa 8. nöbeti hangi gündür?",
+        "back": "İlk nöbetten sonra 8−1=7 aralık geçer. 7·6=42 gün tam 6 hafta olduğundan 8. nöbet de cuma günüdür."
+      }
+    ],
+    "source": {
+      "book": "TYT-mat",
+      "page": 23
+    }
+  },
+  {
+    "id": "mat-tyt-05",
+    "subject": "matematik",
+    "exam": "TYT",
+    "title": "Rasyonel, ondalıklı ve devirli sayılar",
+    "unit": "Rasyonel, ondalıklı ve devirli sayılar",
+    "minutes": 16,
+    "tags": [
+      "Rasyonel Sayılarda İşlemler",
+      "Ondalıklı ve Devirli Ondalıklı Sayılar"
+    ],
+    "summary": "Toplama ve çıkarmada paydalar aynı büyüklükte parçaları temsil etmelidir; bu yüzden önce ortak payda seçilir. 1/3−1/4=4/12−3/12=1/12 olur.",
+    "visual": {
+      "type": "flow",
+      "nodes": [
+        {
+          "label": "Tanım ve koşul",
+          "detail": "Toplama ve çıkarmada paydalar aynı büyüklükte parçaları temsil etmelidir; bu yüzden önce ortak payda seçilir. 1/3−1/4=4/12−3/12=1/12 olur."
+        },
+        {
+          "label": "Yöntem ve örnek",
+          "detail": "Sayfanın örneği [(1/3−1/4)·6/7]:(5/28) biçimindedir. Parantez 1/12, ardından çarpım 1/14 olur."
+        },
+        {
+          "label": "Sonucu denetle",
+          "detail": "x=0,272727… ve 100x=27,272727… çıkarılırsa 99x=27 çıkar. x=27/99=3/11 olur."
+        }
+      ]
+    },
+    "sections": [
+      {
+        "title": "Rasyonel Sayılarda İşlemler",
+        "text": "Toplama ve çıkarmada paydalar aynı büyüklükte parçaları temsil etmelidir; bu yüzden önce ortak payda seçilir. 1/3−1/4=4/12−3/12=1/12 olur. Paydaları toplamak veya çıkarmak parçaların büyüklüğünü değiştirir. Çarpmada ise paylar ve paydalar çarpılır; işlem öncesinde ortak çarpanları sadeleştirmek sayıları küçültür. Tam sayılı kesri önce bileşik kesre dönüştür: 1 tam 1/2=3/2’dir. Sayfanın örneği [(1/3−1/4)·6/7]:(5/28) biçimindedir. Parantez 1/12, ardından çarpım 1/14 olur. Bölme, ikinci kesrin çarpma tersini almak demektir: (1/14)·(28/5)=2/5. Pay ve payda içindeki toplam terimlerini ayrı ayrı silmek sadeleştirme değildir; yalnız çarpanlar sadeleşir. Ayrıca sıfıra bölme tanımsız olduğundan bölen kesrin payının sıfır olmadığı koşulu korunmalıdır."
+      },
+      {
+        "title": "Ondalıklı ve Devirli Ondalıklı Sayılar",
+        "text": "27. sayfada 3/5’in paydası 10 yapılarak 0,6 elde edilir. Ondalık bölmede hem bölüneni hem böleni aynı 10 kuvvetiyle çarpmak oranı korur: 1,2:0,03=120:3=40’tır. Çarpmada ondalık basamak sayıları toplanır; 0,2·0,03=0,006 olur. Toplamada ise basamaklar hizalanır; “virgülden sonra aynı sayıda rakam yok” diye virgülleri kaydırma. 28. sayfadaki devir dönüşümü, devreden kuyruğu çıkarma yoluyla yok eder. Örneğin x=0,1666… yani yalnız 6 tekrar ediyorsa 10x=1,666… ve 100x=16,666…; çıkarınca 90x=15, x=1/6 bulunur. Paydada bir 9 ve bir 0 bulunmasının nedeni budur. Kitaptaki 21,3787878… örneğinde 78 tekrar eder: (21378−213)/990=1411/66. Negatif kesirleri sıralarken pozitif büyüklük karşılaştırmasının yönü tersine döner: 2/3>1/2 iken −2/3<−1/2 olur."
+      }
+    ],
+    "memory": "x=0,272727… ve 100x=27,272727… çıkarılırsa 99x=27 çıkar. x=27/99=3/11 olur.",
+    "question": {
+      "stem": "0,272727… sayısının kesir karşılığı hangisidir?",
+      "options": [
+        "27/100",
+        "2/7",
+        "3/11",
+        "27/90"
+      ],
+      "answer": 2,
+      "explanation": "x=0,272727… ve 100x=27,272727… çıkarılırsa 99x=27 çıkar. x=27/99=3/11 olur."
+    },
+    "cards": [
+      {
+        "front": "(3/4−1/6):(7/12) işlemini yap.",
+        "back": "Ortak payda 12 alınır: 9/12−2/12=7/12. Sonra (7/12):(7/12)=1 olur; bölen sıfır olmadığı için işlem tanımlıdır."
+      },
+      {
+        "front": "0,272727… sayısını kesre çevir.",
+        "back": "x=0,272727… için 100x=27,272727… yazılır. Çıkarınca 99x=27, dolayısıyla x=27/99=3/11 olur."
+      }
+    ],
+    "source": {
+      "book": "TYT-mat",
+      "page": 26
+    }
+  },
+  {
+    "id": "mat-tyt-06",
+    "subject": "matematik",
+    "exam": "TYT",
+    "title": "Aralıklar, denklemler ve eşitsizlikler",
+    "unit": "Aralıklar, denklemler ve eşitsizlikler",
+    "minutes": 24,
+    "tags": [
+      "Gerçek Sayılar Kümesinde Aralık Kavramı",
+      "Bir Bilinmeyenli Denklem ve Basit Eşitsizlikler",
+      "İki Bilinmeyenli Denklem ve Eşitsizlik Sistemleri"
+    ],
+    "summary": "29. sayfadaki sayı doğrularında dolu nokta uç değerin kümeye katıldığını, boş nokta dışarıda kaldığını gösterir.",
+    "visual": {
+      "type": "flow",
+      "nodes": [
+        {
+          "label": "Tanım ve koşul",
+          "detail": "29. sayfadaki sayı doğrularında dolu nokta uç değerin kümeye katıldığını, boş nokta dışarıda kaldığını gösterir."
+        },
+        {
+          "label": "Yöntem ve örnek",
+          "detail": "30. sayfada A=[−4,6), B=(2,8] verilmiştir."
+        },
+        {
+          "label": "Sonucu denetle",
+          "detail": "−3x>−6 olur. Negatif −3’e bölünürken yön değişir ve x<2 bulunur."
+        }
+      ]
+    },
+    "sections": [
+      {
+        "title": "Gerçek Sayılar Kümesinde Aralık Kavramı",
+        "text": "29. sayfadaki sayı doğrularında dolu nokta uç değerin kümeye katıldığını, boş nokta dışarıda kaldığını gösterir. [a,b] iki ucu, (a,b) hiçbir ucu içermez; [a,b) yalnız a’yı içerir. Sonsuz bir gerçek sayı veya ulaşılabilen uç nokta olmadığından ∞ yanına kapalı parantez yazılmaz. x≥3 koşulu [3,∞), x<3 koşulu (−∞,3) olur. Aralığın içindeki gerçek sayılarla yalnız tam sayıları sayma sorularını ayır. 30. sayfada A=[−4,6), B=(2,8] verilmiştir. Birleşim en az birinde bulunanları toplar ve [−4,8] olur. Kesişim her ikisinin aynı anda içerdiği (2,6) aralığıdır. A’dan B’yi çıkarırken 2’yi silmeyiz, çünkü 2 B’de bulunmaz; bu yüzden A\\B=[−4,2] çıkar. Uçların dahil olmasını yalnız aralığın dış uçlarına bakarak değil, o noktadaki üyeliği ayrı ayrı sorgulayarak belirle."
+      },
+      {
+        "title": "Bir Bilinmeyenli Denklem ve Basit Eşitsizlikler",
+        "text": "31. sayfadaki ax+b=0 sınıflamasında önce a’nın sıfır olup olmadığına bakılır. a≠0 ise tek kök −b/a; a=b=0 ise bütün gerçek sayılar; a=0,b≠0 ise boş çözüm kümesi vardır. Parametreli soruda doğrudan a’ya bölmek, sıfır olabileceği durumu kaybettirir. Örneğin (k−2)x=4 için k=2 olduğunda 0=4 çıkar ve çözüm yoktur; diğer k değerlerinde x=4/(k−2) bulunur. 32. sayfanın yön değiştirme kuralı negatif sayıyla çarpma veya bölmede uygulanır: −3x+6>0 → −3x>−6 → x<2. Her iki tarafa aynı sayıyı eklemek yönü değiştirmez. Ters alma kuralının işaret koşulunu ayrıca kontrol et: 0<a<b için 1/a>1/b olur; fakat a<0<b iken iki tersin işareti zaten farklıdır. Eşitsizliği karesini alarak dönüştürürken de işaret önemlidir: −5<−2 iken 25>4 olur."
+      },
+      {
+        "title": "İki Bilinmeyenli Denklem ve Eşitsizlik Sistemleri",
+        "text": "33. sayfada iki doğrunun kesişimi denklem sisteminin ortak çözümüdür. x+y=5 ve x−y=1 toplanınca 2x=6, x=3 ve y=2 bulunur; (3,2) her iki doğru üzerindedir. Paralel farklı doğruların ortak noktası yoktur; çakışık doğruların sonsuz ortak noktası vardır. Katsayı oranlarıyla karar verirken sıfıra bölme yapmamaya dikkat et; denklemleri birbirinin katı olacak biçimde karşılaştırmak daha güvenlidir. 34. sayfadaki çizimler eşitsizliğin bir yarı düzlemi seçtiğini gösterir. Önce sınır doğrusunu çiz; ≥ ve ≤ için düz, > ve < için kesikli çizgi kullan. Örneğin 2x−3y≥−6, −3’e bölünürken y≤(2/3)x+2 olur ve alt bölge seçilir. 35. sayfada mavi ile sarı boyamanın ortak bölgesi sistemin çözümüdür. Bir test noktasını her eşitsizlikte ayrı kontrol et: yalnız birini sağlaması yeterli değildir. Sınır üzerindeki eşitlik işaretleri de iki koşulda ayrı incelenir."
+      }
+    ],
+    "memory": "−3x>−6 olur. Negatif −3’e bölünürken yön değişir ve x<2 bulunur.",
+    "question": {
+      "stem": "−3x+6>0 eşitsizliğinin çözümü hangisidir?",
+      "options": [
+        "x>2",
+        "x<2",
+        "x<−2",
+        "x≥2"
+      ],
+      "answer": 1,
+      "explanation": "−3x>−6 olur. Negatif −3’e bölünürken yön değişir ve x<2 bulunur."
+    },
+    "cards": [
+      {
+        "front": "A=[−1,5), B=[3,7] ise A∩B ve A\\B nedir?",
+        "back": "Ortak bölüm 3’ü içerir, 5’i içermez: A∩B=[3,5). B’de bulunan 3 ve üzeri A’dan çıkarıldığı için A\\B=[−1,3) olur."
+      },
+      {
+        "front": "(0,0), 2x−3y≥−6 ve y<1 sistemini sağlar mı; (0,1) sağlar mı?",
+        "back": "(0,0) için 0≥−6 ve 0<1 doğru olduğundan çözümdür. (0,1) ilk koşulu −3≥−6 ile sağlar; fakat 1<1 yanlış olduğundan sisteme ait değildir."
+      }
+    ],
+    "source": {
+      "book": "TYT-mat",
+      "page": 29
+    }
+  },
+  {
+    "id": "mat-tyt-07",
+    "subject": "matematik",
+    "exam": "TYT",
+    "title": "Mutlak değeri uzaklıkla çöz",
+    "unit": "Mutlak değeri uzaklıkla çöz",
+    "minutes": 16,
+    "tags": [
+      "Mutlak Değer Kavramı ve Özellikleri",
+      "Mutlak Değerli Denklemler ve Eşitsizlikler"
+    ],
+    "summary": "36. sayfadaki tanım |x|’i sıfıra uzaklık olarak verir; sonuç daima sıfır veya pozitiftir.",
+    "visual": {
+      "type": "flow",
+      "nodes": [
+        {
+          "label": "Tanım ve koşul",
+          "detail": "36. sayfadaki tanım |x|’i sıfıra uzaklık olarak verir; sonuç daima sıfır veya pozitiftir."
+        },
+        {
+          "label": "Yöntem ve örnek",
+          "detail": "37. sayfadaki |x+3|+|x|+|2x−4| örneğinde kritik noktalar −3,0,2’dir."
+        },
+        {
+          "label": "Sonucu denetle",
+          "detail": "−6<2x−4<6 yazılır. Her tarafa 4 ekleyip 2’ye bölünce −1<x<5 bulunur."
+        }
+      ]
+    },
+    "sections": [
+      {
+        "title": "Mutlak Değer Kavramı ve Özellikleri",
+        "text": "36. sayfadaki tanım |x|’i sıfıra uzaklık olarak verir; sonuç daima sıfır veya pozitiftir. İçerideki ifade negatifse ters işaretlisi alınır: b<0 iken |5b|=−5b olur ve bu sonuç pozitiftir. |x−a|, x ile a arasındaki uzaklıktır; kritik nokta x=a’dır. √(x²)=|x| yazılmasının nedeni de karekökün negatif olmamasıdır. Örneğin x=−3 için √9=3’tür, −3 değil. 37. sayfadaki |x+3|+|x|+|2x−4| örneğinde kritik noktalar −3,0,2’dir. Bunlar doğruyu dört parçaya ayırır. Özellikle 0≤x≤2 aralığında ifade (x+3)+x+(4−2x)=7 olur; minimum yalnız x=0 veya x=2’de değil bütün bu aralıkta alınır. Dış aralıklarda parçalı ifadeyi açarak daha küçük değer çıkmadığı doğrulanabilir. |x+y|≤|x|+|y| üçgen eşitsizliği ise mutlak değerin toplam üzerine her zaman eşitlikle dağıtılamayacağını anlatır; |3−5|=2 iken |3|+|−5|=8’dir."
+      },
+      {
+        "title": "Mutlak Değerli Denklemler ve Eşitsizlikler",
+        "text": "|x|=a eşitliği a>0 için x=±a verir; a=0 için iki farklı kök değil yalnız 0 vardır; a<0 için çözüm yoktur. Sayfanın |2x−9|=−4x+3 örneğinde sağ tarafın negatif olamaması gerekir. İki cebirsel durumdan çıkan x=2 ve x=−3 adayları bu yüzden doğrudan kabul edilmez. x=2 için 5=−5 yanlış; x=−3 için 15=15 doğru olduğundan yalnız −3 kalır. Eşitsizlikte uzaklık küçükse iki sınır arasında, büyükse dış bölgelerde kalınır. |x−2|≤3, −3≤x−2≤3 demektir; −1≤x≤5 bulunur. |x−2|>3 ise x<−1 veya x>5 olur. “Ve” ile “veya” ayrımı çözümün kesişim veya birleşim olmasını belirler. İki mutlak değerin toplamı sıfırsa her biri ayrı ayrı sıfır olmak zorundadır; çünkü negatif bir terim diğerini götüremez."
+      }
+    ],
+    "memory": "−6<2x−4<6 yazılır. Her tarafa 4 ekleyip 2’ye bölünce −1<x<5 bulunur.",
+    "question": {
+      "stem": "|2x−4|<6 eşitsizliğinin çözümü hangisidir?",
+      "options": [
+        "(−1,5)",
+        "[−1,5]",
+        "(−∞,−1)∪(5,∞)",
+        "(1,5)"
+      ],
+      "answer": 0,
+      "explanation": "−6<2x−4<6 yazılır. Her tarafa 4 ekleyip 2’ye bölünce −1<x<5 bulunur."
+    },
+    "cards": [
+      {
+        "front": "|x+3|+|x|+|2x−4| ifadesi x=1 için neden minimum değeri verir?",
+        "back": "1, 0 ile 2 arasındadır. Bu aralıkta mutlak değerler (x+3)+x+(4−2x) biçiminde açılır ve toplam 7 sabittir. x=1 için de 4+1+2=7 bulunur."
+      },
+      {
+        "front": "|2x−4|<6 eşitsizliğinin çözüm kümesi nedir?",
+        "back": "−6<2x−4<6 yazılır. Her tarafa 4 eklenirse −2<2x<10, 2’ye bölünürse −1<x<5 bulunur; çözüm (−1,5) aralığıdır."
+      }
+    ],
+    "source": {
+      "book": "TYT-mat",
+      "page": 36
+    }
+  },
+  {
+    "id": "mat-tyt-08",
+    "subject": "matematik",
+    "exam": "TYT",
+    "title": "Üslü ifadeler, denklemler ve eşitsizlikler",
+    "unit": "Üslü ifadeler, denklemler ve eşitsizlikler",
+    "minutes": 16,
+    "tags": [
+      "Üslü İfadeler ve Özellikleri",
+      "Üslü İfade İçeren Denklemler ve Eşitsizlikler"
+    ],
+    "summary": "39. sayfada negatif üs, negatif sonuç anlamına gelmez; çarpma tersini gösterir.",
+    "visual": {
+      "type": "flow",
+      "nodes": [
+        {
+          "label": "Tanım ve koşul",
+          "detail": "39. sayfada negatif üs, negatif sonuç anlamına gelmez; çarpma tersini gösterir."
+        },
+        {
+          "label": "Yöntem ve örnek",
+          "detail": "40. sayfanın 27⁵,81⁴,243² örneği hepsini 3 tabanına taşır: 3¹⁵,3¹⁶,3¹⁰."
+        },
+        {
+          "label": "Sonucu denetle",
+          "detail": "0<1/3<1 olduğundan üslü fonksiyon azalandır. 2x−1≤5, dolayısıyla x≤3 bulunur."
+        }
+      ]
+    },
+    "sections": [
+      {
+        "title": "Üslü İfadeler ve Özellikleri",
+        "text": "39. sayfada negatif üs, negatif sonuç anlamına gelmez; çarpma tersini gösterir. 2⁻³=1/8, (−2)⁻³=−1/8 olur. Sıfırın negatif kuvveti tanımsızdır. Aynı tabanların çarpımında üsler toplanır; aynı tabanların bölümünde çıkarılır; kuvvetin kuvvetinde çarpılır. Toplamaya bu kurallar uygulanmaz: 2³+2³=2·2³=16’dır, 2⁶ değildir. Ortak kuvveti paranteze almak toplama ve çıkarma için doğru yoldur. 40. sayfanın 27⁵,81⁴,243² örneği hepsini 3 tabanına taşır: 3¹⁵,3¹⁶,3¹⁰. Taban 3>1 olduğu için büyük üs büyük sayıyı verir ve sıralama üçüncü, birinci, ikinci şeklindedir. Diğer örnekte 2ˣ=17,3ʸ=29,5ᶻ=55 değerleri yakın kuvvetler arasında sıkıştırılır: 4<x<5,3<y<4,2<z<3; dolayısıyla z<y<x. Üsleri hesaplamadan da karşılaştırma yapılabildiğini gör."
+      },
+      {
+        "title": "Üslü İfade İçeren Denklemler ve Eşitsizlikler",
+        "text": "Gerçek üslerle çalışırken ortak tabanın pozitif ve 1’den farklı olması, üs eşitlemenin güvenli temel koşuludur. a>1 için aˣ artan, 0<a<1 için azalandır. Bu yüzden (1/2)ˣ<(1/2)³ eşitsizliğinde x>3 bulunur. Negatif tabanın her gerçek üs için tanımlı olmadığını unutma. Ayrıca x²=y²’den yalnız x=y çıkmaz; x=−y olasılığı da vardır. Sayfanın örneği (3/5)^(x−1)<(25/9)^(x−4) eşitsizliğidir. 25/9=(3/5)⁻² yazıldığında sağ tarafın üssü −2x+8 olur. Taban 0 ile 1 arasında olduğundan üsler karşılaştırılırken yön döner: x−1>−2x+8; 3x>9 ve x>3 çıkar. Sınır x=3 iki tarafı eşitlediği için sıkı eşitsizliğe dahil edilmez. Üsleri eşitlemeden önce iki tarafın gerçekten aynı tabana getirildiğini denetle."
+      }
+    ],
+    "memory": "0<1/3<1 olduğundan üslü fonksiyon azalandır. 2x−1≤5, dolayısıyla x≤3 bulunur.",
+    "question": {
+      "stem": "(1/3)^(2x−1)≥(1/3)⁵ için çözüm nedir?",
+      "options": [
+        "x≥3",
+        "x≤3",
+        "x<2",
+        "x=3"
+      ],
+      "answer": 1,
+      "explanation": "0<1/3<1 olduğundan üslü fonksiyon azalandır. 2x−1≤5, dolayısıyla x≤3 bulunur."
+    },
+    "cards": [
+      {
+        "front": "(2³·2⁻¹)/2² işleminin sonucu nedir?",
+        "back": "Aynı tabanda çarpma ve bölmeyle üsler 3+(−1)−2=0 olur. Taban sıfırdan farklı olduğundan 2⁰=1’dir."
+      },
+      {
+        "front": "(1/3)^(2x−1)≥(1/3)⁵ için çözüm nedir?",
+        "back": "Taban 0 ile 1 arasında olduğundan üsler ters yönde karşılaştırılır: 2x−1≤5. Buradan 2x≤6, x≤3 bulunur."
+      }
+    ],
+    "source": {
+      "book": "TYT-mat",
+      "page": 39
+    }
+  },
+  {
+    "id": "mat-tyt-09",
+    "subject": "matematik",
+    "exam": "TYT",
+    "title": "Köklü ifadeler ve köklü denklemler",
+    "unit": "Köklü ifadeler ve köklü denklemler",
+    "minutes": 16,
+    "tags": [
+      "Köklü İfadeler ve Eşlenik",
+      "Köklü İfadeleri İçeren Denklemler ve Eşitsizlikler"
+    ],
+    "summary": "42. sayfada kökün derecesi çift olduğunda kök içi sıfır veya pozitif olmak zorundadır.",
+    "visual": {
+      "type": "flow",
+      "nodes": [
+        {
+          "label": "Tanım ve koşul",
+          "detail": "42. sayfada kökün derecesi çift olduğunda kök içi sıfır veya pozitif olmak zorundadır."
+        },
+        {
+          "label": "Yöntem ve örnek",
+          "detail": "43. sayfanın eşlenik tablosu iki kare farkına dayanır: (√a+√b)(√a−√b)=a−b."
+        },
+        {
+          "label": "Sonucu denetle",
+          "detail": "Sağ tarafın negatif olmaması için x≥1 gerekir. Kare alınca x(x−3)=0 çıkar; 0 koşulu sağlamaz. 3 yerine yazılınca √4=2 doğrulanır."
+        }
+      ]
+    },
+    "sections": [
+      {
+        "title": "Köklü İfadeler ve Eşlenik",
+        "text": "42. sayfada kökün derecesi çift olduğunda kök içi sıfır veya pozitif olmak zorundadır. √(x²)=|x| iken ∛(x³)=x olur. x²=9 denkleminin iki çözümü ±3’tür; √9 ifadesinin değeri ise yalnız 3’tür. Kök alma işlemi ile denklem çözmeyi ayır. Benzer kökler toplanabilir: √12+√27=2√3+3√3=5√3. √(12+27) yazmak toplamı kökün içine yanlış biçimde taşır. 43. sayfanın eşlenik tablosu iki kare farkına dayanır: (√a+√b)(√a−√b)=a−b. Paydadaki √3+√2’yi kökten kurtarmak için hem pay hem paydayı √3−√2 ile çarparız; 1/(√3+√2)=√3−√2 olur. İç içe kök açmada √(5+2√6)=√3+√2, çünkü 3+2=5 ve 3·2=6’dır. Eksili biçimde √(5−2√6)=|√3−√2| gerekir; hangi kökün büyük olduğu biliniyorsa mutlak değer buna göre açılır."
+      },
+      {
+        "title": "Köklü İfadeleri İçeren Denklemler ve Eşitsizlikler",
+        "text": "İlk örnekte √x+4=11’den √x=7 ve x=49 elde edilir; yerine yazıldığında 7+4=11 sağlanır. İkinci örnekte √x+13=8’den √x=−5 çıkar. Kare alma x=25 adayı üretse de √25+13=18 olduğundan bu aday çözüm değildir. Aslında karekökün negatif olamayacağı baştan görülürse ikinci denklemin çözümsüz olduğu hemen anlaşılır. Kare almak, eşitliği sağlayanların dışından adaylar da ekleyebilir. Sıralama örneğinde 5√3,2√20,7√2 ifadeleri √75,√80,√98 biçimine çevrilir; aynı derecede ve pozitif köklerde içerisi büyüdükçe değer büyür. Kök dereceleri farklıysa yakın tam kuvvetlerle sınır bulunabilir: ∛123, 4 ile 5 arasında; √79, 8 ile 9 arasında; dördüncü dereceden √234, 3 ile 4 arasındadır. Derecesi küçük kök büyüktür kuralını yalnız aynı kök içi 1’den büyükken kullan; 0<a<1 için yön tersidir."
+      }
+    ],
+    "memory": "Sağ tarafın negatif olmaması için x≥1 gerekir. Kare alınca x(x−3)=0 çıkar; 0 koşulu sağlamaz. 3 yerine yazılınca √4=2 doğrulanır.",
+    "question": {
+      "stem": "√(x+1)=x−1 denkleminin gerçek çözümü hangisidir?",
+      "options": [
+        "{0}",
+        "{3}",
+        "{0,3}",
+        "∅"
+      ],
+      "answer": 1,
+      "explanation": "Sağ tarafın negatif olmaması için x≥1 gerekir. Kare alınca x(x−3)=0 çıkar; 0 koşulu sağlamaz. 3 yerine yazılınca √4=2 doğrulanır."
+    },
+    "cards": [
+      {
+        "front": "1/(√5−2) ifadesini paydayı kökten kurtararak yaz.",
+        "back": "Pay ve payda √5+2 ile çarpılır. Payda (√5−2)(√5+2)=5−4=1 olur. Sonuç √5+2’dir; başlangıç paydası sıfır değildir."
+      },
+      {
+        "front": "√(x+1)=x−1 denkleminin gerçek çözümünü bul.",
+        "back": "Kök içinden x≥−1, sağ tarafın negatif olmamasından x≥1 gerekir. Kare alınca x+1=x²−2x+1, yani x(x−3)=0 çıkar. Aday 0 koşulu sağlamaz; x=3 için √4=2 doğru olduğundan çözüm {3}’tür."
+      }
+    ],
+    "source": {
+      "book": "TYT-mat",
+      "page": 42
+    }
+  },
+  {
+    "id": "mat-tyt-10",
+    "subject": "matematik",
+    "exam": "TYT",
+    "title": "Oran ve orantı problemleri",
+    "unit": "Oran ve orantı problemleri",
+    "minutes": 16,
+    "tags": [
+      "Oran-Orantı Kavramı ve Özellikleri",
+      "Oran-Orantı Problemleri"
+    ],
+    "summary": "a/b=c/d=k eşitliğinde a=kb ve c=kd yazmak bütün oran özelliklerinin temelidir. İçler-dışlar çarpımı ad=bc buradan çıkar.",
+    "visual": {
+      "type": "flow",
+      "nodes": [
+        {
+          "label": "Tanım ve koşul",
+          "detail": "a/b=c/d=k eşitliğinde a=kb ve c=kd yazmak bütün oran özelliklerinin temelidir. İçler-dışlar çarpımı ad=bc buradan çıkar."
+        },
+        {
+          "label": "Yöntem ve örnek",
+          "detail": "Doğru orantıda a/b sabit; ters orantıda a·b sabittir. İki niceliğin yalnız birlikte artması doğru orantı için yeterli değildir: y=x+3 artandır ama y/x sabit değildir."
+        },
+        {
+          "label": "Sonucu denetle",
+          "detail": "Ters oran 1/2:1/3=3:2’dir. Beş pay 60 olduğundan bir pay 12, büyük pay 36’dır."
+        }
+      ]
+    },
+    "sections": [
+      {
+        "title": "Oran-Orantı Kavramı ve Özellikleri",
+        "text": "a/b=c/d=k eşitliğinde a=kb ve c=kd yazmak bütün oran özelliklerinin temelidir. İçler-dışlar çarpımı ad=bc buradan çıkar. Payların toplamı ile paydaların toplamının oranı da k’dır, ancak yeni payda b+d sıfır olmamalıdır. Oranların çarpımı k değil k² verir; bu ayrımı sayfanın üçüncü ve beşinci özelliklerini karşılaştırarak gör. Oranı sabit k kabul etmek dört bilinmeyeni ayrı ayrı taşımayı kolaylaştırır. Doğru orantıda a/b sabit; ters orantıda a·b sabittir. İki niceliğin yalnız birlikte artması doğru orantı için yeterli değildir: y=x+3 artandır ama y/x sabit değildir. Aynı şekilde birinin artıp diğerinin azalması tek başına ters orantı kanıtı olmaz. İşçi-süre ilişkisinde işin miktarı ve işçilerin verimi sabit tutulmalıdır. Bu koşullar değişirse tek bir orantı bağıntısı durumu açıklamaz; önce sabitleri belirle."
+      },
+      {
+        "title": "Oran-Orantı Problemleri",
+        "text": "Tabloda hız-yol doğru orantısı sürenin, hız-zaman ters orantısı yolun sabit olmasıyla anlam kazanır. Örneğin aynı 120 km yolu 40 km/sa hızla 3 saatte, 60 km/sa hızla 2 saatte alırsın; hız·süre=120 sabittir. Dört sayıyı şemaya yazmadan önce aynı sütundaki niceliklerin tür ve birimlerini eşleştir; hangi niceliğin artınca diğerinin nasıl değiştiğini koşullar altında açıkla. Ceviz örneğinde Furkan,Fatih,Feyza 144 cevizi 3,4,6 ile ters orantılı paylaşır. Paylar k/3,k/4,k/6’dır; paydaları 12’de eşitleyince oran 4:3:2 olur. Toplam 9 eş pay 144 olduğundan bir pay 16’dır. Ceviz sayıları 64,48,32 çıkar; en azı Feyza alır. Doğrudan 3:4:6 oranında dağıtmak ters orantıyı doğru orantıya çevirir ve en az alan kişiyi de değiştirir."
+      }
+    ],
+    "memory": "Ters oran 1/2:1/3=3:2’dir. Beş pay 60 olduğundan bir pay 12, büyük pay 36’dır.",
+    "question": {
+      "stem": "60 ceviz 2 ve 3 ile ters orantılı paylaşılıyor. Büyük pay kaçtır?",
+      "options": [
+        "24",
+        "30",
+        "36",
+        "40"
+      ],
+      "answer": 2,
+      "explanation": "Ters oran 1/2:1/3=3:2’dir. Beş pay 60 olduğundan bir pay 12, büyük pay 36’dır."
+    },
+    "cards": [
+      {
+        "front": "a/b=2/3 ve a+b=25 ise a ve b nedir?",
+        "back": "a=2t,b=3t yazılır. Toplam 5t=25 olduğundan t=5, a=10 ve b=15 bulunur. Kontrol: 10/15=2/3."
+      },
+      {
+        "front": "60 ceviz 2 ve 3 ile ters orantılı dağıtılırsa paylar nedir?",
+        "back": "Paylar 1/2:1/3=3:2 oranındadır. Toplam 5 pay 60 ise bir pay 12’dir. 2 ile ters orantılı pay 36, 3 ile ters orantılı pay 24 olur."
+      }
+    ],
+    "source": {
+      "book": "TYT-mat",
+      "page": 45
+    }
+  },
+  {
+    "id": "mat-tyt-11",
+    "subject": "matematik",
+    "exam": "TYT",
+    "title": "Sayı, kesir ve yaş problemleri",
+    "unit": "Sayı, kesir ve yaş problemleri",
+    "minutes": 16,
+    "tags": [
+      "Sayı ve Kesir Problemleri",
+      "Yaş Problemleri"
+    ],
+    "summary": "47. sayfadaki kafe örneğinde iki kişilik masa sayısı x seçildiğinde üç kişiliklerin sayısı 46−x’tir; ayrı bir bilinmeyen zorunlu değildir.",
+    "visual": {
+      "type": "flow",
+      "nodes": [
+        {
+          "label": "Tanım ve koşul",
+          "detail": "47. sayfadaki kafe örneğinde iki kişilik masa sayısı x seçildiğinde üç kişiliklerin sayısı 46−x’tir; ayrı bir bilinmeyen zorunlu değildir."
+        },
+        {
+          "label": "Yöntem ve örnek",
+          "detail": "48. sayfanın soru çözme örneğinde toplam 3x seçilir; ilk üçte bir x soru, kalan 2x sorudur."
+        },
+        {
+          "label": "Sonucu denetle",
+          "detail": "t yıl sonra 36+t=2(12+t) yazılır. 36+t=24+2t’den t=12 çıkar."
+        }
+      ]
+    },
+    "sections": [
+      {
+        "title": "Sayı ve Kesir Problemleri",
+        "text": "47. sayfadaki kafe örneğinde iki kişilik masa sayısı x seçildiğinde üç kişiliklerin sayısı 46−x’tir; ayrı bir bilinmeyen zorunlu değildir. Toplam kapasite 2x+3(46−x)=117 olur. Düzenleyince x=21, diğer masa sayısı 25 çıkar; 2·21+3·25=117 sağlaması yapılır. Sözel ifadeyi işlem sırasıyla çevir: “5 katının 14 eksiği” 5x−14’tür; kat alma ile çıkarma farklı basamaklardır. 48. sayfanın soru çözme örneğinde toplam 3x seçilir; ilk üçte bir x soru, kalan 2x sorudur. Süreler x/25 ve 2x/20 gün olduğundan x/25+2x/20=14 yazılır; x=100 ve toplam 300 soru bulunur. Günlük hızları toplayıp 45’e bölmek doğru değildir, çünkü iki hız aynı anda kullanılmaz. Tel örneğinde tek uçtan kesilen x/6 uzunluğun yarısı kadar orta nokta kayar: x/12=15, uzunluk 180 cm’dir."
+      },
+      {
+        "title": "Yaş Problemleri",
+        "text": "Yaş tablosunda a yıl önce herkesin yaşından a çıkar, b yıl sonra herkesin yaşına b eklenir. Üç kişinin yaş toplamı bu yüzden a yıl geriye gidince 3a azalır. İki kişi arasındaki fark değişmez; yaşlarının oranı ise genellikle değişir. “a yıl önce doğsaydı” ifadesi zaman yolculuğu değildir: kişi daha erken doğacağı için bugünkü yaşı a artardı. Tablodaki iki farklı cümle türünü bu nedenle ayrı oku. Örnekte kardeşi doğduğunda Efe 8 yaşındadır, dolayısıyla yaş farkı 8’dir. Kardeş Efe’nin o andaki 8 yaşına geldiğinde kardeş 8,Efe 16 olur. Toplam 24 annenin yaşının yarısıysa anne 48’dir. Efe’nin doğduğu ana 16 yıl geri gidilir ve anne 32 yaşında bulunur. Bütün kişilerin yaşlarını aynı zaman sütununda toplamak gerekir; annenin bugünkü yaşıyla çocukların başka bir andaki yaşlarını eşitlemek zamanları karıştırır."
+      }
+    ],
+    "memory": "t yıl sonra 36+t=2(12+t) yazılır. 36+t=24+2t’den t=12 çıkar.",
+    "question": {
+      "stem": "Bir anne 36, çocuğu 12 yaşındadır. Kaç yıl sonra annenin yaşı çocuğunun iki katı olur?",
+      "options": [
+        "6",
+        "8",
+        "12",
+        "24"
+      ],
+      "answer": 2,
+      "explanation": "t yıl sonra 36+t=2(12+t) yazılır. 36+t=24+2t’den t=12 çıkar."
+    },
+    "cards": [
+      {
+        "front": "Bir telin bir ucundan dörtte biri kesilince orta noktası 9 cm kayıyorsa ilk uzunluk nedir?",
+        "back": "İlk uzunluk L ise kesilen parça L/4’tür. Eski ve yeni orta noktalar arasındaki uzaklık kesilenin yarısı, L/8 olur. L/8=9’dan L=72 cm bulunur."
+      },
+      {
+        "front": "Bir anne 36, çocuğu 12 yaşında. Kaç yıl sonra annenin yaşı çocuğunun iki katı olur?",
+        "back": "t yıl sonra yaşlar 36+t ve 12+t olur. 36+t=2(12+t) eşitliğinden t=12 bulunur. O zaman yaşlar 48 ve 24, fark yine 24’tür."
+      }
+    ],
+    "source": {
+      "book": "TYT-mat",
+      "page": 47
+    }
+  },
+  {
+    "id": "mat-tyt-12",
+    "subject": "matematik",
+    "exam": "TYT",
+    "title": "İşçi, yüzde ve kâr-zarar problemleri",
+    "unit": "İşçi, yüzde ve kâr-zarar problemleri",
+    "minutes": 16,
+    "tags": [
+      "İşçi Problemleri",
+      "Yüzde ve Kâr-Zarar Problemleri"
+    ],
+    "summary": "Bir işin tamamını 1 kabul edersen 4 günde bitiren işçinin günlük hızı 1/4, 6 günde bitirenin 1/6 iştir. Aynı anda aynı işe çalıştıklarında hızlar toplanır; bitirme süreleri toplanmaz.",
+    "visual": {
+      "type": "flow",
+      "nodes": [
+        {
+          "label": "Tanım ve koşul",
+          "detail": "Bir işin tamamını 1 kabul edersen 4 günde bitiren işçinin günlük hızı 1/4, 6 günde bitirenin 1/6 iştir. Aynı anda aynı işe çalıştıklarında hızlar toplanır; bitirme süreleri toplanmaz."
+        },
+        {
+          "label": "Yöntem ve örnek",
+          "detail": "Cem-Caner örneği işin ortasında hızın değiştiği iki aşama içerir. İşi 12 birim alırsak Cem günde 3, Caner 2 birim yapar."
+        },
+        {
+          "label": "Sonucu denetle",
+          "detail": "Etiket 200·1,3=260; satış 260·0,9=234 TL’dir. 34 TL kârın maliyete oranı 34/200=%17’dir."
+        }
+      ]
+    },
+    "sections": [
+      {
+        "title": "İşçi Problemleri",
+        "text": "Bir işin tamamını 1 kabul edersen 4 günde bitiren işçinin günlük hızı 1/4, 6 günde bitirenin 1/6 iştir. Aynı anda aynı işe çalıştıklarında hızlar toplanır; bitirme süreleri toplanmaz. Eş verimli işçilerde toplam iş, işçi sayısı·süre ile orantılıdır: 8 işçinin 12 günlük işi 96 işçi-gündür; aynı işi 6 işçi 16 günde yapar. Verim eşitliği ve çalışma saatlerinin aynı olması bu modelin koşuludur. Cem-Caner örneği işin ortasında hızın değiştiği iki aşama içerir. İşi 12 birim alırsak Cem günde 3, Caner 2 birim yapar. İlk iki günde birlikte 2·5=10 birim biter; 2 birim kalır. Cem ayrılınca hız 2 birim/gün olduğundan Caner kalan işi 1 günde bitirir. Sorulan toplam süre olsaydı 2+1=3 gün denirdi. Kalan işin süresiyle baştan geçen toplam süreyi son adımda ayırt et."
+      },
+      {
+        "title": "Yüzde ve Kâr-Zarar Problemleri",
+        "text": "51. sayfadaki yüzde bağıntılarında payda karşılaştırmanın tabanıdır: “A, B’nin yüzde kaçı” sorusu 100A/B’dir. Başlangıcı 100x seçmek %20’yi 20x yaparak kesirleri azaltır. Asiye-Begüm-Cenk örneğinde paylar 4x,x,5x olur; Asiye toplam 10x’in 4x’ini, yani %40’ını alır. Toplam 720 TL olsa da yüzdeyi bulmak için önce x’in değerini bilmek zorunlu değildir. 52. sayfada kâr yüzdesi maliyet üzerinden hesaplanır; indirim ise indirimin uygulandığı satış/etiket fiyatı üzerinden yapılır. Maliyeti 100 TL olan ürün %50 kârla 150 TL’ye etiketlenip %20 indirilirse satış 150·0,80=120 TL, kâr %20 olur. %50−%20=%30 hesabı farklı tabanları karıştırır. Art arda zam ve indirimde her adımın çarpanını kullan: %20 zam ve %20 indirim toplamda 1,2·0,8=0,96 verir; başlangıca göre %4 düşüş vardır."
+      }
+    ],
+    "memory": "Etiket 200·1,3=260; satış 260·0,9=234 TL’dir. 34 TL kârın maliyete oranı 34/200=%17’dir.",
+    "question": {
+      "stem": "200 TL maliyetli ürün %30 kârla etiketlenip etiketten %10 indirilirse gerçek kâr yüzde kaçtır?",
+      "options": [
+        "17",
+        "20",
+        "27",
+        "30"
+      ],
+      "answer": 0,
+      "explanation": "Etiket 200·1,3=260; satış 260·0,9=234 TL’dir. 34 TL kârın maliyete oranı 34/200=%17’dir."
+    },
+    "cards": [
+      {
+        "front": "Bir işi A 6, B 12 günde bitiriyor. Birlikte 2 gün çalıştıktan sonra A ayrılırsa B kalan işi kaç günde bitirir?",
+        "back": "Birlikte günlük hız 1/6+1/12=1/4 iştir. 2 günde 1/2 iş biter; 1/2 kalır. B’nin günlük hızı 1/12 olduğundan kalan süre (1/2)/(1/12)=6 gündür."
+      },
+      {
+        "front": "200 TL maliyetli ürün %30 kârla etiketlenip etiketinden %10 indirilirse gerçek kâr yüzdesi kaçtır?",
+        "back": "Etiket 200·1,30=260 TL; indirimli satış 260·0,90=234 TL’dir. Kâr 34 TL, maliyete oranı 34/200·100=%17 olur."
+      }
+    ],
+    "source": {
+      "book": "TYT-mat",
+      "page": 50
+    }
+  },
+  {
+    "id": "mat-tyt-13",
+    "subject": "matematik",
+    "exam": "TYT",
+    "title": "Karışım, hareket ve rutin olmayan problemler",
+    "unit": "Karışım, hareket ve rutin olmayan problemler",
+    "minutes": 16,
+    "tags": [
+      "Karışım ve Hareket Problemleri",
+      "Rutin Olmayan Problemler"
+    ],
+    "summary": "53. sayfanın karışım bağıntısı saf madde korunmasına dayanır.",
+    "visual": {
+      "type": "flow",
+      "nodes": [
+        {
+          "label": "Tanım ve koşul",
+          "detail": "53. sayfanın karışım bağıntısı saf madde korunmasına dayanır."
+        },
+        {
+          "label": "Yöntem ve örnek",
+          "detail": "54. sayfada X=Vt kullanmadan önce birimleri eşleştir."
+        },
+        {
+          "label": "Sonucu denetle",
+          "detail": "Tuz miktarı 60 g kalır. Toplam 300 g olduğundan tuz oranı 60/300=%20’dir."
+        }
+      ]
+    },
+    "sections": [
+      {
+        "title": "Karışım ve Hareket Problemleri",
+        "text": "53. sayfanın karışım bağıntısı saf madde korunmasına dayanır. %20’lik 100 g çözelti 20 g, %50’lik 200 g çözelti 100 g saf madde içerir. Toplam 120/300=%40 olur; yüzdelerin aritmetik ortalaması %35, miktarlar farklı olduğu için doğru değildir. Homojen karışımın bir kısmı dökülürse oran değişmez. Saf su eklenirken tuz miktarı sabit, toplam kütle artar; yalnız su buharlaşırsa tuz sabit kalırken toplam azalır. 54. sayfada X=Vt kullanmadan önce birimleri eşleştir. Zıt yönde yaklaşan araçların aralığı (V₁+V₂)t, aynı yönde yakalamada (V₁−V₂)t kadar kapanır. Gidiş-dönüşte eşit yolları 60 ve 40 km/sa hızlarla almak ortalama 50 vermez: yol 120 km seçilirse süreler 2 ve 3 saat, toplam 240/5=48 km/sa olur. Tablodaki 2V₁V₂/(V₁+V₂) formülü eşit yol koşulunun sonucudur; eşit sürelerde aritmetik ortalama kullanılır."
+      },
+      {
+        "title": "Rutin Olmayan Problemler",
+        "text": "Koli örneğinde küçük aile sayısı x, büyük aile sayısı y seçilerek 2x+3y=79 yazılır. Nüfusu büyütmek için küçük aileleri 3, büyük aileleri 8 kişi kabul etmek gerekir. Bir kolinin en çok taşıdığı nüfus küçük ailede 3/2, büyük ailede 8/3 olduğundan büyük aileye ağırlık vermek avantajlıdır. x’in en küçük uygun tam sayı değeri 2’dir; buradan y=25 ve nüfus 2·3+25·8=206 çıkar. Yalnız y’yi yuvarlamak paket eşitliğini bozabilir. Antrenman örneğinde 18 dakika 1080 saniyedir; 24 egzersizin her biri 45 saniye sürer. Başlangıçlar 0,45,90,135,180,… saniyeleridir. Dakika başına rastlamak için 45k’nin 60’a bölünmesi gerekir; bu da k’nin 4’ün katı olmasıdır. Egzersiz numarası k+1 olduğundan 1,5,9,13,17,21 bulunur. Son bitiş anı yeni egzersiz başlangıcı değildir; 25’inci diye saymak bir fazla sonuç verir."
+      }
+    ],
+    "memory": "Tuz miktarı 60 g kalır. Toplam 300 g olduğundan tuz oranı 60/300=%20’dir.",
+    "question": {
+      "stem": "%30 tuz içeren 200 g karışıma 100 g su eklenirse tuz yüzdesi kaç olur?",
+      "options": [
+        "10",
+        "15",
+        "20",
+        "25"
+      ],
+      "answer": 2,
+      "explanation": "Tuz miktarı 60 g kalır. Toplam 300 g olduğundan tuz oranı 60/300=%20’dir."
+    },
+    "cards": [
+      {
+        "front": "%30’luk 200 g tuzlu suya 100 g saf su eklenirse tuz yüzdesi kaç olur?",
+        "back": "Başta 200·0,30=60 g tuz vardır. Su eklemek tuzu değiştirmez; toplam 300 g olur. 60/300·100=%20 bulunur."
+      },
+      {
+        "front": "Dakika başında başlayan, her biri 40 saniye süren 12 etkinliğin kaçı dakika başında başlar?",
+        "back": "Başlangıçlar 40k saniyede, k=0,…,11 için gerçekleşir. 40k’nin 60’a bölünmesi k’nin 3’ün katı olmasını gerektirir. k=0,3,6,9, yani 1,4,7,10. etkinlikler; toplam 4 tanedir."
+      }
+    ],
+    "source": {
+      "book": "TYT-mat",
+      "page": 53
+    }
+  },
+  {
+    "id": "mat-tyt-14",
+    "subject": "matematik",
+    "exam": "TYT",
+    "title": "Önerme, bağlaç, niceleyici ve ispat",
+    "unit": "Önerme, bağlaç, niceleyici ve ispat",
+    "minutes": 32,
+    "tags": [
+      "Önermeler ve Doğruluk Tablosu",
+      "Bileşik Önermeler ve De Morgan Kuralları",
+      "Koşullu ve İki Yönlü Koşullu Önerme"
+    ],
+    "summary": "56. sayfanın örneklerinde yanlış bir yargı da önermedir: “Asal olan her sayı tek sayıdır” ifadesi 2 nedeniyle yanlış, fakat kesin doğruluk değeri bulunduğu için önermedir.",
+    "visual": {
+      "type": "flow",
+      "nodes": [
+        {
+          "label": "Tanım ve koşul",
+          "detail": "56. sayfanın örneklerinde yanlış bir yargı da önermedir: “Asal olan her sayı tek sayıdır” ifadesi 2 nedeniyle yanlış, fakat kesin doğruluk değeri bulunduğu için önermedir."
+        },
+        {
+          "label": "Yöntem ve örnek",
+          "detail": "57. sayfada iki bağımsız önerme için (1,1),(1,0),(0,1),(0,0) olmak üzere dört satır vardır."
+        },
+        {
+          "label": "Sonucu denetle",
+          "detail": "Bir koşullu önerme yalnız hipotezi doğru, hükmü yanlış olduğunda yanlıştır. Diğer üç doğruluk durumunda doğrudur."
+        }
+      ]
+    },
+    "sections": [
+      {
+        "title": "Önermeler ve Doğruluk Tablosu",
+        "text": "56. sayfanın örneklerinde yanlış bir yargı da önermedir: “Asal olan her sayı tek sayıdır” ifadesi 2 nedeniyle yanlış, fakat kesin doğruluk değeri bulunduğu için önermedir. Soru cümlesi doğruluk değeri taşımaz; “en lezzetli” gibi kişiye göre değişen ölçütler de kesin matematiksel yargı oluşturmaz. Önerme olmayı doğru olmakla karıştırma. p doğruysa 1, yanlışsa 0 yazılması yalnız iki durumun kısa gösterimidir. 57. sayfada iki bağımsız önerme için (1,1),(1,0),(0,1),(0,0) olmak üzere dört satır vardır. Her yeni bağımsız önerme olasılık sayısını iki katına çıkardığı için n önerme 2ⁿ satır üretir. Değil alma yalnız doğruluk değerini tersine çevirir; iki kez değil alma ilk değeri geri verir. “Her asal tektir” önermesinin değili “Hiçbir asal tek değildir” olmaz; doğru olumsuzluk en az bir asalın tek olmadığını söylemelidir."
+      },
+      {
+        "title": "Bileşik Önermeler ve De Morgan Kuralları",
+        "text": "58. sayfadaki “ve” tablosu yalnız iki giriş de 1 iken 1 verir. “Veya” ise en az bir giriş 1 olduğunda 1’dir; iki girişin birlikte doğru olması da buna dahildir. 59. sayfadaki “ya da” tablosu tam bir girişin doğru olmasını ister, bu yüzden (1,1) satırında 0 çıkar. Günlük dilde karışabilen bu iki bağlacı doğruluk tablosundaki aynı satırda karşılaştırarak ayır. De Morgan kuralları değili parantezin içine geçirirken hem yargıları hem bağlacı değiştirir: (p∧q)′=p′∨q′, (p∨q)′=p′∧q′. “Hem A hem B sağlanmıyor” ifadesi ikisinin de yanlış olmasını zorunlu tutmaz; en az birinin yanlış olması yeterlidir. Örneğin p=1,q=0 iken p∧q=0 ve değili 1’dir; p′∨q′=0∨1=1 aynı sonucu verir. p∨p′ her zaman doğru, p∧p′ her zaman yanlıştır; bunlar sadeleştirmede güçlü kontrol noktalarıdır."
+      },
+      {
+        "title": "Koşullu ve İki Yönlü Koşullu Önerme",
+        "text": "60. sayfanın p⇒q tablosunda yalnız p=1,q=0 satırı yanlıştır. Bu koşullu önerme p′∨q ile denktir. “Bir sayı 4’ün katıysa çifttir” önermesinde p, 4’ün katı olma; q, çift olma durumudur. Bunun karşıtı q⇒p her zaman doğru değildir; 6 çift olup 4’ün katı değildir. Karşıt ters q′⇒p′ ise ilk önermeye denktir: çift olmayan sayı 4’ün katı olamaz. 61. sayfada p⇔q iki yönün birlikte istenmesidir; doğruluk değerleri aynıysa 1, farklıysa 0 olur. “Sayı çifttir ancak ve ancak 2’ye tam bölünür” iki yönü de sağlar. p⇒q’nun değili p∧q′ biçimindedir; p′⇒q′ biçimindeki tersiyle karıştırma. Bir koşullu yargıyı çürütmek için hipotezin doğru, hükmün yanlış olduğu tek örnek yeterlidir. Ancak ve ancak yargısında ise her iki gerektirmeyi ayrıca denetlemek gerekir."
+      },
+      {
+        "title": "Niceleyiciler; Tanım, Aksiyom, Teorem ve İspat",
+        "text": "62. sayfada p(x):x²=9 açık önermesinin tam sayılardaki doğruluk kümesi {−3,3} olur. ∀ bütün elemanları, ∃ en az bir elemanı ifade eder; “bazı” en az bir demektir, “yalnız bir” anlamına gelmez. Olumsuzlukta niceleyici de hüküm de değişir: “Her gerçek x için x²>0” önermesinin değili “En az bir gerçek x için x²≤0”dır. x=0 bu olumsuzluğa tanık olur. 63. sayfadaki ayrımda tanım bir kavramı açıklar; aksiyom başlangıçta kabul edilir; teorem ise tanım, aksiyom ve önceki sonuçlarla ispatlanır. Eşkenar üçgen örneğinde “eşkenardır” hipotez, “iç açıları eşittir” hükümdür. Tek bir eşkenar üçgen çizip açılarını ölçmek bütün üçgenleri kapsayan ispat değildir. Buna karşılık evrensel bir yargının yanlışlığını göstermek için tek karşı örnek yeterlidir; ispat ile karşı örneğin mantıksal görevlerini ayır."
+      }
+    ],
+    "memory": "Bir koşullu önerme yalnız hipotezi doğru, hükmü yanlış olduğunda yanlıştır. Diğer üç doğruluk durumunda doğrudur.",
+    "question": {
+      "stem": "p⇒q koşullu önermesi hangi durumda yanlıştır?",
+      "options": [
+        "p=0,q=0",
+        "p=0,q=1",
+        "p=1,q=0",
+        "p=1,q=1"
+      ],
+      "answer": 2,
+      "explanation": "Bir koşullu önerme yalnız hipotezi doğru, hükmü yanlış olduğunda yanlıştır. Diğer üç doğruluk durumunda doğrudur."
+    },
+    "cards": [
+      {
+        "front": "“9 asal sayıdır” bir önerme midir; doğruluk değeri ve değili nedir?",
+        "back": "Kesin doğru veya yanlış olduğu için önermedir. 9=3·3 olduğundan yanlış, doğruluk değeri 0’dır. Değili “9 asal sayı değildir” doğrudur, değeri 1’dir."
+      },
+      {
+        "front": "“Her tam sayının karesi pozitiftir” yargısını niceleyiciyle olumsuzla ve bir tanık ver.",
+        "back": "Olumsuzu “En az bir x tam sayısı için x²≤0”dır. x=0 seçilirse 0²=0≤0 sağlanır; bu karşı örnek ilk evrensel önermeyi çürütür."
+      }
+    ],
+    "source": {
+      "book": "TYT-mat",
+      "page": 56
+    }
+  },
+  {
+    "id": "mat-tyt-15",
+    "subject": "matematik",
+    "exam": "TYT",
+    "title": "Kümeler, küme problemleri ve Kartezyen çarpım",
+    "unit": "Kümeler, küme problemleri ve Kartezyen çarpım",
+    "minutes": 24,
+    "tags": [
+      "Kümelerde Temel Kavramlar ve Alt Küme",
+      "Kesişim, Birleşim, Fark ve Tümleme",
+      "Küme Problemleri ve Sıralı İkililer"
+    ],
+    "summary": "64. sayfada liste, Venn ve ortak özellik aynı kümeyi farklı biçimlerde gösterir.",
+    "visual": {
+      "type": "flow",
+      "nodes": [
+        {
+          "label": "Tanım ve koşul",
+          "detail": "64. sayfada liste, Venn ve ortak özellik aynı kümeyi farklı biçimlerde gösterir."
+        },
+        {
+          "label": "Yöntem ve örnek",
+          "detail": "65. sayfanın alt küme tablosunda her eleman için al/alma biçiminde iki seçim bulunur; n elemanda 2ⁿ alt küme elde edilir."
+        },
+        {
+          "label": "Sonucu denetle",
+          "detail": "a zorunlu alınır, b dışarıda kalır. c ve d için al/alma seçimleri bağımsızdır; 2²=4 alt küme vardır."
+        }
+      ]
+    },
+    "sections": [
+      {
+        "title": "Kümelerde Temel Kavramlar ve Alt Küme",
+        "text": "64. sayfada liste, Venn ve ortak özellik aynı kümeyi farklı biçimlerde gösterir. Kümede tekrar sayılmaz, yazılış sırası önemli değildir. ∅ hiçbir elemanı olmayan kümedir; {∅} ise tek elemanı boş küme olan başka bir kümedir. ∈ bir nesnenin üyeliğini, ⊆ bir kümenin bütün elemanlarının diğerinde bulunmasını söyler. Örneğin A={1,2} için 1∈A ve {1}⊆A doğrudur; {1}∈A ise doğru değildir. 65. sayfanın alt küme tablosunda her eleman için al/alma biçiminde iki seçim bulunur; n elemanda 2ⁿ alt küme elde edilir. Kendisi çıkarılırsa 2ⁿ−1 öz alt küme kalır. A={a,b,c} için 8 alt kümenin 4’ü a’yı içerir; a zorunlu seçildikten sonra b,c serbesttir. “a veya b bulunur” ikisinin birlikte olduğu durumu da içerir; “a ya da b” yalnız birinin bulunmasını ister. Boş küme her kümenin alt kümesidir ama her kümenin elemanı olmak zorunda değildir."
+      },
+      {
+        "title": "Kesişim, Birleşim, Fark ve Tümleme",
+        "text": "66. sayfadaki Venn boyamalarında kesişim iki kümenin ortak, birleşim en az birine ait bölgedir. s(A)+s(B) toplandığında ortak elemanlar iki kez sayıldığından s(A∪B)=s(A)+s(B)−s(A∩B) yazılır. A⊆B ise kesişim A, birleşim B olur. De Morgan kuralları burada da bölge üyeliğiyle açıklanır: (A∪B)′=A′∩B′, yani ikisinde de olmayanlar. 67. sayfada A\\B, A’da olup B’de olmayan elemanları seçer; sıra değişirse bölge değişir. E={1,2,3,4,5}, A={1,2,3}, B={3,4} seçelim. A∩B={3}, A∪B={1,2,3,4}, A\\B={1,2}, B\\A={4}, A′={4,5} olur. Tümleyen evrensel kümeye bağlıdır: E büyütülürse A değişmeden A′ değişebilir. Evrensel küme belirtilmeden “A’da olmayan bütün nesneler” diye sınırsız bir tümleyen yazma; işlemin bağlamını koru."
+      },
+      {
+        "title": "Küme Problemleri ve Sıralı İkililer",
+        "text": "68. sayfadaki a,b,c,d bölgelerinde “en çok bir spor” a+c+d’dir; hiçbir spor yapmayanlar da en çok bir koşulunu sağlar. “Sadece bir” ise a+c, “en az bir” a+b+c’dir. Gözlük örneğinde gözlüksüz erkek x seçilir; dört hücre 2x,x+3,x−3,x olur. “Gözlüksüz veya erkek” birleşiminde gözlüksüz erkeği iki kez saymadan 3x=21, x=7 ve toplam 5x=35 bulunur. İki özellik türünü tabloya yerleştirmek bölgeleri görünür yapar. 69. sayfanın A={2,3,4}, B={3,5} örneğinde A×B altı sıralı ikili içerir. Birinci bileşen x, ikinci y koordinatıdır; (2,5) ile (5,2) farklıdır. Grafikte üç x değeri ve iki y değeri altı kesişim noktası üretir. Eleman sayısı s(A)s(B) olur; bu çarpım kümelerin bütün noktalarını birleştiren dolu bir dikdörtgen değildir. Sonlu kümelerde yalnız seçilmiş koordinat noktaları vardır; aradaki gerçek sayılar kendiliğinden kümeye katılmaz."
+      }
+    ],
+    "memory": "a zorunlu alınır, b dışarıda kalır. c ve d için al/alma seçimleri bağımsızdır; 2²=4 alt küme vardır.",
+    "question": {
+      "stem": "A={a,b,c,d} kümesinin a’yı içeren, b’yi içermeyen kaç alt kümesi vardır?",
+      "options": [
+        "2",
+        "4",
+        "8",
+        "16"
+      ],
+      "answer": 1,
+      "explanation": "a zorunlu alınır, b dışarıda kalır. c ve d için al/alma seçimleri bağımsızdır; 2²=4 alt küme vardır."
+    },
+    "cards": [
+      {
+        "front": "A={a,b,c,d} kümesinin a’yı içeren ve b’yi içermeyen kaç alt kümesi vardır?",
+        "back": "a zorunlu alınır, b alınmaz. c ve d için iki bağımsız al/alma seçimi vardır; 2²=4 alt küme bulunur."
+      },
+      {
+        "front": "A={1,2}, B={0,3,4} ise A×B’de ikinci bileşeni 3 olan kaç ikili vardır?",
+        "back": "Birinci bileşen A’dan 1 veya 2 seçilebilir, ikinci bileşen 3 olarak sabittir. İkililer (1,3),(2,3); toplam 2 tanedir."
+      }
+    ],
+    "source": {
+      "book": "TYT-mat",
+      "page": 64
+    }
+  },
+  {
+    "id": "mat-tyt-16",
+    "subject": "matematik",
+    "exam": "TYT",
+    "title": "Sayma, faktöriyel ve permütasyon",
+    "unit": "Sayma, faktöriyel ve permütasyon",
+    "minutes": 16,
+    "tags": [
+      "Saymanın Temel İlkesi ve Faktöriyel",
+      "Permütasyon ve Tekrarlı Permütasyon"
+    ],
+    "summary": "70. sayfadaki ilk posta örneğinde dört farklı mektubun her biri üç kutudan birine atılır; kutu tekrar kullanılabildiği için 3⁴=81 dağılım vardır.",
+    "visual": {
+      "type": "flow",
+      "nodes": [
+        {
+          "label": "Tanım ve koşul",
+          "detail": "70. sayfadaki ilk posta örneğinde dört farklı mektubun her biri üç kutudan birine atılır; kutu tekrar kullanılabildiği için 3⁴=81 dağılım vardır."
+        },
+        {
+          "label": "Yöntem ve örnek",
+          "detail": "71. sayfada n!"
+        },
+        {
+          "label": "Sonucu denetle",
+          "detail": "İki A ve iki N özdeştir. Tekrarlı permütasyon sayısı 4!/(2!·2!)=6’dır."
+        }
+      ]
+    },
+    "sections": [
+      {
+        "title": "Saymanın Temel İlkesi ve Faktöriyel",
+        "text": "70. sayfadaki ilk posta örneğinde dört farklı mektubun her biri üç kutudan birine atılır; kutu tekrar kullanılabildiği için 3⁴=81 dağılım vardır. İkinci örnekte üç mektup dört kutuya, her kutuda en çok biri olacak şekilde dağıtılır; seçenekler 4,3,2 diye azalır ve sonuç 24 olur. Ayrık alternatifler toplanır; aynı sonucun art arda seçim basamakları çarpılır. “Farklı mektup” ile “özdeş mektup” aynı sayma problemi değildir. 71. sayfada n! birbirinden farklı n nesnenin sıralanma sayısıdır; 0!=1 kabulü boş seçimi ve formülleri tutarlı kılar. Faktöriyelli toplamda küçük faktöriyeli ortak al: 6!+5!=5!(6+1). 29! içindeki 3 çarpanlarını sayarken 3’ün katlarından 9, 9’un katlarından 3, 27’nin katından 1 katkı gelir; toplam 13’tür. Katları tekrar saymak hata değildir: 9 iki,27 üç adet 3 çarpanı taşıdığı için ek katkılar gereklidir."
+      },
+      {
+        "title": "Permütasyon ve Tekrarlı Permütasyon",
+        "text": "72. sayfada A={a,b,c} için ikili sıralamalar (a,b) ve (b,a) gibi ayrı sayılır; P(3,2)=3·2=6’dır. Altı asal arasından 11’i içermeyen üçlü sıralama P(5,3)=60; içerenler toplamdan çıkarılarak P(6,3)−P(5,3)=60 bulunur. “11 var” koşulu için ayrıca 3·P(5,2)=60 da yazılabilir: 11’in üç yerinden biri seçilir, kalan iki yer sıralanır. 73. sayfanın ELEK örneğinde iki E özdeştir. Üç harfli dizilişler üç ayrık türdür: E,L,K birer kez kullanılırsa 3!=6; E,E,K için 3!/2!=3; E,E,L için yine 3. Toplam 12 olur. İki E’den hangisinin seçildiğini ayrı saymak aynı görünen dizileri çoğaltır. Tekrarlı permütasyonda n!/(n₁!n₂!…) formülü bütün nesnelerin dizildiği durumda doğrudan uygulanır; daha az harf seçiliyorsa önce hangi tekrar çokluğunun kullanıldığını ayırmak gerekir."
+      }
+    ],
+    "memory": "İki A ve iki N özdeştir. Tekrarlı permütasyon sayısı 4!/(2!·2!)=6’dır.",
+    "question": {
+      "stem": "ANNA kelimesinin bütün harfleriyle kaç farklı diziliş yapılır?",
+      "options": [
+        "4",
+        "6",
+        "12",
+        "24"
+      ],
+      "answer": 1,
+      "explanation": "İki A ve iki N özdeştir. Tekrarlı permütasyon sayısı 4!/(2!·2!)=6’dır."
+    },
+    "cards": [
+      {
+        "front": "10! sayısını bölen en büyük 2 kuvveti nedir?",
+        "back": "10! içindeki 2 üssü ⌊10/2⌋+⌊10/4⌋+⌊10/8⌋=5+2+1=8’dir. Bu nedenle en büyük kuvvet 2⁸’dir."
+      },
+      {
+        "front": "ANNA kelimesinin bütün harfleri kaç farklı biçimde dizilir?",
+        "back": "Dört harften iki A, iki N özdeştir. Dört farklı nesne için 4! olan sayı her özdeş çiftin 2! sıralamasına bölünür: 4!/(2!·2!)=6."
+      }
+    ],
+    "source": {
+      "book": "TYT-mat",
+      "page": 70
+    }
+  },
+  {
+    "id": "mat-tyt-17",
+    "subject": "matematik",
+    "exam": "TYT",
+    "title": "Kombinasyon ve binom açılımı",
+    "unit": "Kombinasyon ve binom açılımı",
+    "minutes": 24,
+    "tags": [
+      "Kombinasyon Kavramı ve Problemleri",
+      "Kombinasyon ve Geometri",
+      "Binom Açılımı ve Pascal Üçgeni"
+    ],
+    "summary": "74. sayfada r elemanlı alt küme seçilirken sıralama önemli değildir; aynı r elemanın r!",
+    "visual": {
+      "type": "flow",
+      "nodes": [
+        {
+          "label": "Tanım ve koşul",
+          "detail": "74. sayfada r elemanlı alt küme seçilirken sıralama önemli değildir; aynı r elemanın r!"
+        },
+        {
+          "label": "Yöntem ve örnek",
+          "detail": "75. sayfanın komisyonu dört kişiliktir ve en fazla iki fizik öğretmeni içerir."
+        },
+        {
+          "label": "Sonucu denetle",
+          "detail": "x üssü 4−r=2 için r=2 alınır. C(4,2)(−2)²=6·4=24 bulunur."
+        }
+      ]
+    },
+    "sections": [
+      {
+        "title": "Kombinasyon Kavramı ve Problemleri",
+        "text": "74. sayfada r elemanlı alt küme seçilirken sıralama önemli değildir; aynı r elemanın r! dizilişi tek seçim sayılır. Bu yüzden C(n,r)=P(n,r)/r! olur. Yedi elemanlı örnekte x’in zorunlu bulunduğu üçlü alt küme için diğer iki eleman kalan altıdan seçilir: C(6,2)=15. x zorunlu, y yasaksa kalan beşten iki seçilir ve C(5,2)=10 bulunur. Zorunlu elemanı yeniden seçenekler içinde tutma. 75. sayfanın komisyonu dört kişiliktir ve en fazla iki fizik öğretmeni içerir. Fizik sayısı 0,1,2 olabilir; bunlar ayrık durumlardır. Seçim sayıları C(4,0)C(6,4)=15, C(4,1)C(6,3)=80 ve C(4,2)C(6,2)=90; toplam 185 olur. Her durumda fizik ve matematik seçimi birlikte yapıldığı için çarpılır, farklı fizik sayıları ise toplanır. Komisyona başkan gibi farklı görevler eklenirse sıralama/görev atama aşaması ayrıca sayılmalıdır."
+      },
+      {
+        "title": "Kombinasyon ve Geometri",
+        "text": "İki nokta bir doğruyu belirler; ancak C(n,2)’nin farklı doğru sayısı olması için üç noktanın aynı doğru üzerinde olmaması gerekir. Üç noktadan üçgen sayısı C(n,3) alınırken de doğrusal üçlülerin çıkarılması gerekir. Beş noktanın üçü aynı doğru üzerindeyse C(5,3)=10 üçlüden o doğrusal üçlü çıkarılır ve 9 üçgen kalır. Geometrik nesne oluşturmakla yalnız nokta seçmek arasındaki koşulu önce kontrol et. Sayfadaki en çok kesişim sayıları her çiftin katkısını toplar. n farklı doğrunun en çok C(n,2) kesişimi için paralel çift olmamalı ve üç doğru tek noktada buluşmamalıdır. n farklı çember için her çift en çok iki noktada kesişir; üst sınır 2C(n,2)’dir. Ortak kesişim noktaları veya teğetlik bu sayıyı düşürür. Çokgenlerde ortak kenar parçaları varsa sonsuz ortak nokta oluşabileceğinden sonlu kesişim sayısı yorumunda böyle çakışmaları dışlamak gerekir; yalnız farklı olmak her zaman yeterli değildir."
+      },
+      {
+        "title": "Binom Açılımı ve Pascal Üçgeni",
+        "text": "77. sayfanın Pascal üçgeninde içteki sayı üstteki iki komşunun toplamıdır. Bu sayılar (x+y)ⁿ açılımının C(n,r) katsayılarıdır. x’in azalan kuvvetlerinde baştan r+1’inci terim C(n,r)x^(n−r)yʳ olur. Terim numarası r değil r+1’dir; ilk terimde r=0 alınır. Her terimin toplam derecesi n kalır, çünkü x’ten y’ye doğru üsler birer birer aktarılır. 78. sayfanın (x−2y)⁴ örneğinde ikinci ifade −2y’dir; işaret ve 2’nin kuvveti birlikte alınır. Açılım x⁴−8x³y+24x²y²−32xy³+16y⁴ olur. Katsayılar toplamı için x=y=1 yazınca (1−2)⁴=1 çıkar; sabit terim için bütün değişkenler 0 yapılır. (2x−3y+4)⁷ örneğinde bu iki işlem sırasıyla 3⁷ ve 4⁷ verir. Bu yerine koyma yöntemi polinom açılımlarında geçerlidir; negatif kuvvet içeren ifadeye değişkeni 0 koymak tanımsızlık üretebilir."
+      }
+    ],
+    "memory": "x üssü 4−r=2 için r=2 alınır. C(4,2)(−2)²=6·4=24 bulunur.",
+    "question": {
+      "stem": "(x−2)⁴ açılımında x²’nin katsayısı kaçtır?",
+      "options": [
+        "6",
+        "12",
+        "24",
+        "−24"
+      ],
+      "answer": 2,
+      "explanation": "x üssü 4−r=2 için r=2 alınır. C(4,2)(−2)²=6·4=24 bulunur."
+    },
+    "cards": [
+      {
+        "front": "5 kız ve 4 erkekten 3 kişilik, tam 2 kız içeren ekip kaç biçimde seçilir?",
+        "back": "Kızlar C(5,2)=10, tek erkek C(4,1)=4 biçimde seçilir. Bu iki seçim birlikte yapılır: 10·4=40 ekip."
+      },
+      {
+        "front": "(x−2)⁴ açılımında x²’nin katsayısı kaçtır?",
+        "back": "x üssü 4−r=2 olması için r=2 alınır. Katsayı C(4,2)(−2)²=6·4=24’tür; bu baştan üçüncü terimdir."
+      }
+    ],
+    "source": {
+      "book": "TYT-mat",
+      "page": 74
+    }
+  },
+  {
+    "id": "mat-tyt-18",
+    "subject": "matematik",
+    "exam": "TYT",
+    "title": "Olasılıkta örnek uzay ve olaylar",
+    "unit": "Olasılıkta örnek uzay ve olaylar",
+    "minutes": 12,
+    "tags": [
+      "Olasılıkta Temel Kavramlar ve Basit Olaylar"
+    ],
+    "summary": "79. sayfanın iki para örnek uzayı {YY,YT,TY,TT}’dir.",
+    "visual": {
+      "type": "flow",
+      "nodes": [
+        {
+          "label": "Tanım ve koşul",
+          "detail": "79. sayfanın iki para örnek uzayı {YY,YT,TY,TT}’dir."
+        },
+        {
+          "label": "Yöntem ve örnek",
+          "detail": "80. sayfada P(A)=s(A)/s(E) yalnız eş olasılıklı çıktılar için kullanılır."
+        },
+        {
+          "label": "Sonucu denetle",
+          "detail": "Çiftler {2,4,6}, 3’ün katları {3,6}; birleşim {2,3,4,6}’dır. Dört uygun çıktı/altı eş olası çıktı=2/3."
+        }
+      ]
+    },
+    "sections": [
+      {
+        "title": "Olasılıkta Temel Kavramlar ve Basit Olaylar",
+        "text": "79. sayfanın iki para örnek uzayı {YY,YT,TY,TT}’dir. YT ile TY farklı sıralı çıktılardır; yalnız “bir yazı bir tura” diyerek birleştirirsen eş olasılıklı dört çıktıyı kaybedersin. Üç para 2³=8, iki zar 6²=36 çıktı verir. Olay örnek uzayın alt kümesidir; ayrık olayların kesişimi boştur, tümleyen olay ise A’nın dışındaki bütün çıktıları kapsar. Deneyin fiziksel adalet koşulu olmadan sonuçları eş şanslı varsayma."
+      },
+      {
+        "title": "Olayı say ve olasılığı denetle",
+        "text": "80. sayfada P(A)=s(A)/s(E) yalnız eş olasılıklı çıktılar için kullanılır. Kırmızı-mavi-sarı bilye örneğinde kırmızı k=m+s olduğundan toplam 2k’dir. m/(2k)=2/5 →5m=4k; dolayısıyla m=4t,k=5t,s=t olur. Sarı sayısı 1 ile 5 arasında ve uçlar hariç olduğundan en küçük t=2, m=8’dir. Birleşimde ortak olay bir kez çıkarılır; tümleyende P(A′)=1−P(A) kullanılır. Bu bağıntılar sayma yükünü azaltır ama örnek uzayı doğru kurma zorunluluğunu kaldırmaz."
+      }
+    ],
+    "memory": "Çiftler {2,4,6}, 3’ün katları {3,6}; birleşim {2,3,4,6}’dır. Dört uygun çıktı/altı eş olası çıktı=2/3.",
+    "question": {
+      "stem": "Adil bir zar atıldığında çift veya 3’ün katı gelme olasılığı kaçtır?",
+      "options": [
+        "1/2",
+        "2/3",
+        "5/6",
+        "1/3"
+      ],
+      "answer": 1,
+      "explanation": "Çiftler {2,4,6}, 3’ün katları {3,6}; birleşim {2,3,4,6}’dır. Dört uygun çıktı/altı eş olası çıktı=2/3."
+    },
+    "cards": [
+      {
+        "front": "Adil bir zar atıldığında çift veya 3’ün katı gelme olasılığı nedir?",
+        "back": "Çiftler {2,4,6}, 3’ün katları {3,6}’dır; ortak 6 iki kez sayılmamalıdır. Birleşim {2,3,4,6} dört çıktı içerir. Olasılık 4/6=2/3’tür."
+      },
+      {
+        "front": "Eş olası çıktılarda olay olasılığı nasıl bulunur?",
+        "back": "Uygun çıktı sayısı bütün çıktı sayısına bölünür. Ortak çıktıları iki kez sayma; tümleyenle P(A′)=1−P(A) kullanılabilir."
+      }
+    ],
+    "source": {
+      "book": "TYT-mat",
+      "page": 79
+    }
+  },
+  {
+    "id": "mat-tyt-19",
+    "subject": "matematik",
+    "exam": "TYT",
+    "title": "Fonksiyon kavramı, türleri ve işlemler",
+    "unit": "Fonksiyon kavramı, türleri ve işlemler",
+    "minutes": 32,
+    "tags": [
+      "Fonksiyon Kavramı ve Gösterimi",
+      "İçine, Örten, Birebir, Birim ve Sabit Fonksiyonlar",
+      "Doğrusal, Parçalı, Çift ve Tek Fonksiyonlar"
+    ],
+    "summary": "81. sayfanın ok şemasında A’nın her elemanından tam bir ok çıkmalıdır; B’de bazı elemanlara hiç ok gelmeyebilir veya aynı elemana birden çok ok gelebilir.",
+    "visual": {
+      "type": "flow",
+      "nodes": [
+        {
+          "label": "Tanım ve koşul",
+          "detail": "81. sayfanın ok şemasında A’nın her elemanından tam bir ok çıkmalıdır; B’de bazı elemanlara hiç ok gelmeyebilir veya aynı elemana birden çok ok gelebilir."
+        },
+        {
+          "label": "Yöntem ve örnek",
+          "detail": "82. sayfanın f(3x−2) sorularında önce istenen girdiyi kur: f(7) için 3x−2=7 →x=3 yazılır."
+        },
+        {
+          "label": "Sonucu denetle",
+          "detail": "Sağ taraf (3x−2)²+9’dur. f(t)=t²+9, dolayısıyla f(4)=16+9=25 bulunur."
+        }
+      ]
+    },
+    "sections": [
+      {
+        "title": "Fonksiyon Kavramı ve Gösterimi",
+        "text": "81. sayfanın ok şemasında A’nın her elemanından tam bir ok çıkmalıdır; B’de bazı elemanlara hiç ok gelmeyebilir veya aynı elemana birden çok ok gelebilir. A tanım, B değer, gerçekten ulaşılan f(A) görüntü kümesidir. f(A)⊆B her fonksiyonda doğrudur, eşitlik ise örtenliği gösterir. m elemanlı A’dan n elemanlı B’ye fonksiyon sayısı nᵐ’dir; her girdinin bağımsız n çıktı seçeneği vardır. 82. sayfanın f(3x−2) sorularında önce istenen girdiyi kur: f(7) için 3x−2=7 →x=3 yazılır. f(3x−2)=9x²−12x+13=(3x−2)²+9 ise f(t)=t²+9 bulunur; dolayısıyla f(7)=58’dir. Görüntü aralığını belirlerken yalnız uç görüntüleri her zaman yeterli değildir. Örneğin f(x)=x², x∈[−2,1] için uçlar 4 ve 1 olsa da içte x=0 minimumu verir; görüntü [0,4] olur. Kritik noktaları ve açık/kapalı uçları birlikte incele."
+      },
+      {
+        "title": "İçine, Örten, Birebir, Birim ve Sabit Fonksiyonlar",
+        "text": "83. sayfanın şemalarında örtenlik B’nin tamamına ulaşılıp ulaşılmadığına, birebirlik farklı girdilerin aynı çıktıyı paylaşıp paylaşmadığına bakar. f:R→R, f(x)=x² örten değildir çünkü negatif değerlere ulaşamaz; birebir de değildir çünkü f(1)=f(−1). Tanım [0,∞), değer [0,∞) seçilirse aynı kural hem birebir hem örten olur. Yalnız formül değil, tanım ve değer kümeleri de fonksiyonun özelliklerini belirler. 84. sayfada birim fonksiyon her girdiyi kendisine götürür: I(x)=x. Sabit fonksiyon bütün girdileri aynı c’ye götürür ve görüntü kümesi {c}’dir. Tanım kümesinde birden fazla eleman varsa sabit fonksiyon birebir olamaz. (ax+b)/(cx+d) ifadesinin sabit olmasını katsayıların orantısıyla araştırırken paydanın sıfır olduğu noktayı dışarıda tut. Örneğin (2x+2)/(x+1)=2, x≠−1 koşuluyla sabittir; sadeleşme başlangıçtaki tanım boşluğunu doldurmaz."
+      },
+      {
+        "title": "Doğrusal, Parçalı, Çift ve Tek Fonksiyonlar",
+        "text": "85. sayfanın f(x)=x+2 grafiği y eksenini 2’de, x eksenini −2’de keser. f(x)=mx+n’de m eğim, n başlangıç/y kesim değeridir. Parçalı fonksiyonda hangi formülü kullanacağını girdinin ait olduğu aralık belirler. Kritik noktada ≤ veya < işaretine bakılır; komşu parçanın formülünü alışkanlıkla kullanmak farklı bir değer üretir. Her tanım girdisi için yalnız tek kural geçerli olmalıdır. 86. sayfanın x², sabit 3 ve cos x grafikleri y eksenine göre simetriktir; ortak test f(−x)=f(x)’tir. x,x³,sin x grafikleri orijine göre simetrik olup f(−x)=−f(x) sağlar. Tek/çift değerlendirmesinde tanım kümesinin de sıfıra göre simetrik olması gerekir. f(x)=x²+x ne tek ne çifttir, sıfır fonksiyonu ise ikisidir. “Yalnız çift/tek dereceli terimler” kısa yolu polinom biçiminde uygulanabilir; bütün fonksiyon türlerinin tanımı yerine kullanılamaz."
+      },
+      {
+        "title": "Fonksiyonlarda Dört İşlem ve Grafik Çizimi",
+        "text": "87. sayfanın Venn çiziminde işlemlerin tanım kümesi A∩B olarak gösterilir; f(x) ve g(x) aynı girdide tanımlı olmalıdır. Bölüm için buna g(x)≠0 koşulu eklenir. f(x)=√x, g(x)=x−1 ise f/g, x≥0 ve x≠1 için tanımlıdır. Çarpım f·g ile bileşke f∘g farklıdır: biri aynı girdideki çıktıları çarpar, diğeri bir çıktıyı ötekinin girdisi yapar. 88. sayfada grafik, bütün (x,f(x)) noktalarının kümesidir. Tanım kümesi grafiğin x eksenindeki, görüntü kümesi y eksenindeki izdüşümüdür; grafiğin yalnız iki ekseni kestiği noktalar değildir. Doğrusal fonksiyon için iki farklı x seçmek doğruyu belirlemeye yeter; fakat aralıkla sınırlı bir tanım kümesinde bütün doğruyu çizmek doğru olmaz. Örneğin f(x)=x+2, x∈[0,3] grafiği (0,2) ile (3,5) arasındaki kapalı doğru parçasıdır."
+      }
+    ],
+    "memory": "Sağ taraf (3x−2)²+9’dur. f(t)=t²+9, dolayısıyla f(4)=16+9=25 bulunur.",
+    "question": {
+      "stem": "f(3x−2)=9x²−12x+13 ise f(4) kaçtır?",
+      "options": [
+        "16",
+        "20",
+        "25",
+        "36"
+      ],
+      "answer": 2,
+      "explanation": "Sağ taraf (3x−2)²+9’dur. f(t)=t²+9, dolayısıyla f(4)=16+9=25 bulunur."
+    },
+    "cards": [
+      {
+        "front": "f(3x−2)=9x²−12x+13 ise f(4) kaçtır?",
+        "back": "Sağ taraf (3x−2)²+9’dur; dolayısıyla f(t)=t²+9 olur. f(4)=16+9=25. Alternatif olarak 3x−2=4 için x=2 yazıp 36−24+13=25 bulunur."
+      },
+      {
+        "front": "f(x)=√x, g(x)=x−1 için (f/g)(x)’in gerçek tanım kümesi nedir?",
+        "back": "Karekök x≥0 gerektirir; g bütün gerçeklerde tanımlıdır. Bölme ayrıca x−1≠0 ister. Tanım [0,1)∪(1,∞) olur."
+      }
+    ],
+    "source": {
+      "book": "TYT-mat",
+      "page": 81
+    }
+  },
+  {
+    "id": "mat-tyt-20",
+    "subject": "matematik",
+    "exam": "TYT",
+    "title": "Fonksiyon grafikleri, bileşke ve ters",
+    "unit": "Fonksiyon grafikleri, bileşke ve ters",
+    "minutes": 16,
+    "tags": [
+      "Grafik Testleri ve İki Fonksiyonun Bileşkesi",
+      "Bir Fonksiyonun Tersi ve Grafik Uygulamaları"
+    ],
+    "summary": "89. sayfada düşey doğru testi aynı x için birden fazla y olup olmadığını araştırır.",
+    "visual": {
+      "type": "flow",
+      "nodes": [
+        {
+          "label": "Tanım ve koşul",
+          "detail": "89. sayfada düşey doğru testi aynı x için birden fazla y olup olmadığını araştırır."
+        },
+        {
+          "label": "Yöntem ve örnek",
+          "detail": "90. sayfanın üç kümeli ok şemasında g∘f, önce A’dan f ile B’ye, sonra g ile C’ye ilerler."
+        },
+        {
+          "label": "Sonucu denetle",
+          "detail": "Ters fonksiyon 7 çıktısını veren girdiyi bulur. 3x−2=7 eşitliğinden x=3 bulunur; f(3)=7 sağlaması yapılır."
+        }
+      ]
+    },
+    "sections": [
+      {
+        "title": "Grafik Testleri ve İki Fonksiyonun Bileşkesi",
+        "text": "89. sayfada düşey doğru testi aynı x için birden fazla y olup olmadığını araştırır. Bir düşey doğru grafiği iki noktada kesiyorsa fonksiyon koşulu bozulur. Yatay doğru testi birebirliği inceler: bir yatay doğru iki farklı noktada keserse iki girdi aynı çıktıya gitmiştir. Örtenlik için ayrıca ilan edilen değer kümesini bilmek gerekir; değer kümesindeki her y’ye en az bir nokta düşmelidir. Grafiğin x ekseni üstünde kalan parçaları f(x)>0 koşulunun çözümünü verir. 90. sayfanın üç kümeli ok şemasında g∘f, önce A’dan f ile B’ye, sonra g ile C’ye ilerler. f(x)=2x+1, g(x)=x² ise (g∘f)(x)=(2x+1)², (f∘g)(x)=2x²+1’dir; sıra genelde sonucu değiştirir. İç fonksiyonun çıktısı dış fonksiyonun tanım kümesine girmelidir. Örneğin dış fonksiyon √x ise içerideki ifadenin negatif olmaması gerekir. Bileşkenin tanım koşulunu yalnız iki formülün ayrı ayrı tanımlı olmasına indirgeme."
+      },
+      {
+        "title": "Bir Fonksiyonun Tersi ve Grafik Uygulamaları",
+        "text": "91. sayfada ters fonksiyon eşlemeyi geri çevirir: f(x)=y ise f⁻¹(y)=x. Bu nedenle ilan edilen A ve B arasında tersin fonksiyon olması için f birebir ve örten olmalıdır. y=3x−2’den x=(y+2)/3 çözülür ve f⁻¹(x)=(x+2)/3 yazılır. f⁻¹ ifadesi 1/f demek değildir. (x,y) noktası ters grafikte (y,x) olur; iki grafik y=x doğrusuna göre simetriktir. 92. sayfada iki nokta üzerinden kural kurarken eğim m=(y₂−y₁)/(x₂−x₁)’dir. (0,2) ve (3,8) için eğim 2, kural f(x)=2x+2 çıkar. Bir ücret hikâyesinde 2 sabit başlangıç bedeli, 2x değişen bölüm olabilir; sabit terim varsa ilişki doğru orantı değildir ama doğrusaldır. Grafikte f⁻¹(8) sorusu y=8’i hangi x’in verdiğini arar; örnekte sonuç 3’tür. Bileşke, ters ve işaret sorularında önce arananın x mi y mi olduğunu söyle."
+      }
+    ],
+    "memory": "Ters fonksiyon 7 çıktısını veren girdiyi bulur. 3x−2=7 eşitliğinden x=3 bulunur; f(3)=7 sağlaması yapılır.",
+    "question": {
+      "stem": "f(x)=3x−2 için f⁻¹(7) kaçtır?",
+      "options": [
+        "1",
+        "3",
+        "7/3",
+        "19"
+      ],
+      "answer": 1,
+      "explanation": "Ters fonksiyon 7 çıktısını veren girdiyi bulur. 3x−2=7 eşitliğinden x=3 bulunur; f(3)=7 sağlaması yapılır."
+    },
+    "cards": [
+      {
+        "front": "f(x)=2x+1, g(x)=x² için (g∘f)(2) ve (f∘g)(2) nedir?",
+        "back": "Önce f(2)=5, sonra g(5)=25; böylece (g∘f)(2)=25. Diğer sırada g(2)=4, f(4)=9 bulunur. Değerler farklıdır."
+      },
+      {
+        "front": "f(x)=3x−2 için f⁻¹(7) kaçtır?",
+        "back": "3x−2=7 eşitliğini sağlayan girdi aranır. 3x=9, x=3 bulunur; f⁻¹(7)=3. Kontrol: f(3)=7."
+      }
+    ],
+    "source": {
+      "book": "TYT-mat",
+      "page": 89
+    }
+  },
+  {
+    "id": "mat-tyt-21",
+    "subject": "matematik",
+    "exam": "TYT",
+    "title": "Polinomlar ve çarpanlara ayırma",
+    "unit": "Polinomlar ve çarpanlara ayırma",
+    "minutes": 40,
+    "tags": [
+      "Polinom Kavramı ve Polinomlarda İşlemler",
+      "Polinomlarda Bölme ve Bölmeden Kalan Bulma",
+      "Ortak Çarpan, Gruplandırma ve Kare Özdeşlikleri"
+    ],
+    "summary": "93. sayfanın polinom tanımında değişkenin üsleri doğal sayıdır; x⁻¹ ve √x içeren ifadeler x’in polinomu değildir.",
+    "visual": {
+      "type": "flow",
+      "nodes": [
+        {
+          "label": "Tanım ve koşul",
+          "detail": "93. sayfanın polinom tanımında değişkenin üsleri doğal sayıdır; x⁻¹ ve √x içeren ifadeler x’in polinomu değildir."
+        },
+        {
+          "label": "Yöntem ve örnek",
+          "detail": "94. sayfadaki çarpma örneğinde üçüncü ve ikinci dereceli polinomun çarpımı beşinci derecelidir; baş terimler 6x³·(−2x²)=−12x⁵’i verir."
+        },
+        {
+          "label": "Sonucu denetle",
+          "detail": "Kalan teoremine göre kalan P(2)’dir. P(2)=8−8+12−5=7 bulunur."
+        }
+      ]
+    },
+    "sections": [
+      {
+        "title": "Polinom Kavramı ve Polinomlarda İşlemler",
+        "text": "93. sayfanın polinom tanımında değişkenin üsleri doğal sayıdır; x⁻¹ ve √x içeren ifadeler x’in polinomu değildir. Katsayılar gerçek olabilir: √2·x² bir polinom terimidir. Derece, sıfır olmayan en yüksek katsayının üssüdür; sabit sıfırdan farklı polinomun derecesi 0, sıfır polinomunun derecesi tanımsızdır. P(1) katsayılar toplamını, P(0) sabit terimi verir. P(1) ve P(−1)’in toplamı/ farkı çift/tek dereceli katsayıları ayırır. 94. sayfadaki çarpma örneğinde üçüncü ve ikinci dereceli polinomun çarpımı beşinci derecelidir; baş terimler 6x³·(−2x²)=−12x⁵’i verir. Toplamda ise en yüksek terimler birbirini götürebilir: (x²+1)+(−x²+x)=x+1. Dereceler farklıysa yüksek dereceli terimin karşılığı bulunmadığından toplamın derecesi büyük olan derecedir. Örneğin m<n için P±Q’nun derecesi n’dir. Derece kuralını uygulamadan önce sıfır polinomu ve baş katsayıların yok olması olasılıklarını incele."
+      },
+      {
+        "title": "Polinomlarda Bölme ve Bölmeden Kalan Bulma",
+        "text": "95. sayfanın ana eşitliği P=Q·B+K’dir; kalanın derecesi bölenin derecesinden küçük olmalıdır. Uzun bölmede her adımda baş terimler bölünür, bulunan terim bölenle çarpılıp çıkarılır. Sayfanın 5x⁴−3x³−2x²+4x−1 örneğinde bölüm 5x²−28x+163, kalan −951x+814’tür. Katsayıları geri çarparak kontrol et: x²+5x−5 ile bu bölümün çarpımına kalan eklendiğinde başlangıç polinomu elde edilir. Ara işlemle sonuç satırı uyuşmazsa bu eşitlik belirleyicidir. 96. sayfada x−a ile bölmede x=a yazmak bölenli çarpımı sıfırlar ve sabit kalan P(a) olur. P(x)=x³−2x²+6x−5 için P(1)=1−2+6−5=0; dolayısıyla x−1 çarpandır. Bölüm x²−x+5 bulunur. Bölen 2x−3 ise sıfırlayan değer 3/2’dir, 3 değildir. İkinci dereceli bölenle kalanı tek sayı sanma; kalan en çok birinci dereceli ax+b olabilir ve iki koşulla belirlenebilir."
+      },
+      {
+        "title": "Ortak Çarpan, Gruplandırma ve Kare Özdeşlikleri",
+        "text": "97. sayfada her terimdeki ortak çarpanı dışarı almak dağılmanın tersidir. 7x⁶+5x⁴−x²=x²(7x⁴+5x²−1) yazılır; dışarı alınan x² son terimi −1’e dönüştürür. Dört terimde ortak parantez oluşturmak için gruplama yapılabilir: x³+5x²−x−5=x²(x+5)−(x+5)=(x²−1)(x+5). İlk grubu artı, ikinciyi eksiyle almak gerekebilir; açıp kontrol etmek işaret hatasını yakalar. 98. sayfanın alan şekilleri (a+b)²=a²+2ab+b² bağıntısındaki 2ab’nin iki ayrı dikdörtgenden geldiğini gösterir. a²+b²’yi (a+b)² yapmak bu iki bölgeyi eklemek olur. İki kare farkında a²−b²=(a−b)(a+b) yazılır; 9x²−16=(3x−4)(3x+4). Önceki örneğin x²−1 çarpanı bu yöntemle (x−1)(x+1) olur. Çarpanlara ayırmayı ilk elde edilen iki parantezde durdurma; her çarpanın daha fazla ayrılıp ayrılmadığını kontrol et."
+      },
+      {
+        "title": "Küp Özdeşlikleri ve Üç Terimli İfadeler",
+        "text": "99. sayfada toplamın küpü ile küpler toplamını ayır: (a+b)³ dört terim içerirken a³+b³=(a+b)(a²−ab+b²)’dir. x³−8 için 8=2³ görülür ve (x−2)(x²+2x+4) bulunur. İkinci parantezdeki orta terimin işareti dış parantezdekine terstir; son terim daima artıdır. (3x+4)³ örneğinde 3x’in de kuvveti alınır; ilk terim 27x³ olur, 3x³ değildir. 100. sayfada 2x²−7x+6=(2x−3)(x−2) seçiminin doğruluğunu çapraz çarpımlar belirler: −4x−3x=−7x. Baş ve son terimi tutturmak tek başına yeterli değildir. Değişken değiştirme örneğinde a=4x² alınır; 16x⁴−16x²+3=a²−4a+3=(a−1)(a−3) olur. Geri dönünce (4x²−1)(4x²−3) elde edilir; 4x²−1=(2x−1)(2x+1) de ayrılabilir. Yeni değişkenin yerine asıl ifadeyi yazmadan çözümü bitirme."
+      },
+      {
+        "title": "Rasyonel İfadelerin Sadeleştirilmesi",
+        "text": "Rasyonel ifadede paydanın sıfır olmadığı değerler başlangıçta belirlenir. (x²−1)/(x−1) ifadesi (x−1)(x+1)/(x−1)=x+1 biçiminde sadeleşir, fakat x≠1 koşulu devam eder. Sadeleştirme aynı çarpanın çarpma tersiyle götürülmesidir; toplam içindeki terimler silinmez. (x+2)/(x+3) ifadesinden x’leri silip 2/3 elde edilemez. Sayfanın renkli örneğinde de aynı renkte gösterilen bütün çarpanlar eşleştirilir. Toplama ve çıkarmada çarpanlarına ayrılmış paydaların ortak katı seçilir; çıkarılan kesrin payı paranteze alınır. 1/(x−1)−1/(x+1)=[(x+1)−(x−1)]/(x²−1)=2/(x²−1), x≠±1 olur. Bölmede ikinci kesir ters çevrilirken başlangıçtaki payda koşullarına bölen kesrin sıfır olmaması da eklenir. Örneğin 1/(x−1) ifadesini (x−2)/(x−1)’e bölmek için x≠1 ve x≠2 gerekir; sonuç 1/(x−2) olsa da x=1 dışarıda kalır."
+      }
+    ],
+    "memory": "Kalan teoremine göre kalan P(2)’dir. P(2)=8−8+12−5=7 bulunur.",
+    "question": {
+      "stem": "P(x)=x³−2x²+6x−5’in x−2 ile bölümünden kalan kaçtır?",
+      "options": [
+        "0",
+        "2",
+        "5",
+        "7"
+      ],
+      "answer": 3,
+      "explanation": "Kalan teoremine göre kalan P(2)’dir. P(2)=8−8+12−5=7 bulunur."
+    },
+    "cards": [
+      {
+        "front": "P(x)=2x³−5x²+4x−1 için tek dereceli terimlerin katsayılar toplamı nedir?",
+        "back": "Tek dereceli terimler 2x³ ve 4x olduğundan toplam 6’dır. P(1)=0, P(−1)=−12; [P(1)−P(−1)]/2=6 da aynı sonucu verir."
+      },
+      {
+        "front": "(x²−4)/(x−2) ifadesinin sade biçimi ve tanım koşulu nedir?",
+        "back": "Pay (x−2)(x+2) olur. Ortak x−2 çarpanı yalnız x≠2 iken sadeleşir. Sonuç x+2, tanım koşulu x≠2’dir; x=2 başlangıç ifadesine geri eklenmez."
+      }
+    ],
+    "source": {
+      "book": "TYT-mat",
+      "page": 93
+    }
+  },
+  {
+    "id": "mat-tyt-22",
+    "subject": "matematik",
+    "exam": "TYT",
+    "title": "İkinci derece denklemler ve karmaşık sayılar",
+    "unit": "İkinci derece denklemler ve karmaşık sayılar",
+    "minutes": 24,
+    "tags": [
+      "İkinci Dereceden Denklem Kavramı ve Çarpanlarla Çözüm",
+      "Diskriminant ve Karmaşık Sayılar",
+      "Kök-Katsayı İlişkisi ve Köklerden Denklem"
+    ],
+    "summary": "102. sayfanın ax²+bx+c=0 tanımında a≠0 şarttır; bu katsayı sıfır olursa denklem ikinci dereceden kalmaz.",
+    "visual": {
+      "type": "flow",
+      "nodes": [
+        {
+          "label": "Tanım ve koşul",
+          "detail": "102. sayfanın ax²+bx+c=0 tanımında a≠0 şarttır; bu katsayı sıfır olursa denklem ikinci dereceden kalmaz."
+        },
+        {
+          "label": "Yöntem ve örnek",
+          "detail": "103. sayfada 3x²+7x+4=(3x+4)(x+1) olduğundan çarpımın sıfır olması iki çarpandan en az birinin sıfır olmasıdır."
+        },
+        {
+          "label": "Sonucu denetle",
+          "detail": "Toplam T=−1, çarpım Ç=−6’dır. x²−Tx+Ç=0 bağıntısı x²+x−6=0 verir; (x−2)(x+3)=0 ile doğrulanır."
+        }
+      ]
+    },
+    "sections": [
+      {
+        "title": "İkinci Dereceden Denklem Kavramı ve Çarpanlarla Çözüm",
+        "text": "102. sayfanın ax²+bx+c=0 tanımında a≠0 şarttır; bu katsayı sıfır olursa denklem ikinci dereceden kalmaz. x⁴ terimi veya 1/x² içeren bir ifade, içinde x² de bulunduğu için ikinci derece polinom denklemi sayılmaz. Parametre örneğinde (a−5)x³+3x^(2a−b)+x−2=0 için küp terimi a=5 ile kaldırılır; 2a−b=2’den b=8 bulunur. Son düzenlenmiş denklem 3x²+x−2=0’dır. 103. sayfada 3x²+7x+4=(3x+4)(x+1) olduğundan çarpımın sıfır olması iki çarpandan en az birinin sıfır olmasıdır. Kökler −4/3 ve −1’dir. Bir çarpana bölerek çözmek o çarpanın sıfır olduğu kökü kaybettirebilir: x(x−2)=0 denklemini doğrudan x’e bölersen x=0 kaybolur. Önce tüm ifadeyi sıfıra eşitle, çarpanlara ayır ve her çarpanı ayrı sıfırla; çözümleri başlangıç denklemine yazıp doğrula."
+      },
+      {
+        "title": "Diskriminant ve Karmaşık Sayılar",
+        "text": "104. sayfada Δ=b²−4ac kök sayısını gerçek sayılarda belirler: Δ>0 iki farklı, Δ=0 tek farklı gerçek kök, Δ<0 gerçek kök yoktur. x²+5x−6=0 örneğinde Δ=49 ve kökler (−5±7)/2, yani 1 ve −6’dır. 9x²−6x+1=(3x−1)² için Δ=0; iki kez tekrar eden kök 1/3 olsa da çözüm kümesi tek elemanlıdır. Kök formülünde paydanın 2a olduğunu, tüm payın bu sayıya bölündüğünü koru. 105. sayfa Δ<0 durumunu karmaşık sayılarla genişletir. i²=−1 kabul edilir ve z=a+bi yazılır; gerçek kısmı a, sanal kısmı b’dir. i kuvvetleri 1,i,−1,−i döngüsünü dört adımda tekrarlar; i²⁷=i³=−i olur. z’nin eşleniği a−bi’dir. Gerçek katsayılı ikinci derece denklemde gerçek olmayan kökler eşleniktir: x²−2x+5=0 için Δ=−16, kökler 1±2i bulunur. “Çözüm yok” demeden önce gerçek sayılar mı karmaşık sayılar mı istendiğini belirt."
+      },
+      {
+        "title": "Kök-Katsayı İlişkisi ve Köklerden Denklem",
+        "text": "ax²+bx+c=a(x−x₁)(x−x₂) açılırsa a[x²−(x₁+x₂)x+x₁x₂] elde edilir. Aynı kuvvetlerin katsayıları karşılaştırılınca kökler toplamı −b/a, çarpımı c/a olur. Bu bağıntılar kökleri tek tek bulmadan simetrik ifadeleri hesaplatır. Örneğin 2x²−6x+3=0 için toplam 3, çarpım 3/2’dir; x₁²+x₂²=(x₁+x₂)²−2x₁x₂=9−3=6 bulunur. Kökleri verilen denklemde baş katsayıyı 1 seçersek x²−Tx+Ç=0 yazılır; T toplam, Ç çarpımdır. Kökleri 2 ve −3 olan denklem x²+x−6=0 olur. Aynı kökleri taşıyan denklemin sıfırdan farklı sabit katları da mümkündür; baş katsayı verilmedikçe tek bir katsayı üçlüsü zorunlu değildir. Köklerden kurduğun ifadeyi (x−2)(x+3) biçiminde tekrar açarak işareti denetle; sabit terime köklerin toplamı değil çarpımı gelir."
+      }
+    ],
+    "memory": "Toplam T=−1, çarpım Ç=−6’dır. x²−Tx+Ç=0 bağıntısı x²+x−6=0 verir; (x−2)(x+3)=0 ile doğrulanır.",
+    "question": {
+      "stem": "Kökleri 2 ve −3 olan baş katsayısı 1 ikinci derece denklem hangisidir?",
+      "options": [
+        "x²−x−6=0",
+        "x²+x−6=0",
+        "x²+x+6=0",
+        "x²−5x+6=0"
+      ],
+      "answer": 1,
+      "explanation": "Toplam T=−1, çarpım Ç=−6’dır. x²−Tx+Ç=0 bağıntısı x²+x−6=0 verir; (x−2)(x+3)=0 ile doğrulanır."
+    },
+    "cards": [
+      {
+        "front": "3x²+x−2=0 denkleminin kökleri nedir?",
+        "back": "3x²+x−2=(3x−2)(x+1) olur. 3x−2=0’dan x=2/3; x+1=0’dan x=−1 bulunur. Çözüm {−1,2/3}’tür."
+      },
+      {
+        "front": "Kökleri 2 ve −3 olan, baş katsayısı 1 ikinci derece denklem nedir?",
+        "back": "Toplam T=−1, çarpım Ç=−6’dır. x²−Tx+Ç=0 formülünde yerine yazılınca x²+x−6=0 çıkar. (x−2)(x+3)=0 açılımı da aynı denklemi verir."
+      }
+    ],
+    "source": {
+      "book": "TYT-mat",
+      "page": 102
+    }
+  },
+  {
+    "id": "mat-tyt-23",
+    "subject": "matematik",
+    "exam": "TYT",
+    "title": "Veri, yayılım ve grafikler",
+    "unit": "Veri, yayılım ve grafikler",
+    "minutes": 16,
+    "tags": [
+      "Veri ve Merkezi Eğilim/Yayılım Ölçüleri",
+      "Histogram ve Grafik Çeşitleri"
+    ],
+    "summary": "107. sayfada ortalama bütün değerlerin toplamını veri sayısına böler; ortanca için önce sıralama gerekir; mod en sık görülen değerdir.",
+    "visual": {
+      "type": "flow",
+      "nodes": [
+        {
+          "label": "Tanım ve koşul",
+          "detail": "107. sayfada ortalama bütün değerlerin toplamını veri sayısına böler; ortanca için önce sıralama gerekir; mod en sık görülen değerdir."
+        },
+        {
+          "label": "Yöntem ve örnek",
+          "detail": "108. sayfanın standart sapma şeması ortalamadan farkların karesini toplar, n−1’e böler ve karekök alır; burada kitabın kullandığı örneklem standart sapması tanımı izlenir."
+        },
+        {
+          "label": "Sonucu denetle",
+          "detail": "Tam daire 360°’dir. Pay 72/360=1/5, yüzde karşılığı %20’dir."
+        }
+      ]
+    },
+    "sections": [
+      {
+        "title": "Veri ve Merkezi Eğilim/Yayılım Ölçüleri",
+        "text": "107. sayfada ortalama bütün değerlerin toplamını veri sayısına böler; ortanca için önce sıralama gerekir; mod en sık görülen değerdir. 2,2,3,5,8 verilerinde ortalama 4, ortanca 3, mod 2’dir. Son değer 80 olursa ortalama büyük ölçüde artar ama ortanca ve mod aynı kalır. Kesikli veri sayım, sürekli veri ölçüm örnekleriyle düşünülür: öğrenci sayısı 2,5 olamaz; uzunluk uygun aralıkta ara değerler alabilir. 108. sayfanın standart sapma şeması ortalamadan farkların karesini toplar, n−1’e böler ve karekök alır; burada kitabın kullandığı örneklem standart sapması tanımı izlenir. 2,4,6 için ortalama 4, kare farklar 4,0,4; S=√(8/2)=2 olur. Açıklık 6−2=4’tür. Açıklık yalnız uçları, standart sapma bütün gözlemlerin dağılımını kullanır. Aynı ortalamalı iki gruptan standart sapması küçük olanın verileri ortalamaya daha yakın toplanmıştır; bu tek başına ortalamanın yüksek olduğunu göstermez."
+      },
+      {
+        "title": "Histogram ve Grafik Çeşitleri",
+        "text": "109. sayfadaki yaşlar 3,4,8,8,10,12,13,16,17’dir. Açıklık 14 ve üç grup için genişlik 5 seçilir; 3–7,8–12,13–17 grupları sırasıyla 2,4,3 kişi içerir. Sütun yükseklikleri yaşları değil bu sıklıkları gösterir; toplam 2+4+3=9 veri bulunur. Histogramın sütunları ardışık sayısal aralıkları temsil eder ve bitişiktir. Gruplama tek tek yaşları kaybettirir; grafikten her bireyin tam yaşını geri çıkarmak mümkün değildir. 110. sayfada çizgi grafiği zamana bağlı değişimi, sütun grafiği kategoriler arasındaki miktarı, daire grafiği bütündeki payı gösterir. Dairede bir grubun açısı (grup miktarı/toplam)·360° olur; 20 kişilik sınıfta 5 kişinin dilimi 90°’dir. Sütun ve çizgi grafiğinde eksen birimleri ile başlangıcını oku: düşey eksenin kesilmesi küçük farkları görsel olarak büyütebilir. Eksenin üstündeki sayı “oran” mı “kişi sayısı” mı belirtilmeden yalnız şeklin yüksekliğinden yüzde sonucu çıkarma."
+      }
+    ],
+    "memory": "Tam daire 360°’dir. Pay 72/360=1/5, yüzde karşılığı %20’dir.",
+    "question": {
+      "stem": "Bir daire grafiğinde 72°’lik dilim bütünün yüzde kaçıdır?",
+      "options": [
+        "10",
+        "15",
+        "20",
+        "25"
+      ],
+      "answer": 2,
+      "explanation": "Tam daire 360°’dir. Pay 72/360=1/5, yüzde karşılığı %20’dir."
+    },
+    "cards": [
+      {
+        "front": "2,4,6 veri grubunun ortalaması, ortancası, açıklığı ve kitaptaki tanımla standart sapması nedir?",
+        "back": "Ortalama (2+4+6)/3=4, sıralı grubun ortancası 4, açıklık 6−2=4’tür. Kare fark toplamı 4+0+4=8; n−1=2’ye bölüp karekök alınca standart sapma 2 olur."
+      },
+      {
+        "front": "Bir daire grafiğinde 72°’lik dilim toplamın yüzde kaçını gösterir?",
+        "back": "Tam daire 360°’dir. Dilimin payı 72/360=1/5; yüzde karşılığı (1/5)·100=%20’dir."
+      }
+    ],
+    "source": {
+      "book": "TYT-mat",
+      "page": 107
+    }
+  }
+]);

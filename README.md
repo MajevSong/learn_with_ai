@@ -27,16 +27,23 @@ Numaralar MEB derlemesinin konu sırasıdır; özgün ÖSYM kitapçık numarası
 
 Ayrıca altı fen uygulaması birden fazla geçmiş sorudaki kavramı aynı problemde birleştirir; koşulları ve çıkış soruları açıkça gösterilir. Özgün uygulamalar yapay zekâ desteğiyle hazırlanmıştır; ÖSYM sorusu veya çıkacağı garanti edilen tahmin diye sunulmaz.
 
+## Matematik konu anlatımı
+
+TYT ve AYT matematik ile geometri de kitap üzerinden çalışılır. Kaynaklar, yüklenen TYT Matematik kitabının basılı 9–156 ve AYT Matematik kitabının 9–137. sayfalarıdır. Özgün sayfalar; tanım, işlem koşulu, çözümlü örnek, grafik/şekil açıklaması ve gerekçeli kontrol sorusuyla birlikte gösterilir. Kitaptaki gerekli konu anlatımı sayfaları seçilebilir; mevcut fen ve sözel dersler korunur.
+
+708 matematik sorusunun kaynak sayfası referansları, aynı sayfayı işleyen yeni derslere `math-exam-links.js` ile bağlanır. Öteleme/yansıma ve açıortay için analizi doğrudan bu kavramları kullanan beş soruya ayrıca kavram bağlantısı kurulur. Soru analizlerinin özgün metni yeniden yazılmaz. Matematik anlatımından ilgili soru arşivine ve sorudan konu anlatımına gidilebilir. Fonksiyon/parabol, birim çember ve kesen–teğet için üç etkileşimli model bulunur; modelin örnek fonksiyonu ve koşulları açıkça belirtilir.
+
 ## Kapsam
 
 - TYT Türkçe, Tarih, Coğrafya, Felsefe ve Din Kültürü.
+- TYT/AYT matematik ve geometri; temel işlemler, problemler, fonksiyonlar, cebir, trigonometri, limit, türev, integral, analitik ve katı cisimler.
 - TYT/AYT fizik, kimya ve biyolojide kavramsal bilgiler, mekanizmalar ve grafik yorumlama.
-- 128 konuya özgün kitap bölümleri üzerinden giriş; kitap ve ona bağlı açıklama aynı çalışma alanında.
+- Tüm konulara özgün kitap bölümleri üzerinden giriş; kitap ve ona bağlı açıklama aynı çalışma alanında.
 - 60 fen konusu için kaynak başlığına, sayfaya, tabloya ve grafiğe bağlı ayrıntılı açıklamalar ve gerekçeli kontrol soruları.
 - Resmî MEBİ kitaplarını sayfa sayfa site içinde açan okuyucu, büyütme ve içindekilerden konuya gitme.
 - Bölüm ve sayfa seçimiyle eşleşen açıklama; aynı sayfadaki farklı şekiller için ayrı okuma adımları. Basılı kitap numarası ve dosya numarası ayrı gösterilir.
-- 256 hafıza kartı ve 128 açıklamalı soru.
-- 96 TYT ve 32 AYT dersi; derslerde ve kartlarda sınav düzeyi filtresi.
+- Her konu için hafıza kartları ve açıklamalı kontrol sorusu.
+- Derslerde ve kartlarda TYT/AYT düzeyi ile matematik dahil ders filtresi.
 - Osmoz, enzim, protein sentezi, tanecik modeli, periyodik eğilimler, kimyasal denge ve enerji, dalga, devre, mercek ve sıvı basıncı için 11 etkileşimli model.
 - Etkileşimli kavram şemaları, karşılaştırmalar ve zaman çizelgeleri.
 - Kitaptaki anlatımı destekleyen çalışma notları, açıklamalı kontrol soruları ve hafıza kartları.
@@ -44,7 +51,7 @@ Ayrıca altı fen uygulaması birden fazla geçmiş sorudaki kavramı aynı prob
 - Cihazda ilerleme kaydı, JSON yedekleme ve geri yükleme. Sorudan geri dönünce veya sayfayı yenileyince seçilen kitap bölümü ve sayfası korunur.
 - Din kültürü görünürlüğünü çalışma tercihlerinden değiştirme.
 
-Fen anlatımları kitabın ilgili bölüm sırasını izler; tanımlar, tablolar, mekanizmalar ve grafikler özgün sayfayla birlikte açıklanır. Türkçe ve sosyalde özgün kitabın bölüm sırası ve sayfaları ana metindir; önceki çalışma notları yalnız kendi kitap bölümüne bağlanır. Başka bir kaynaktan gelen notlar kitap sayfasına aitmiş gibi gösterilmez. Matematikte soru analizleri ve özgün kaynak kitapları bulunur. AYT Edebiyat ve AYT Sosyal dersleri kapsamda değildir.
+Fen anlatımları kitabın ilgili bölüm sırasını izler; tanımlar, tablolar, mekanizmalar ve grafikler özgün sayfayla birlikte açıklanır. Türkçe ve sosyalde özgün kitabın bölüm sırası ve sayfaları ana metindir; önceki çalışma notları yalnız kendi kitap bölümüne bağlanır. Başka bir kaynaktan gelen notlar kitap sayfasına aitmiş gibi gösterilmez. Matematikte de özgün kitap sayfasına bağlı konu anlatımları, çözümlü örnekler ve soru analizleri bulunur. AYT Edebiyat ve AYT Sosyal dersleri kapsamda değildir.
 
 ## Çalıştırma
 
@@ -60,7 +67,7 @@ Tarayıcıda http://127.0.0.1:4173 adresini aç. Statik sunucu kullanımı öner
 npm test
 ```
 
-Kontrol; 128 dersin yapısını, kitapla çalışma bölümlerinin sırasını, sayfa eşlemesini, kaynakla açıklamanın birlikte gösterimini, 1.780 sorunun bire bir analiz kapsamını, benzersiz kimlikleri, seçenekleri, alıştırmaları, kaynak sayfalarını, görsel dosyalarını ve bağlantıları doğrular. İçerik doğruluğu ayrıca gözden geçirilmelidir.
+Kontrol; derslerin yapısını, kitapla çalışma bölümlerinin sırasını, sayfa eşlemesini, kaynakla açıklamanın birlikte gösterimini, 1.780 sorunun bire bir analiz kapsamını, benzersiz kimlikleri, seçenekleri, alıştırmaları, kaynak sayfalarını, görsel dosyalarını ve bağlantıları doğrular. İçerik doğruluğu ayrıca gözden geçirilmelidir.
 
 ## Kaynaklar ve içerik
 
@@ -68,7 +75,7 @@ Türkçe, tarih ve coğrafya için yerel TYT kitapları; fizik, kimya ve biyoloj
 
 `science-visuals.js` içindeki modeller şematiktir; her biri varsayımlarını ve sınırlarını belirtir. Mevcut ders kimlikleri ve tarayıcı kayıt anahtarı korunduğu için önceki ilerleme kayıtları çalışmaya devam eder.
 
-Kitapla çalışma akışı `book-study.js` ve `book-study.css` içindedir. Fen açıklamaları `data/book-physics.js`, `data/book-biology.js`, `data/book-chemistry.js` dosyalarında başlık, basılı sayfa, bakılacak şekil/tablo, açıklama ve kontrol sorusu olarak tutulur. `data/book-verbal.js`, gerçek kitap içindekilerinden ve tanımlanmış bölüm aralıklarından `node scripts/build_book_guides.cjs` ile üretilir. Eski çalışma notları `data/biology-reading.js`, `data/core-reading.js`, `data/applied-reading.js` içinde korunur; fen konularında bunların yerine yeni kitap açıklamaları gösterilir. `source-reader.js` özgün sayfayı büyütür ve sayfa değişimini açıklamayla eşler. Kitabın tamamı ve tüm içindekiler ayrıca okuyucudan erişilebilir.
+Kitapla çalışma akışı `book-study.js` ve `book-study.css` içindedir. Fen açıklamaları `data/book-physics.js`, `data/book-biology.js`, `data/book-chemistry.js` dosyalarında başlık, basılı sayfa, bakılacak şekil/tablo, açıklama ve kontrol sorusu olarak tutulur. `data/book-verbal.js`, gerçek kitap içindekilerinden ve tanımlanmış bölüm aralıklarından `node scripts/build_book_guides.cjs` ile üretilir. Eski çalışma notları `data/biology-reading.js`, `data/core-reading.js`, `data/applied-reading.js` içinde korunur; fen konularında bunların yerine yeni kitap açıklamaları gösterilir. Matematik dersleri `data/math-tyt.js`, `data/math-ayt.js`, `data/math-geometry.js`; kitap açıklamaları karşılık gelen `data/book-math-*.js` dosyalarındadır. `math-visuals.js` üç matematik modelini oluşturur. `source-reader.js` özgün sayfayı büyütür ve sayfa değişimini açıklamayla eşler. Kitabın tamamı ve tüm içindekiler ayrıca okuyucudan erişilebilir.
 
 Görselleştirilmiş anlatımlar ve örnek sorular yapay zekâ desteğiyle özgün olarak hazırlanmıştır. Kaynaklar veya ÖSYM tarafından onaylandığı iddia edilmez. Şemalar kavramları anlatır; süre ve mesafeleri ölçekli göstermez. Özgün kitap görüntüleri MEB'ye aittir ve resmî kaynak bağlantısı okuyucuda korunur. İçerik düzeltmeleri için GitHub issue açılabilir.
 

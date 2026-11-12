@@ -1,6 +1,6 @@
 {
   "name": "learn-with-ai",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "private": true,
   "description": "TYT/AYT kaynak okuyucu ve anlatım içinde görsellerle konu çalışması",
   "scripts": {
