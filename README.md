@@ -1,6 +1,6 @@
 # Net Atlası · learn_with_ai
 
-Sayısalda derece hedefleyen adaylar için **TYT Türkçe, Sosyal ve TYT/AYT Fen** görsel öğrenme atlası.
+**TYT Türkçe, Sosyal ve TYT/AYT Fen** kaynaklarını siteden çıkmadan okuyup anlatım içindeki görsellerle çalışmak için hazırlanmış bir öğrenme alanı.
 
 **Site:** https://majevsong.github.io/learn_with_ai/
 
@@ -8,16 +8,19 @@ Sayısalda derece hedefleyen adaylar için **TYT Türkçe, Sosyal ve TYT/AYT Fen
 
 - TYT Türkçe, Tarih, Coğrafya, Felsefe ve Din Kültürü.
 - TYT/AYT fizik, kimya ve biyolojide kavramsal bilgiler, mekanizmalar ve grafik yorumlama.
-- 128 mikro ders: mevcut 68 TYT Türkçe/Sosyal dersine ek olarak 22 biyoloji, 18 kimya, 20 fizik; 256 hafıza kartı ve 128 açıklamalı soru.
+- 128 konuda 280 öğretici anlatım bloğu; her açıklamanın içinde ilgili çizim, karşılaştırma, süreç veya zaman çizelgesi.
+- Resmî MEBİ kitaplarını sayfa sayfa site içinde açan okuyucu, büyütme ve içindekilerden konuya gitme.
+- Her anlatım bloğunda kendi kaynak sayfasına doğrudan erişim. Kitap sayfası ile dosya sayfası farkı bağlantılarda hesaba katılır.
+- 256 hafıza kartı ve 128 açıklamalı soru.
 - 96 TYT ve 32 AYT dersi; derslerde ve kartlarda sınav düzeyi filtresi.
 - Osmoz, enzim, protein sentezi, tanecik modeli, periyodik eğilimler, kimyasal denge ve enerji, dalga, devre, mercek ve sıvı basıncı için 11 etkileşimli model.
 - Etkileşimli kavram şemaları, karşılaştırmalar ve zaman çizelgeleri.
 - Özgün mikro dersler, açıklamalı kontrol soruları ve hafıza kartları.
-- 1–3–7–14–30–60 gün aralıklarıyla tekrar; günlük ders hedefi.
+- 1–3–7–14–30–60 gün aralıklarıyla tekrar.
 - Cihazda ilerleme kaydı, JSON yedekleme ve geri yükleme.
 - Din kültürü görünürlüğünü çalışma tercihlerinden değiştirme.
 
-AYT Edebiyat, Tarih, Coğrafya ve Felsefe Grubu bu sürümün kapsamında değildir. Fen dersleri sayısal hedef için kavram ve yorum odaklıdır; kapsamlı matematiksel problem çözümü içermez. Bu mikro dersler tam konu anlatımı veya soru bankası yerine geçmez.
+Fen konuları kavramlar, mekanizmalar ve grafik yorumlama üzerinde durur. Matematik, AYT Edebiyat ve AYT Sosyal için ayrı dersler eklenmedi.
 
 ## Çalıştırma
 
@@ -37,13 +40,13 @@ Kontrol; kapsam, ders şemaları, benzersiz kimlikler, soru seçenekleri, PDF sa
 
 ## Kaynaklar ve içerik
 
-Türkçe, tarih ve coğrafya için yerel TYT kitapları; fizik, kimya ve biyoloji için yerel TYT ve AYT kitapları kullanıldı. Toplam dokuz kitabın konu dizinleri ve ders bazında PDF sayfa referansları `data/sources.js` dosyasındadır. PDF'ler yayımlanmaz ve depoya alınmaz. Sayfa numarası PDF görüntüleyicideki sayfayı ifade eder.
+Türkçe, tarih ve coğrafya için yerel TYT kitapları; fizik, kimya ve biyoloji için yerel TYT ve AYT kitapları kullanıldı. Dokuz kitabın konu dizinleri `data/sources.js`, güncel resmî kitap görüntüsü adresleri `data/source-resources.js` içindedir. Felsefe ve din kültürü için resmî MEBİ kitapları da okuyucuya eklendi. Özgün kitap sayfaları MEB'nin içerik sunucusundan görüntülenir; PDF dosyaları depoya alınmaz.
 
 `science-visuals.js` içindeki modeller şematiktir; her biri varsayımlarını ve sınırlarını belirtir. Mevcut ders kimlikleri ve tarayıcı kayıt anahtarı korunduğu için önceki ilerleme kayıtları çalışmaya devam eder.
 
-Yerel dosyası bulunmayan felsefe ve din kültürü konuları için resmî MEB/OGM ve Diyanet kaynaklarına ders bazında bağlantı verilir. Sınav test yapısı için 2026 ÖSYM TYT kitapçığı kaynaklar ekranında bulunur. Her aday kendi sınav yılının güncel kılavuzunu kontrol etmelidir.
+Anlatımlar `data/biology-reading.js`, `data/core-reading.js` ve `data/applied-reading.js` dosyalarındadır. Her blok kendi kaynak sayfasını belirtir. `reading-room.js` çizimleri paragrafın içinde üretir; `source-reader.js` özgün kitabı aynı ekranda açar.
 
-Anlatımlar ve örnek sorular yapay zekâ desteğiyle özgün olarak hazırlanmış kısa öğretim içerikleridir. Kaynaklar veya ÖSYM tarafından onaylandığı iddia edilmez. Şemalar kavramları anlatır; süre ve mesafeleri ölçekli göstermez. İçerik düzeltmeleri için GitHub issue açılabilir.
+Görselleştirilmiş anlatımlar ve örnek sorular yapay zekâ desteğiyle özgün olarak hazırlanmıştır. Kaynaklar veya ÖSYM tarafından onaylandığı iddia edilmez. Şemalar kavramları anlatır; süre ve mesafeleri ölçekli göstermez. Özgün kitap görüntüleri MEB'ye aittir ve resmî kaynak bağlantısı okuyucuda korunur. İçerik düzeltmeleri için GitHub issue açılabilir.
 
 ## Gizlilik
 

@@ -1,8 +1,8 @@
 {
   "name": "learn-with-ai",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "private": true,
-  "description": "Sayısal hedefli adaylar için TYT Türkçe, Sosyal ve TYT/AYT Fen görsel öğrenme atlası",
+  "description": "TYT/AYT kaynak okuyucu ve anlatım içinde görsellerle konu çalışması",
   "scripts": {
     "start": "node scripts/serve.cjs",
     "test": "node scripts/check.cjs"
