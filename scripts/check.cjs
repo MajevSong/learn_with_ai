@@ -2,7 +2,7 @@
 const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),assert=require('node:assert/strict');
 const root=path.resolve(__dirname,'..'),context={window:{}};
 for(const f of ['sources.js','turkish.js','social.js','thought.js','biology.js','chemistry.js','physics.js'])vm.runInNewContext(fs.readFileSync(path.join(root,'data',f),'utf8'),context,{filename:f});
-for(const f of ['source-resources.js','biology-reading.js','core-reading.js','applied-reading.js'])vm.runInNewContext(fs.readFileSync(path.join(root,'data',f),'utf8'),context,{filename:f});
+for(const f of ['source-resources.js','exam-sources.js','biology-reading.js','core-reading.js','applied-reading.js'])vm.runInNewContext(fs.readFileSync(path.join(root,'data',f),'utf8'),context,{filename:f});
 vm.runInNewContext(fs.readFileSync(path.join(root,'source-reader.js'),'utf8'),context,{filename:'source-reader.js'});
 const lessons=context.window.LESSONS,books=context.window.SOURCE_BOOKS;
 assert(lessons.length>=128,'Expected verbal and science lesson libraries');
@@ -44,7 +44,7 @@ for(const l of lessons){
   }
 }
 assert.equal(Object.keys(context.window.READING).length,lessons.length,'Reading and lesson IDs must match');
-assert.equal(books.length,11,'Expected eleven main source books');
+assert.equal(books.length,13,'Expected thirteen main source books');
 for(const l of lessons)assert(context.window.SourceReader.lessonRef(l),`${l.id}: no in-site source reader`);
 const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
 for(const [,file]of html.matchAll(/(?:src|href)="\.\/([^"#]+)"/g))assert(fs.existsSync(path.join(root,file.split('?')[0])),`Missing asset: ${file}`);
