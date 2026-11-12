@@ -1,20 +1,23 @@
 # Net Atlası · learn_with_ai
 
-Sayısalda derece hedefleyen adaylar için **TYT Türkçe ve Sosyal Bilimler** görsel öğrenme atlası.
+Sayısalda derece hedefleyen adaylar için **TYT Türkçe, Sosyal ve TYT/AYT Fen** görsel öğrenme atlası.
 
 **Site:** https://majevsong.github.io/learn_with_ai/
 
 ## Kapsam
 
 - TYT Türkçe, Tarih, Coğrafya, Felsefe ve Din Kültürü.
-- 68 mikro ders: 20 Türkçe, 16 tarih, 17 coğrafya, 8 felsefe, 7 din kültürü; 136 hafıza kartı ve 68 açıklamalı soru.
+- TYT/AYT fizik, kimya ve biyolojide kavramsal bilgiler, mekanizmalar ve grafik yorumlama.
+- 128 mikro ders: mevcut 68 TYT Türkçe/Sosyal dersine ek olarak 22 biyoloji, 18 kimya, 20 fizik; 256 hafıza kartı ve 128 açıklamalı soru.
+- 96 TYT ve 32 AYT dersi; derslerde ve kartlarda sınav düzeyi filtresi.
+- Osmoz, enzim, protein sentezi, tanecik modeli, periyodik eğilimler, kimyasal denge ve enerji, dalga, devre, mercek ve sıvı basıncı için 11 etkileşimli model.
 - Etkileşimli kavram şemaları, karşılaştırmalar ve zaman çizelgeleri.
 - Özgün mikro dersler, açıklamalı kontrol soruları ve hafıza kartları.
 - 1–3–7–14–30–60 gün aralıklarıyla tekrar; günlük ders hedefi.
 - Cihazda ilerleme kaydı, JSON yedekleme ve geri yükleme.
 - Din kültürü görünürlüğünü çalışma tercihlerinden değiştirme.
 
-AYT Edebiyat, Tarih, Coğrafya ve Felsefe Grubu bu sürümün kapsamında değildir. TYT/AYT sayısal dersler de bu sözel destek atlasına eklenmedi. Bu mikro dersler tam konu anlatımı veya soru bankası yerine geçmez.
+AYT Edebiyat, Tarih, Coğrafya ve Felsefe Grubu bu sürümün kapsamında değildir. Fen dersleri sayısal hedef için kavram ve yorum odaklıdır; kapsamlı matematiksel problem çözümü içermez. Bu mikro dersler tam konu anlatımı veya soru bankası yerine geçmez.
 
 ## Çalıştırma
 
@@ -34,7 +37,9 @@ Kontrol; kapsam, ders şemaları, benzersiz kimlikler, soru seçenekleri, PDF sa
 
 ## Kaynaklar ve içerik
 
-Türkçe, tarih ve coğrafya derslerinde kullanıcının yerel TYT kitaplarının konu dizinleri ve PDF sayfa referansları kullanıldı. Kaynak dizini `data/sources.js` dosyasındadır. PDF'ler yayımlanmaz ve depoya alınmaz. Sayfa numarası PDF görüntüleyicideki sayfayı ifade eder.
+Türkçe, tarih ve coğrafya için yerel TYT kitapları; fizik, kimya ve biyoloji için yerel TYT ve AYT kitapları kullanıldı. Toplam dokuz kitabın konu dizinleri ve ders bazında PDF sayfa referansları `data/sources.js` dosyasındadır. PDF'ler yayımlanmaz ve depoya alınmaz. Sayfa numarası PDF görüntüleyicideki sayfayı ifade eder.
+
+`science-visuals.js` içindeki modeller şematiktir; her biri varsayımlarını ve sınırlarını belirtir. Mevcut ders kimlikleri ve tarayıcı kayıt anahtarı korunduğu için önceki ilerleme kayıtları çalışmaya devam eder.
 
 Yerel dosyası bulunmayan felsefe ve din kültürü konuları için resmî MEB/OGM ve Diyanet kaynaklarına ders bazında bağlantı verilir. Sınav test yapısı için 2026 ÖSYM TYT kitapçığı kaynaklar ekranında bulunur. Her aday kendi sınav yılının güncel kılavuzunu kontrol etmelidir.
 
