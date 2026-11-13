@@ -6,7 +6,7 @@
 
 ## Tasarım ve okuma görünümü
 
-Arayüz, kullanıcının sağladığı beş Google Stitch ekranından uyarlandı: çalışma masası, konu haritası, kitap üzerinden çalışma, mobil okuyucu ve ÖSYM soru incelemesi. Fildişi zemin, koyu yeşil ayrıntılar, Newsreader başlıklar ve Plus Jakarta Sans okuma yazısı kullanılır. Tasarım dosyalarındaki örnek sayılar, kazanım iddiaları ve eski tarihler aktarılmaz; içerik ve ilerleme gerçek uygulama verilerinden gelir.
+Arayüz, kullanıcının sağladığı beş Google Stitch ekranının HTML yapısı ve `academic_editorial_workspace/DESIGN.md` ölçüleri esas alınarak düzenlendi: çalışma masası, konu haritası, kitap üzerinden çalışma, mobil okuyucu ve ÖSYM soru incelemesi. Fildişi zemin, koyu yeşil ayrıntılar, Newsreader başlıklar ve Plus Jakarta Sans okuma yazısı kullanılır. Sol menü 256 px, üst çubuk 64 px; temel okuma metni 16,5 px / 28 px, etiketler 13/11 px olarak uygulanır. Kitap seçimi ve sayfa kontrolleri sol kaynak panelindedir. Ana sayfada Matematik ve Geometri ayrı alanlardır; Felsefe ve Din ortak modülde ayrı bağlantılarla açılır. Bilimsel Şema Kataloğu 14 farklı etkileşimli modele gider. Tasarım dosyalarındaki örnek sayılar, kazanım iddiaları ve eski tarihler aktarılmaz; içerik ve ilerleme gerçek uygulama verilerinden gelir.
 
 Masaüstünde özgün kitap görüntüsü, o sayfanın açıklaması ve ayrıntılı anlatım sürekli iki sütunda okunur. Telefonda **Kitap / Anlatım** düğmeleri aynı bölüm ve sayfa üzerinde geçiş yapar; anlatımdaki kaynak düğmesi ilgili kitap sayfasını açar. Yazı büyütme ve odak görünümü üst çubuktan değiştirilebilir. Ana sayfadaki devam kartı, geçerli kayıtlı kitap konumunu ve varsa en son erişim zamanını kullanır. ÖSYM ekranında soru ve çözüm panelleri yan yana yer alır; telefon görünümünde sırayla gösterilir.
 

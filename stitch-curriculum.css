@@ -1,147 +1,185 @@
-/* Editorial curriculum and source workspace, adapted from the supplied Stitch design. */
-.curriculum-workspace{color:var(--ink,#0a3428);min-width:0}
-.curriculum-masthead{display:flex;align-items:flex-end;justify-content:space-between;gap:28px;padding:6px 0 28px;border-bottom:1px solid var(--line,#e2e6df)}
-.curriculum-masthead .eyebrow{display:flex;align-items:center;flex-wrap:wrap;gap:13px;margin:0 0 15px;font-size:10px;letter-spacing:.08em;color:#536d60}
-.curriculum-masthead .eyebrow>span{border:1px solid #dfe5dc;background:#edf3ea;padding:5px 8px;letter-spacing:.04em;font-weight:600}
-.curriculum-masthead .eyebrow>i{font:italic 17px/1.4 var(--font-heading,'Newsreader',Georgia,serif);letter-spacing:0;color:#557166}
-.curriculum-masthead h1{font:500 clamp(36px,3.2vw,48px)/1.15 var(--font-heading,'Newsreader',Georgia,serif);letter-spacing:-.025em;color:var(--ink,#0a3428);margin:0 0 15px}
-.curriculum-masthead>div>p:last-child{font-size:14px;line-height:1.9;max-width:720px;color:#587065;margin:0}
-.curriculum-masthead-meta{display:flex;gap:20px;white-space:nowrap;padding-bottom:5px;font-size:11px;color:#65786c}
-.curriculum-masthead-meta>span+span{padding-left:20px;border-left:1px solid var(--line,#e2e6df)}
-.curriculum-masthead-meta b{color:#173e30;font-weight:600;margin-right:3px;font-size:14px}
-.curriculum-filters{border-color:var(--line,#e2e6df);border-radius:3px;background:#fff;box-shadow:none;padding:20px;gap:14px;margin:25px 0 0}
-.curriculum-filters label{color:#526a5f;font-size:10px;line-height:1.5;letter-spacing:.03em;gap:6px;min-width:120px}
-.curriculum-filters select,.curriculum-filters input[type=search]{background:#f7f8f4;border:1px solid #dce3d9;border-radius:2px;color:#244b3e;font:400 12px/1.4 var(--font-body,'Plus Jakarta Sans',sans-serif);padding:11px;min-height:43px;box-shadow:none}
-.curriculum-filters input[type=search]::placeholder{color:#758579;opacity:1}
-.curriculum-filters .button{min-height:43px;padding:10px 16px;border-radius:2px;background:#0a3428;color:white;gap:16px;font-size:11px;box-shadow:none}
-.curriculum-filters .curriculum-search{min-width:190px}
-.curriculum-exam-switch{display:flex;align-self:flex-end;padding:3px;background:#f6f7f3;border:1px solid #dce3d9;border-radius:2px;min-height:43px;box-sizing:border-box}
-.curriculum-exam-switch button{border:0;background:transparent;color:#596e62;font:600 12px var(--font-body,'Plus Jakarta Sans',sans-serif);min-height:35px;min-width:53px;padding:8px 14px;border-radius:2px;cursor:pointer}
-.curriculum-exam-switch button[aria-pressed=true]{background:#0a3428;color:#fff;box-shadow:0 1px 2px #142a161a}
+/* Exact type scale and grid rhythm from Academic Editorial Workspace/DESIGN.md. */
+body[data-route=mufredat] main#main{padding:0;max-width:none;margin:0}
+.curriculum-workspace{color:#072018;font-family:var(--font-body,'Plus Jakarta Sans',sans-serif);min-width:0}
+.curriculum-header-sheet{background:#fff;border-bottom:1px solid #e2e6df;padding:40px 40px 24px}
+.curriculum-header-inner,.curriculum-content-inner{max-width:1280px;margin:0 auto;min-width:0}
+.curriculum-masthead{display:flex;flex-direction:column;gap:16px;padding:0;border:0}
+.map-overline-row{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.curriculum-masthead .eyebrow{display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin:0;color:#4a6358;font:600 11px/16px var(--font-body,'Plus Jakarta Sans',sans-serif);letter-spacing:.06em}
+.curriculum-masthead .eyebrow>span{padding:2px 8px;background:#f7f8f4;border:1px solid #e2e6df;border-radius:4px}
+.curriculum-masthead .eyebrow>i{font:italic 15px/22px var(--font-heading,'Newsreader',Georgia,serif);letter-spacing:0;text-transform:none;color:#446553}
+.curriculum-masthead-meta{display:flex;align-items:center;gap:16px;color:#4a6358;font:600 11px/16px var(--font-body,'Plus Jakarta Sans',sans-serif);letter-spacing:.02em;white-space:nowrap}
+.curriculum-masthead-meta>span+span{padding-left:16px;border-left:1px solid #e2e6df}
+.curriculum-masthead-meta b{font-size:13px;line-height:18px;color:#0a3428;font-weight:600;margin-left:4px}
+.map-title-row{display:flex;justify-content:space-between;align-items:flex-end;gap:24px}
+.map-title-row>div:first-child{min-width:0;max-width:768px}
+.curriculum-masthead h1{font:600 32px/40px var(--font-heading,'Newsreader',Georgia,serif);letter-spacing:-.015em;margin:0;color:#0a3428}
+.map-title-row p{font:400 16.5px/28px var(--font-body,'Plus Jakarta Sans',sans-serif);color:#4a6358;margin:4px 0 0}
+.curriculum-view-switch{display:flex;flex:none;align-items:stretch;background:#f7f8f4;border:1px solid #e2e6df;border-radius:4px;padding:4px}
+.curriculum-view-switch button{display:flex;align-items:center;gap:6px;padding:7px 14px;min-height:36px;color:#4a6358;border:0;border-radius:3px;background:transparent;font:600 13px/18px var(--font-body,'Plus Jakarta Sans',sans-serif);letter-spacing:.025em;cursor:pointer}
+.curriculum-view-switch button[aria-pressed=true]{color:#0a3428;background:#fff;box-shadow:0 1px 2px #233b3212}
+.curriculum-view-switch svg{width:17px;height:17px;flex:none}
+.curriculum-filters{background:#fff;border:1px solid #e2e6df;border-radius:4px;padding:20px;box-shadow:none;gap:16px;margin:24px 0 0}
+.curriculum-filters label{font:600 11px/16px var(--font-body,'Plus Jakarta Sans',sans-serif);letter-spacing:.04em;color:#4a6358;gap:8px;min-width:140px}
+.curriculum-filters select,.curriculum-filters input[type=search]{font:400 14px/22px var(--font-body,'Plus Jakarta Sans',sans-serif);padding:10px 12px;border:1px solid #e2e6df;border-radius:4px;background:#f7f8f4;color:#233b32;min-height:44px;box-shadow:none}
+.curriculum-filters input::placeholder{color:#717975;opacity:1}
+.curriculum-filters .button{font:600 13px/18px var(--font-body,'Plus Jakarta Sans',sans-serif);min-height:44px;padding:10px 16px;border-radius:4px;background:#0a3428;color:white;box-shadow:none}
+.map-filters{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:16px;padding:24px 0 0;background:transparent;border:0;border-radius:0;margin:0}
 .map-filters .curriculum-select-exam,.map-filters .curriculum-select-subject{display:none}
-.curriculum-subject-switch{display:flex;flex-wrap:wrap;gap:7px;width:100%;padding-top:5px}
-.curriculum-subject-switch button{border:1px solid #dfe5dc;background:#f7f8f4;border-radius:2px;padding:8px 11px;min-height:36px;font:500 11px/1.3 var(--font-body,'Plus Jakarta Sans',sans-serif);color:#536b5e;cursor:pointer}
-.curriculum-subject-switch button[aria-pressed=true]{color:#0a3428;background:#edf3ea;border-color:#8da996;font-weight:700}
-.curriculum-subject-switch button:hover,.curriculum-exam-switch button:hover{background:#e9f0e6;color:#153e2d}
-.curriculum-result{display:flex;flex-wrap:wrap;justify-content:space-between;gap:9px;font-size:11px;color:#687c70;padding:15px 0 21px;margin:0}
-.curriculum-result a{font-size:10px;letter-spacing:.01em;color:#365e4c;text-underline-offset:3px}
-.curriculum-body{display:grid;grid-template-columns:minmax(0,1fr) 264px;gap:28px;align-items:start;min-width:0}
-.curriculum-main{min-width:0}
-.curriculum-table{margin-bottom:42px;scroll-margin-top:100px}
+.curriculum-exam-switch{display:inline-flex;padding:2px;border:1px solid #e2e6df;background:#f7f8f4;border-radius:4px;align-self:start;min-height:44px;box-sizing:border-box}
+.curriculum-exam-switch button{border:0;background:transparent;color:#4a6358;font:600 13px/18px var(--font-body,'Plus Jakarta Sans',sans-serif);letter-spacing:.04em;padding:9px 16px;min-width:63px;border-radius:3px;cursor:pointer}
+.curriculum-exam-switch button[aria-pressed=true]{background:#0a3428;color:white;box-shadow:0 1px 2px #233b3212}
+.map-filters .curriculum-search{position:relative;display:block;justify-self:end;width:100%;max-width:576px;min-width:0;font-size:0;line-height:0}
+.map-filters .curriculum-search:before{content:'⌕';position:absolute;left:13px;top:11px;color:#717975;font:22px/22px var(--font-body,'Plus Jakarta Sans',sans-serif)}
+.map-filters .curriculum-search input{width:100%;padding-left:38px}
+.map-filters>.button{padding:10px 12px;background:#f7f8f4;color:#244b3e;border:1px solid #e2e6df}
+.curriculum-subject-switch{display:flex;align-items:center;flex-wrap:nowrap;gap:4px;grid-column:1/-1;overflow-x:auto;min-width:0;padding:4px 0;scrollbar-width:thin;scrollbar-color:#c1c8c3 transparent}
+.curriculum-subject-switch button{flex:none;white-space:nowrap;padding:6px 8px;border:1px solid #e2e6df;border-radius:4px;background:#f7f8f4;color:#4a6358;font:600 11px/16px var(--font-body,'Plus Jakarta Sans',sans-serif);letter-spacing:.025em;min-height:32px;cursor:pointer}
+.curriculum-subject-switch button[aria-pressed=true]{background:#edf3ea;color:#0a3428;border-color:#b4c4b7;font-weight:700}
+.curriculum-subject-switch button:hover,.curriculum-exam-switch button:hover{background:#edf3ea;color:#0a3428}
+.curriculum-content-sheet{background:#f7f8f4;padding:24px 40px 40px}
+.curriculum-result{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;margin:0 0 24px;font:400 11px/18px var(--font-body,'Plus Jakarta Sans',sans-serif);color:#4a6358}
+.curriculum-result>a{font-size:11px;color:#446553;text-underline-offset:3px}
+.curriculum-body{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:start;min-width:0}
+.curriculum-main{grid-column:span 8;min-width:0}
+.curriculum-table{margin:0 0 40px;scroll-margin-top:88px}
 .curriculum-table:focus{outline:none}
-.curriculum-table:focus-visible{outline:2px solid #547c65;outline-offset:5px}
-.curriculum-table>.section-top{margin:0 0 19px;padding:0 0 13px;border-bottom:1px solid #dce3d8;display:flex;justify-content:space-between;align-items:center;gap:18px}
-.curriculum-table .section-top h2{font:500 24px/1.35 var(--font-heading,'Newsreader',Georgia,serif);color:#123d2e;margin:0 0 4px}
-.curriculum-table .section-top h2>span{font-size:9px;color:#4f735c;display:inline-block;vertical-align:middle;margin:0 5px 3px 0}
-.curriculum-table .section-top p{font-size:10px;line-height:1.6;color:#718174;margin:0}
-.curriculum-table .section-top>a{font-size:10px;white-space:nowrap;color:#466553}
-.curriculum-topic-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:19px}
-.curriculum-topic{background:#fff;border:1px solid #dfe5dc;border-radius:3px;padding:25px 26px 19px;box-shadow:0 1px 2px #19332209;scroll-margin-top:95px}
-.curriculum-topic.topic-complete{border-left:3px solid #648774}
-.topic-type{font-size:9px;line-height:1.6;letter-spacing:.04em;margin:0 0 12px;align-items:center;color:#687e6e}
-.topic-type>span:first-child{text-transform:uppercase;display:inline-block;background:#edf3ea;color:#426653;padding:4px 8px;border-radius:2px;font-weight:600}
-.topic-type>span:last-child{font-size:9px;letter-spacing:0}
-.curriculum-topic h3{font:500 28px/1.2 var(--font-heading,'Newsreader',Georgia,serif);letter-spacing:-.015em;color:#123d2e;margin:0 0 12px}
-.topic-description{font-size:12px;line-height:1.95;color:#597065;margin:0 0 16px;max-width:82ch}
-.topic-tags{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 16px}
-.topic-tags>span{padding:4px 7px;border:1px solid #e0e5dd;background:#f7f8f4;border-radius:2px;font-size:9px;line-height:1.4;color:#607266}
-.topic-source-strip{display:flex;align-items:baseline;flex-wrap:wrap;gap:7px 12px;border:1px solid #e0e6dd;background:#fafbf8;border-radius:2px;padding:10px 12px;margin-bottom:15px;color:#355a48;font-size:11px;line-height:1.7}
-.topic-source-strip>span:first-child{font-size:17px;line-height:1;color:#466957;align-self:center}
-.topic-source-strip small{color:#7a877e;font-size:10px;margin-left:5px;overflow-wrap:anywhere}
-.topic-lesson-links{gap:6px}
-.topic-lesson-links>a{border:0;border-radius:2px;background:#f5f7f2;padding:9px 11px;font-size:11px;line-height:1.6;color:#3f6350;gap:16px}
-.topic-lesson-links>a small{font-size:9px;white-space:nowrap;color:#506f5e}
-.topic-lesson-links>a small>span{font-size:14px;margin-left:7px}
-.topic-lesson-links>a.topic-primary-study{background:#0a3428;color:#fff;border:1px solid #0a3428;padding:11px 13px}
-.topic-lesson-links>a.topic-primary-study small{color:#fff;font-weight:600}
-.topic-lesson-links>a:hover{background:#e9efe4;color:#1d4d36}
-.topic-lesson-links>a.topic-primary-study:hover{background:#244b3e;color:white}
-.topic-coverage-note{font-size:10px;line-height:1.9;color:#788475;margin:14px 0 0}
-.topic-reference-actions{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:13px}
-.topic-book-sections,.topic-question-links{border-top:1px solid #e3e8df;padding-top:12px;margin-top:0;min-width:0}
-.topic-book-sections>summary,.topic-question-links>summary{font-size:10px;line-height:1.65;color:#446754;cursor:pointer;min-height:25px;overflow-wrap:anywhere}
-.topic-question-links summary b{display:inline-block;min-width:20px;padding:1px 5px;background:#edf3ea;border:1px solid #d8e2d4;border-radius:2px;margin-left:5px;color:#234d38;font-size:10px;font-weight:600;text-align:center}
-.topic-question-links summary>span{margin-left:7px;font-size:13px}
-.topic-book-sections>a,.topic-question-links>a{display:flex;gap:12px;justify-content:space-between;align-items:baseline;padding:9px 0;border-bottom:1px solid #edf0e9;color:#526e5b;font-size:10px;line-height:1.9;overflow-wrap:anywhere}
-.topic-book-sections>a span,.topic-question-links>a b{font-size:9px;white-space:nowrap;font-weight:500;flex:none;color:#7a8c7c}
-.topic-history{margin:13px 0 0;padding-top:12px;border-top:1px solid #e2e7de}
-.topic-history>summary{display:flex;gap:12px;justify-content:space-between;align-items:center;list-style:none;cursor:pointer;font-size:11px;font-weight:500;line-height:1.7;color:#3c614d}
+.curriculum-table:focus-visible{outline:2px solid #446553;outline-offset:4px}
+.curriculum-table>.section-top{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-bottom:8px;border-bottom:1px solid #e2e6df;margin:0 0 24px}
+.curriculum-table .section-top h2{font:600 20px/28px var(--font-heading,'Newsreader',Georgia,serif);margin:0;color:#0a3428}
+.curriculum-table .section-top h2>span{font-size:8px;vertical-align:middle;margin:0 5px 3px 0;color:#446553;display:inline-block}
+.curriculum-table .section-top>a{font:500 11px/16px var(--font-body,'Plus Jakarta Sans',sans-serif);color:#4a6358;white-space:nowrap;text-decoration:none}
+.curriculum-topic-grid{display:flex;flex-direction:column;gap:24px}
+.curriculum-topic{display:flex;flex-direction:column;gap:16px;padding:24px;border:1px solid #e2e6df;border-radius:8px;background:#fff;min-width:0;box-shadow:0 1px 2px #233b320b;scroll-margin-top:88px}
+.curriculum-topic:hover{border-color:#b3c1b5}
+.curriculum-topic.topic-complete{border-left:2px solid #7b9e89}
+.topic-type{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin:0;color:#4a6358;font:500 11px/16px var(--font-body,'Plus Jakarta Sans',sans-serif)}
+.topic-type>div:first-child{display:flex;align-items:center;flex-wrap:wrap;gap:8px}
+.topic-type>div:first-child>span:first-child{text-transform:uppercase;font-weight:600;letter-spacing:.04em;background:#edf3ea;color:#446553;border-radius:4px;padding:3px 8px}
+.topic-type i{font-style:normal;color:#c1c8c3}
+.topic-card-progress{display:flex;align-items:center;gap:10px;font-size:11px;color:#4a6358}
+.topic-card-progress progress{appearance:none;width:80px;height:6px;border:1px solid #e2e6df;border-radius:5px;background:#f7f8f4;overflow:hidden}
+.topic-card-progress progress::-webkit-progress-bar{background:#f7f8f4}
+.topic-card-progress progress::-webkit-progress-value{background:#446553}
+.topic-card-progress progress::-moz-progress-bar{background:#446553}
+.curriculum-topic h3{font:500 32px/40px var(--font-heading,'Newsreader',Georgia,serif);letter-spacing:-.015em;color:#0a3428;margin:0}
+.topic-description{font:400 16.5px/28px var(--font-body,'Plus Jakarta Sans',sans-serif);margin:0;color:#4a6358;max-width:70ch}
+.topic-tags{display:flex;align-items:center;flex-wrap:wrap;gap:6px;margin:0;padding-top:2px}
+.topic-tags>span{font:500 14px/22px var(--font-body,'Plus Jakarta Sans',sans-serif);background:#f7f8f4;border:1px solid #e2e6df;border-radius:4px;padding:3px 8px;color:#414845}
+.topic-source-strip{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin:0;padding:9px 12px;border:1px solid #e2e6df;border-radius:4px;background:#fafbf8;font:400 14px/22px var(--font-body,'Plus Jakarta Sans',sans-serif);color:#233b32;min-width:0}
+.topic-source-strip>span:first-child{font-size:19px;color:#4a6358;line-height:1}
+.topic-source-strip small{font-size:14px;color:#4a6358;margin-left:6px;overflow-wrap:anywhere}
+.topic-card-actions{display:grid;grid-template-columns:.9fr 1fr 1.45fr;align-items:stretch;gap:8px;padding-top:12px;border-top:1px solid #e2e6df}
+.topic-card-actions>a,.topic-card-actions>button{display:flex;align-items:center;justify-content:center;gap:8px;font:600 13px/18px var(--font-body,'Plus Jakarta Sans',sans-serif);letter-spacing:.01em;color:#233b32;text-decoration:none;border:1px solid #e2e6df;border-radius:4px;background:#fff;padding:9px 11px;min-height:44px;box-sizing:border-box;cursor:pointer;min-width:0;text-align:center}
+.topic-card-actions>a.topic-open-study{background:#0a3428;color:white;border-color:#0a3428}
+.topic-card-actions>a:hover,.topic-card-actions>button:hover{background:#edf3ea;color:#0a3428}
+.topic-card-actions>a.topic-open-study:hover{background:#244b3e;color:white}
+.topic-card-actions svg{width:17px;height:17px;flex:none}
+.topic-card-actions b{font:600 11px/16px var(--font-body,'Plus Jakarta Sans',sans-serif);letter-spacing:.015em;background:#edf3ea;border:1px solid #cfdbcd;border-radius:3px;color:#0a3428;padding:1px 5px;white-space:nowrap}
+.topic-card-actions i{font-size:14px;line-height:1;font-style:normal;flex:none;color:#717975}
+.topic-expand-panel:not([open]){display:none}
+.topic-book-sections,.topic-question-links,.topic-linked-studies{margin:0;padding:16px;border:1px solid #e2e6df;border-radius:4px;background:#f7f8f4;min-width:0}
+.topic-book-sections>summary,.topic-question-links>summary,.topic-linked-studies>summary{font:600 13px/18px var(--font-body,'Plus Jakarta Sans',sans-serif);color:#244b3e;cursor:pointer;min-height:22px;line-height:1.7}
+.topic-book-sections>a,.topic-question-links>a{display:flex;justify-content:space-between;align-items:baseline;gap:12px;font:400 14px/24px var(--font-body,'Plus Jakarta Sans',sans-serif);color:#4a6358;padding:10px 0;border-bottom:1px solid #e2e6df;overflow-wrap:anywhere}
+.topic-book-sections>a:last-child,.topic-question-links>a:last-child{border:0;padding-bottom:0}
+.topic-book-sections>a span,.topic-question-links>a b{flex:none;white-space:nowrap;font:500 11px/16px var(--font-body,'Plus Jakarta Sans',sans-serif);color:#446553}
+.topic-lesson-links{display:flex;flex-direction:column;gap:8px;margin-top:12px}
+.topic-lesson-links>a{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:8px 0;background:none;border:0;border-radius:0;font:400 14px/24px var(--font-body,'Plus Jakarta Sans',sans-serif);color:#244b3e;border-bottom:1px solid #e2e6df}
+.topic-coverage-note{margin:0;font:400 14px/22px var(--font-body,'Plus Jakarta Sans',sans-serif);color:#717975}
+.topic-history{padding:16px;border:1px solid #e2e6df;border-radius:4px;margin:0;background:#f7f8f4}
+.topic-history>summary{display:flex;align-items:center;gap:8px;list-style:none;cursor:pointer;color:#0a3428;font:600 13px/18px var(--font-body,'Plus Jakarta Sans',sans-serif)}
 .topic-history>summary::-webkit-details-marker{display:none}
-.topic-history>summary:before{content:'▥';font-size:15px;color:#9a6427}
-.topic-history>summary>span{margin-left:auto;font-size:9px;font-weight:400;color:#7c897e}
-.topic-history>summary:after{content:'+';font-size:15px;font-weight:400;color:#627b69;margin-left:3px}
+.topic-history>summary:before{content:'▥';font-size:18px;color:#693700}
+.topic-history>summary>span{font:500 11px/16px var(--font-body,'Plus Jakarta Sans',sans-serif);color:#4a6358;margin-left:auto}
+.topic-history>summary:after{content:'+';font:400 18px/1 var(--font-body,'Plus Jakarta Sans',sans-serif);color:#717975;margin-left:8px}
 .topic-history[open]>summary:after{content:'−'}
-.topic-history .history-context{font:italic 15px/1.6 var(--font-heading,'Newsreader',Georgia,serif);color:#738173;margin:12px 0}
-.history-year-grid{grid-template-columns:repeat(8,minmax(0,1fr));gap:6px;margin-top:13px}
-.history-year-grid>div{padding:10px 3px;background:#f9faf7;border:1px solid #e2e7de;border-radius:2px}
-.history-year-grid b{font-size:9px;font-weight:500;color:#637b6a}
-.history-year-grid span{font:500 25px/1.1 var(--font-heading,'Newsreader',Georgia,serif);color:#214f3b;margin:7px 0;overflow-wrap:anywhere}
-.history-year-grid small{font-size:7px;color:#859084;line-height:1.5}
-.topic-history>p:not(.history-context){color:#7c897b;font-size:9px;line-height:1.9;margin-top:12px}
-.topic-history>small{display:block;font-size:8px;color:#8a9587;margin-top:8px;overflow-wrap:anywhere}
-.distribution-issues{border:1px solid #e7dcc9;border-left:2px solid #a47a39;background:#fbf5eb;border-radius:2px;padding:11px 14px;margin:0 0 17px}
-.distribution-issues summary{font-size:10px;line-height:1.6;color:#8a6b3e}
-.distribution-issues li{font-size:10px;line-height:1.9;color:#806c4e}
-.curriculum-rail{position:sticky;top:92px;display:grid;gap:19px;min-width:0}
-.curriculum-rail-card{background:#fff;border:1px solid #dfe5dc;border-radius:3px;padding:21px;box-shadow:0 1px 2px #19332209}
-.curriculum-rail-card>.eyebrow{font-size:9px;letter-spacing:.05em;color:#65806b;border-bottom:1px solid #e3e7de;padding-bottom:12px;margin:0 0 17px}
-.curriculum-rail-card h2{font:500 28px/1.2 var(--font-heading,'Newsreader',Georgia,serif);color:#123d2e;margin:0 0 9px}
-.curriculum-rail-card>p:not(.eyebrow){font:italic 16px/1.7 var(--font-heading,'Newsreader',Georgia,serif);color:#6c8070;margin:0 0 21px}
-.curriculum-progress{margin-bottom:15px}
-.curriculum-progress>div{display:flex;justify-content:space-between;gap:10px;font-size:10px;line-height:1.6;color:#6c7f6f;margin-bottom:7px}
-.curriculum-progress b{font-weight:600;color:#365d47}
-.curriculum-progress progress{display:block;width:100%;height:5px;appearance:none;border:0;border-radius:2px;overflow:hidden;background:#edf1e8}
-.curriculum-progress progress::-webkit-progress-bar{background:#edf1e8}
-.curriculum-progress progress::-webkit-progress-value{background:#638873}
-.curriculum-progress progress::-moz-progress-bar{background:#638873}
-.curriculum-rail nav{display:grid;padding-top:8px;border-top:1px solid #e4e9e0;max-height:340px;overflow:auto;scrollbar-width:thin;scrollbar-color:#c8d4c5 transparent}
-.curriculum-rail nav button{border:0;border-bottom:1px solid #edf0e9;background:#fff;display:flex;align-items:center;gap:14px;justify-content:space-between;min-height:34px;padding:8px 0;text-align:left;color:#5e7965;font:400 10px/1.5 var(--font-body,'Plus Jakarta Sans',sans-serif);cursor:pointer}
-.curriculum-rail nav button:hover{color:#0a3428;background:#f7f9f4}
-.curriculum-rail nav button b{font-weight:500;font-size:9px;color:#82937f}
-.curriculum-rail .curriculum-context-note{padding:20px;background:#fbf5eb;border:1px solid #ebdfcd;border-left:2px solid #845825;border-radius:3px;color:#7b613f}
-.curriculum-context-note>.eyebrow{font-size:9px;letter-spacing:.04em;color:#937344;margin:0 0 13px}
-.curriculum-context-note h2{font:500 22px/1.25 var(--font-heading,'Newsreader',Georgia,serif);color:#74532b;margin:0 0 12px}
-.curriculum-context-note p:not(.eyebrow){font-size:11px;line-height:1.9;color:#8a765a;margin:10px 0}
-.curriculum-context-note>a{display:inline-block;font-size:10px;color:#8a6636;margin-top:8px;line-height:1.7;text-underline-offset:3px}
-.curriculum-context-note small{font-size:9px;line-height:1.8;color:#9a8b74;margin-top:13px;border-top:1px solid #e6dccd;padding-top:13px}
-.curriculum-resource-link{position:relative;display:block;background:#fff;border:1px solid #dfe5dc;border-radius:3px;padding:20px;color:#42634e}
-.curriculum-resource-link>span{display:block;font-size:9px;letter-spacing:.05em;color:#7d8d7c;margin-bottom:10px}
-.curriculum-resource-link>b{display:block;font:500 20px/1.35 var(--font-heading,'Newsreader',Georgia,serif);max-width:175px}
-.curriculum-resource-link>i{font-style:normal;position:absolute;right:17px;bottom:20px;font-size:17px}
-.curriculum-complete{margin:31px 0;background:#f4f6ef;border:1px solid #dde5d6;border-radius:3px;padding:25px}
-.curriculum-complete>.eyebrow{font-size:9px;letter-spacing:.06em;color:#829278;margin:0 0 12px}
-.curriculum-complete h2{font:500 28px/1.2 var(--font-heading,'Newsreader',Georgia,serif);color:#315440;margin:0 0 10px}
-.curriculum-complete>p:not(.eyebrow){font-size:11px;line-height:1.9;color:#6e8065;margin:0 0 20px}
-.additional-study-links{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
-.additional-study-links>a{position:relative;background:white;border:1px solid #dfe6d6;border-radius:2px;padding:15px 29px 15px 15px}
-.additional-study-links span{font-size:8px;letter-spacing:.03em;color:#85967a}
-.additional-study-links b{display:block;font-size:11px;line-height:1.8;font-weight:500;color:#506e44}
-.additional-study-links i{font-size:13px;font-style:normal;position:absolute;right:12px;top:50%;color:#7b8f70}
-.curriculum-complete .button{border-radius:2px;font-size:10px;box-shadow:none}
-.curriculum-no-results{padding:35px 25px;background:white;border:1px solid #dfe5dc;border-radius:3px}
-.curriculum-no-results h2{font:500 27px/1.3 var(--font-heading,'Newsreader',Georgia,serif);color:#315440;margin:0 0 12px}
-.curriculum-no-results p{font-size:13px;line-height:1.9;color:#788977;margin:0}
-/* The official-source directory uses the same quiet editorial surfaces. */
-.official-status{border-radius:3px;background:#fbf5eb;border-color:#e9ddc8;padding:27px;box-shadow:none}
-.official-status h2{font:500 27px/1.25 var(--font-heading,'Newsreader',Georgia,serif);color:#76572e}
-.official-status>p:not(.eyebrow){font-size:12px;line-height:1.95;color:#88775b}
-.official-status a{font-size:10px;color:#896637}
-.official-status .exam-dates{border-color:#e7dccb}
-.official-grid{gap:18px}
-.official-card{padding:25px;border:1px solid #e0e6dc;border-radius:3px;box-shadow:0 1px 2px #19332209}
-.official-card-meta{font-size:9px;color:#7c917f;letter-spacing:.02em}
-.official-card-meta>span:first-child{padding:4px 7px;background:#eef3ea;color:#54745e}
-.official-card h3{font:500 25px/1.3 var(--font-heading,'Newsreader',Georgia,serif);margin:15px 0 12px}
-.official-card h3 a{color:#244f39}
-.official-card p,.official-card li{font-size:12px;line-height:1.95;color:#69806e}
-.official-card>small{font-size:9px;color:#8c9a88;line-height:1.8}
-.official-card summary{font-size:10px;color:#6b836f;min-height:22px}
-.official-card details p{font-size:11px;line-height:1.9}
-.source-scan-note{border-radius:3px;border-color:#dfe6d9;background:#f5f7f1}
-.source-scan-note summary{font-size:12px;color:#617d64}
-.source-scan-note p{font-size:11px;line-height:1.95}
-.curriculum-filters :is(button,select,input):focus-visible,.curriculum-workspace a:focus-visible,.curriculum-workspace summary:focus-visible{outline:2px solid #638b70;outline-offset:3px}
-@media(min-width:1600px){.curriculum-body{grid-template-columns:minmax(0,1fr) 310px;gap:32px}.curriculum-topic{padding:30px 32px 23px}.curriculum-topic h3{font-size:32px}.topic-description{font-size:14px}.topic-tags>span{font-size:10px}.topic-source-strip{font-size:12px}.topic-lesson-links>a{font-size:12px}.curriculum-rail-card{padding:25px}}
-@media(max-width:1180px){.curriculum-body{grid-template-columns:minmax(0,1fr) 235px;gap:20px}.curriculum-masthead{display:block}.curriculum-masthead-meta{margin-top:20px}.curriculum-rail-card{padding:17px}.curriculum-topic{padding:22px}.curriculum-topic h3{font-size:26px}.history-year-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.curriculum-table .section-top h2{font-size:22px}}
-@media(max-width:1000px){.curriculum-body{grid-template-columns:minmax(0,1fr)}.curriculum-rail{position:static;grid-template-columns:repeat(2,minmax(0,1fr));order:-1}.curriculum-rail nav{display:flex;flex-wrap:wrap;gap:5px;max-height:120px;overflow:auto}.curriculum-rail nav button{font-size:9px;background:#f7f9f4;border:1px solid #e4e9df;padding:5px 7px;min-height:30px;gap:7px}.curriculum-rail-card{grid-column:1/-1;padding:18px}.curriculum-rail-card h2,.curriculum-rail-card>p:not(.eyebrow),.curriculum-rail .curriculum-context-note,.curriculum-resource-link{display:none}.curriculum-rail-card>.eyebrow{border:0;padding:0;margin-bottom:12px}.curriculum-progress{max-width:400px;margin-bottom:12px}.curriculum-body{gap:22px}.curriculum-table{margin-bottom:31px}.curriculum-masthead h1{font-size:40px}.official-grid{grid-template-columns:1fr}}
-@media(max-width:650px){.curriculum-masthead{padding-bottom:21px}.curriculum-masthead h1{font-size:35px}.curriculum-masthead .eyebrow{font-size:8px;gap:9px}.curriculum-masthead .eyebrow>i{font-size:14px}.curriculum-masthead>div>p:last-child{font-size:12px;line-height:1.9}.curriculum-masthead-meta{font-size:10px;gap:14px;margin-top:16px}.curriculum-masthead-meta b{font-size:12px}.curriculum-masthead-meta>span+span{padding-left:14px}.curriculum-filters{padding:15px;gap:12px;margin-top:19px}.curriculum-exam-switch{width:100%;justify-content:space-between}.curriculum-exam-switch button{flex:1;min-height:38px}.map-filters .curriculum-select-exam{min-width:0;max-width:none}.curriculum-filters .curriculum-search{flex-basis:100%;min-width:0}.curriculum-filters label{font-size:9px}.curriculum-filters .button{width:100%;justify-content:center;min-height:44px}.curriculum-filters select,.curriculum-filters input[type=search]{min-height:44px;font-size:12px}.curriculum-subject-switch{gap:6px;padding-top:0}.curriculum-subject-switch button{font-size:10px;padding:8px 10px;min-height:38px}.curriculum-result{font-size:10px;line-height:1.9;padding:14px 0}.curriculum-rail-card{padding:15px}.curriculum-rail nav button{min-height:36px}.curriculum-topic{padding:20px 17px 16px}.curriculum-topic h3{font-size:27px}.topic-type{gap:8px;font-size:8px;margin-bottom:13px}.topic-type>span:last-child{font-size:8px}.topic-description{font-size:12px;line-height:1.95}.topic-tags{gap:5px}.topic-tags>span{font-size:9px;padding:4px 6px}.topic-source-strip{padding:9px 10px;font-size:10px;gap:6px 9px}.topic-source-strip small{font-size:9px}.topic-lesson-links>a{display:flex;font-size:11px;padding:11px;gap:12px;align-items:center;min-height:44px;box-sizing:border-box}.topic-lesson-links>a small{display:block;max-width:100px;font-size:9px;text-align:right;white-space:normal;margin:0;flex:none}.topic-lesson-links>a small>span{margin-left:3px}.topic-reference-actions{gap:11px;grid-template-columns:1fr}.topic-book-sections>summary,.topic-question-links>summary{font-size:11px;min-height:28px;padding:3px 0}.topic-book-sections>a,.topic-question-links>a{font-size:10px;min-height:30px}.topic-book-sections>a span,.topic-question-links>a b{font-size:8px}.topic-history>summary{font-size:10px;gap:8px;flex-wrap:wrap}.topic-history>summary>span{font-size:8px;margin-left:0}.topic-history>summary:after{margin-left:auto}.topic-history .history-context{font-size:15px;line-height:1.7}.history-year-grid{gap:6px;grid-template-columns:repeat(4,minmax(0,1fr))}.history-year-grid>div{padding:10px 4px}.history-year-grid span{font-size:24px}.history-year-grid small{font-size:7px}.curriculum-table>.section-top{gap:12px;margin-bottom:15px;align-items:start}.curriculum-table .section-top h2{font-size:22px}.curriculum-table .section-top p{font-size:9px}.curriculum-table .section-top>a{font-size:9px;white-space:normal;text-align:right;max-width:70px;line-height:1.8}.curriculum-complete{padding:20px 17px}.curriculum-complete h2{font-size:25px}.curriculum-complete>p:not(.eyebrow){font-size:11px}.additional-study-links{grid-template-columns:1fr}.official-status{padding:22px}.official-status h2{font-size:25px}.official-status>p:not(.eyebrow){font-size:12px}.official-card{padding:22px}.official-card h3{font-size:25px}.official-card p,.official-card li{font-size:12px}.official-filters .curriculum-context{max-width:none;line-height:1.8}.source-scan-note{padding:20px}}
+.topic-history .history-context{font:italic 15px/22px var(--font-heading,'Newsreader',Georgia,serif);color:#4a6358;margin:10px 0 0}
+.history-year-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:16px}
+.history-year-grid>div{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:12px 5px;background:#fff;border:1px solid #e2e6df;border-radius:4px;text-align:center;min-width:0}
+.history-year-grid b{font:600 11px/16px var(--font-body,'Plus Jakarta Sans',sans-serif);color:#4a6358}
+.history-year-grid span{font:600 24px/32px var(--font-heading,'Newsreader',Georgia,serif);color:#0a3428;margin:4px 0;overflow-wrap:anywhere}
+.history-year-grid small{font:400 11px/16px var(--font-body,'Plus Jakarta Sans',sans-serif);color:#717975}
+.topic-history>p:not(.history-context){font:400 11px/18px var(--font-body,'Plus Jakarta Sans',sans-serif);color:#717975;margin:16px 0 0}
+.topic-history>small{display:block;font:400 11px/18px var(--font-body,'Plus Jakarta Sans',sans-serif);color:#717975;margin-top:8px;overflow-wrap:anywhere}
+.distribution-issues{padding:14px 16px;border:1px solid #e6d8c2;border-left:2px solid #d9822b;border-radius:4px;background:#fbf3e8;margin:0 0 24px}
+.distribution-issues summary{font:600 13px/18px var(--font-body,'Plus Jakarta Sans',sans-serif);color:#693700;cursor:pointer}
+.distribution-issues li{font:400 14px/22px var(--font-body,'Plus Jakarta Sans',sans-serif);color:#6f5a3d;margin:10px 0}
+.curriculum-rail{grid-column:span 4;display:flex;flex-direction:column;gap:24px;position:static;min-width:0}
+.curriculum-rail-card,.curriculum-reference-card,.curriculum-resource-link{background:#fff;border:1px solid #e2e6df;border-radius:8px;padding:16px;box-shadow:0 1px 2px #233b320b}
+.curriculum-rail-label{display:flex;align-items:center;justify-content:space-between;gap:12px;color:#4a6358;font:600 11px/16px var(--font-body,'Plus Jakarta Sans',sans-serif);letter-spacing:.06em;padding-bottom:8px;border-bottom:1px solid #e2e6df;margin-bottom:8px}
+.curriculum-rail-label>b{font-weight:600;letter-spacing:0;color:#446553;white-space:nowrap}
+.curriculum-focus-title{display:flex;align-items:center;gap:8px;margin:16px 0;min-width:0}
+.curriculum-focus-title>span{width:40px;height:40px;display:flex;align-items:center;justify-content:center;flex:none;border:1px solid #c1d0bf;border-radius:4px;background:#edf3ea;color:#0a3428}
+.curriculum-focus-title svg{width:22px;height:22px}
+.curriculum-focus-title h2{font:600 24px/30px var(--font-heading,'Newsreader',Georgia,serif);letter-spacing:-.01em;color:#0a3428;margin:0}
+.curriculum-focus-title p{font:italic 15px/22px var(--font-heading,'Newsreader',Georgia,serif);color:#4a6358;margin:4px 0 0}
+.curriculum-focus-facts{padding-top:12px;margin:0 0 14px;border-top:1px solid #e2e6df;display:grid;gap:8px}
+.curriculum-focus-facts>div{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+.curriculum-focus-facts dt,.curriculum-focus-facts dd{font:400 14px/22px var(--font-body,'Plus Jakarta Sans',sans-serif);color:#4a6358;margin:0}
+.curriculum-focus-facts dd{color:#0a3428;font-weight:500;white-space:nowrap}
+.curriculum-rail-card>progress{appearance:none;display:block;width:100%;height:6px;border:1px solid #e2e6df;border-radius:5px;overflow:hidden;background:#f7f8f4;margin-bottom:16px}
+.curriculum-rail-card>progress::-webkit-progress-bar{background:#f7f8f4}
+.curriculum-rail-card>progress::-webkit-progress-value{background:#446553}
+.curriculum-rail-card>progress::-moz-progress-bar{background:#446553}
+.curriculum-table-index{border-top:1px solid #e2e6df;padding-top:12px}
+.curriculum-table-index>summary{font:600 11px/16px var(--font-body,'Plus Jakarta Sans',sans-serif);color:#4a6358;cursor:pointer}
+.curriculum-rail nav{display:flex;flex-direction:column;max-height:340px;overflow:auto;scrollbar-width:thin;scrollbar-color:#c1c8c3 transparent;margin-top:10px}
+.curriculum-rail nav button{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:38px;background:#fff;border:0;border-bottom:1px solid #e2e6df;padding:8px 0;text-align:left;color:#4a6358;font:400 13px/18px var(--font-body,'Plus Jakarta Sans',sans-serif);cursor:pointer}
+.curriculum-rail nav b{font-size:11px;color:#446553}
+.curriculum-context-note{padding:16px;background:#fbf3e8;border:0;border-left:2px solid #693700;border-radius:8px;margin:0;color:#414845;box-shadow:0 1px 2px #233b320b}
+.curriculum-context-note .eyebrow{font:600 13px/18px var(--font-body,'Plus Jakarta Sans',sans-serif);letter-spacing:.04em;color:#693700;margin:0 0 10px}
+.curriculum-context-note h2{font:600 20px/28px var(--font-heading,'Newsreader',Georgia,serif);color:#693700;margin:0 0 8px}
+.curriculum-context-note p:not(.eyebrow){font:italic 15px/24px var(--font-heading,'Newsreader',Georgia,serif);color:#414845;margin:0 0 14px}
+.curriculum-context-note>div{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;border-top:1px solid #e2e6df;padding-top:8px;font:600 11px/16px var(--font-body,'Plus Jakarta Sans',sans-serif);color:#4a6358}
+.curriculum-context-note small{display:block;font:400 11px/18px var(--font-body,'Plus Jakarta Sans',sans-serif);color:#717975;margin-top:12px}
+.curriculum-reference-image{display:flex;justify-content:center;align-items:center;min-height:200px;background:#f7f8f4;border:1px solid #e2e6df;border-radius:4px;padding:16px;margin:12px 0}
+.curriculum-reference-image img{display:block;width:100%;height:220px;object-fit:contain}
+.curriculum-reference-caption{display:flex;justify-content:space-between;align-items:center;gap:16px}
+.curriculum-reference-caption i{font:italic 15px/22px var(--font-heading,'Newsreader',Georgia,serif);color:#0a3428}
+.curriculum-reference-caption>span{font:600 11px/16px var(--font-body,'Plus Jakarta Sans',sans-serif);letter-spacing:.04em;text-transform:uppercase;color:#717975}
+.curriculum-resource-link .eyebrow{font:600 11px/16px var(--font-body,'Plus Jakarta Sans',sans-serif);letter-spacing:.06em;color:#4a6358;margin:0 0 12px}
+.curriculum-resource-link>a{display:flex;align-items:center;gap:8px;padding:8px 0;color:#233b32;font:400 14px/22px var(--font-body,'Plus Jakarta Sans',sans-serif)}
+.curriculum-resource-link>a>svg{width:16px;height:16px;flex:none;color:#717975}
+.curriculum-resource-link>a>i{margin-left:auto;font-size:20px;font-style:normal;color:#717975}
+.curriculum-resource-link>a.curriculum-all-resources{font-size:11px;color:#446553;border-top:1px solid #e2e6df;margin-top:8px;padding-top:12px}
+.curriculum-complete{background:#fff;border:1px solid #e2e6df;border-radius:8px;padding:24px;margin-top:40px}
+.curriculum-complete>.eyebrow{font:600 11px/16px var(--font-body,'Plus Jakarta Sans',sans-serif);letter-spacing:.06em;color:#446553;margin:0 0 12px}
+.curriculum-complete h2{font:500 28px/36px var(--font-heading,'Newsreader',Georgia,serif);color:#0a3428;margin:0 0 12px}
+.curriculum-complete>p:not(.eyebrow){font:400 14px/22px var(--font-body,'Plus Jakarta Sans',sans-serif);color:#4a6358;margin:0 0 16px}
+.additional-study-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:20px 0}
+.additional-study-links>a{position:relative;display:block;padding:16px 28px 16px 16px;background:#f7f8f4;border:1px solid #e2e6df;border-radius:4px}
+.additional-study-links span{font:500 11px/16px var(--font-body,'Plus Jakarta Sans',sans-serif);color:#4a6358;margin-bottom:8px}
+.additional-study-links b{display:block;font:500 14px/22px var(--font-body,'Plus Jakarta Sans',sans-serif);color:#244b3e}
+.additional-study-links i{position:absolute;right:12px;top:45%;font-size:16px;font-style:normal;color:#446553}
+.curriculum-complete .button{font-size:13px;min-height:42px;border-radius:4px}
+.curriculum-no-results{padding:32px 24px;border:1px solid #e2e6df;border-radius:8px;background:#fff}
+.curriculum-no-results h2{font:500 28px/36px var(--font-heading,'Newsreader',Georgia,serif);color:#0a3428;margin:0 0 12px}
+.curriculum-no-results p{font:400 16.5px/28px var(--font-body,'Plus Jakarta Sans',sans-serif);color:#4a6358}
+.curriculum-workspace[data-map-view=tree] .curriculum-topic-grid{border-left:1px solid #c1c8c3;margin-left:10px;padding-left:20px;gap:16px}
+.curriculum-workspace[data-map-view=tree] .curriculum-topic{position:relative;padding:20px;gap:12px;box-shadow:none}
+.curriculum-workspace[data-map-view=tree] .curriculum-topic:before{content:'';position:absolute;left:-21px;top:37px;width:20px;border-top:1px solid #c1c8c3}
+.curriculum-workspace[data-map-view=tree] .topic-description,.curriculum-workspace[data-map-view=tree] .topic-tags{display:none}
+.curriculum-workspace[data-map-view=tree] .curriculum-topic h3{font-size:26px;line-height:34px}
+/* Source catalogue follows the same authoritative type scale. */
+.official-status{padding:24px;border:1px solid #e6d8c2;border-radius:8px;background:#fbf3e8;box-shadow:none}
+.official-status .eyebrow{font-size:11px;color:#693700;line-height:16px}
+.official-status h2{font:500 28px/36px var(--font-heading,'Newsreader',Georgia,serif);color:#693700}
+.official-status>p:not(.eyebrow){font-size:16.5px;line-height:28px;color:#6b5a43}
+.official-status a{font-size:13px;line-height:20px;color:#78592f}
+.exam-dates dt{font-size:11px;line-height:16px}.exam-dates dd{font-size:14px;line-height:22px}
+.official-grid{gap:24px}
+.official-card{background:#fff;padding:24px;border:1px solid #e2e6df;border-radius:8px;box-shadow:0 1px 2px #233b320b}
+.official-card-meta{font:500 11px/16px var(--font-body,'Plus Jakarta Sans',sans-serif);color:#4a6358}
+.official-card-meta>span:first-child{padding:3px 8px;border-radius:4px;background:#edf3ea;color:#446553}
+.official-card h3{font:500 28px/36px var(--font-heading,'Newsreader',Georgia,serif);margin:16px 0 12px}
+.official-card h3 a{color:#0a3428}
+.official-card p,.official-card li{font:400 16.5px/28px var(--font-body,'Plus Jakarta Sans',sans-serif);color:#4a6358}
+.official-card>small{font:400 11px/18px var(--font-body,'Plus Jakarta Sans',sans-serif);color:#717975;margin-top:16px}
+.official-card summary{font:500 13px/18px var(--font-body,'Plus Jakarta Sans',sans-serif);color:#446553;min-height:26px}
+.official-card details p{font:400 14px/24px var(--font-body,'Plus Jakarta Sans',sans-serif)}
+.source-scan-note{padding:24px;background:#f7f8f4;border:1px solid #e2e6df;border-radius:4px}
+.source-scan-note summary{font:600 13px/18px var(--font-body,'Plus Jakarta Sans',sans-serif);color:#446553;cursor:pointer}
+.source-scan-note p{font:400 14px/24px var(--font-body,'Plus Jakarta Sans',sans-serif);color:#4a6358}
+.curriculum-workspace :is(button,a,summary,input,select):focus-visible,.official-filters :is(button,input,select):focus-visible{outline:2px solid #446553;outline-offset:3px}
+@media(max-width:1199px){.curriculum-header-sheet{padding:32px 24px 24px}.curriculum-content-sheet{padding:24px}.curriculum-main{grid-column:1/-1}.curriculum-rail{display:none}.map-title-row{align-items:flex-start;flex-wrap:wrap}.curriculum-view-switch{margin-top:4px}.topic-card-actions{grid-template-columns:1fr 1fr 1.4fr}.official-grid{grid-template-columns:1fr}.curriculum-masthead-meta{font-size:11px}}
+@media(max-width:767px){.curriculum-header-sheet{padding:24px 16px}.curriculum-content-sheet{padding:24px 16px 40px}.curriculum-masthead{gap:16px}.map-overline-row{align-items:flex-start;gap:12px}.curriculum-masthead .eyebrow{font-size:11px;gap:8px}.curriculum-masthead .eyebrow>i{font-size:15px}.curriculum-masthead-meta{gap:12px;font-size:11px;flex-wrap:wrap}.curriculum-masthead-meta>span+span{padding-left:12px}.curriculum-masthead h1{font-size:30px;line-height:38px}.map-title-row{display:block}.map-title-row p{font-size:16.5px;line-height:28px}.curriculum-view-switch{margin-top:16px;width:fit-content}.curriculum-view-switch button{min-height:40px;font-size:13px;padding:8px 12px}.map-filters{grid-template-columns:minmax(0,1fr) auto;gap:12px;padding-top:20px}.curriculum-exam-switch{grid-column:1/-1;justify-content:space-between;min-height:44px}.curriculum-exam-switch button{flex:1;min-height:40px;font-size:13px}.map-filters .curriculum-search{grid-column:1;max-width:none;min-width:0;flex-basis:auto}.map-filters>.button{grid-column:2;min-width:48px;width:auto;font-size:13px}.curriculum-subject-switch{grid-column:1/-1}.curriculum-subject-switch button{min-height:36px;font-size:11px}.curriculum-result{font-size:11px;line-height:18px;gap:8px;margin-bottom:24px}.curriculum-table>.section-top{gap:12px;align-items:flex-start;margin-bottom:20px}.curriculum-table .section-top h2{font-size:20px;line-height:28px}.curriculum-table .section-top>a{font-size:11px;line-height:18px;white-space:normal;text-align:right;max-width:100px}.curriculum-topic{padding:20px 16px;gap:16px;border-radius:8px}.topic-type{font-size:11px;line-height:16px;gap:10px}.topic-type>div:first-child{gap:6px}.topic-card-progress{font-size:11px;gap:8px}.topic-card-progress progress{width:72px}.curriculum-topic h3{font-size:26px;line-height:34px}.topic-description{font-size:16.5px;line-height:28px}.topic-tags>span{font-size:13px;line-height:20px;padding:4px 8px}.topic-source-strip{font-size:14px;line-height:22px;padding:10px;gap:7px}.topic-source-strip small{font-size:14px;line-height:22px}.topic-card-actions{grid-template-columns:1fr 1fr;gap:8px}.topic-card-actions>a,.topic-card-actions>button{min-height:44px;font-size:13px;line-height:18px;padding:10px 8px}.topic-card-actions>button.topic-open-questions{grid-column:1/-1}.topic-card-actions b{font-size:11px;line-height:16px}.topic-book-sections,.topic-question-links,.topic-linked-studies{padding:14px 12px}.topic-book-sections>summary,.topic-question-links>summary,.topic-linked-studies>summary{font-size:13px;line-height:20px;min-height:28px}.topic-book-sections>a,.topic-question-links>a{font-size:14px;line-height:24px;min-height:32px}.topic-book-sections>a span,.topic-question-links>a b{font-size:11px;line-height:16px}.topic-history{padding:14px 12px}.topic-history>summary{font-size:13px;line-height:20px;flex-wrap:wrap;gap:8px}.topic-history>summary>span{font-size:11px;margin-left:0}.topic-history>summary:after{margin-left:auto}.topic-history .history-context{font-size:15px;line-height:22px}.history-year-grid{gap:6px;grid-template-columns:repeat(4,minmax(0,1fr))}.history-year-grid>div{padding:10px 3px}.history-year-grid b{font-size:11px;line-height:16px}.history-year-grid span{font-size:22px;line-height:28px}.history-year-grid small{font-size:11px;line-height:16px;overflow-wrap:anywhere}.topic-coverage-note{font-size:14px;line-height:24px}.curriculum-complete{padding:20px 16px}.curriculum-complete h2{font-size:26px;line-height:34px}.additional-study-links{grid-template-columns:1fr}.curriculum-filters.official-filters{padding:16px;gap:14px}.official-filters>label{min-width:0;flex:1 1 calc(50% - 14px);font-size:11px}.official-filters .curriculum-search{min-width:0;flex-basis:100%}.official-filters .curriculum-context{flex-basis:100%;max-width:none;font-size:11px;line-height:18px}.official-filters>.button{width:100%;justify-content:center;font-size:13px}.official-status{padding:20px}.official-status h2{font-size:26px;line-height:34px}.official-card{padding:20px}.official-card h3{font-size:26px;line-height:34px}.official-card p,.official-card li{font-size:16.5px;line-height:28px}.curriculum-workspace[data-map-view=tree] .curriculum-topic-grid{margin-left:0;padding-left:12px}.curriculum-workspace[data-map-view=tree] .curriculum-topic{padding:16px}.curriculum-workspace[data-map-view=tree] .curriculum-topic:before{left:-13px;width:12px}}

@@ -39,9 +39,8 @@ window.ExamStudy=(()=>{
   root.innerHTML=`
    <a class="back-link" href="${hash({exam:q.exam,subject:q.subject,topic:q.topic})}">← ${names[q.subject]} · ${esc(q.topic)}</a>
    <div class="page-head exam-question-heading">
-    <p class="eyebrow">ÖSYM SORU ÇALIŞMASI · ${esc(q.year)} ${q.exam}</p>
+    <div class="exam-heading-labels"><p class="eyebrow">ÖSYM ÇIKMIŞ SINAV SORUSU İNCELEME ALANI</p><span>${esc(q.year)} ${q.exam} · ${names[q.subject]}</span></div>
     <h1>${esc(a?.title||q.topic)}</h1>
-    <p>Özgün soruyu incele; gereken bilgiyi, çözüm yolunu ve kitap bağlantılarını birlikte çalış.</p>
     ${q.alternative?'<p class="exam-filter-note">Kaynakta yıldızla işaretli ilave felsefe sorusu · Din Kültürü yerine sorulan ilave felsefe grubundandır.</p>':''}
    </div>
    <div class="exam-context-strip" aria-label="Sorunun kaynak bilgileri">
@@ -53,20 +52,21 @@ window.ExamStudy=(()=>{
    <div class="exam-question-layout">
     <article class="exam-question-main">
      <section class="original-question" aria-label="Özgün ÖSYM sorusu">
-      <div class="exam-paper-heading"><span>${esc(q.year)} ${q.exam}</span><b>${names[q.subject]}</b><small>Özgün soru görseli</small></div>
+      <div class="exam-paper-heading"><span>Soru ${q.number}.</span><b>${esc(q.year)} ${q.exam} ÇIKMIŞ</b><small>${names[q.subject]} / ${esc(q.topic)}</small></div>
       <div class="exam-image-tools"><button type="button" data-question-zoom aria-pressed="false">Görseli büyüt ＋</button><span>Şekil ve seçenekleri kaynaktan oku.</span></div>
       ${q.contextImage?`<p class="exam-context-label">Bu sorunun ortak metni / şekli</p><div class="exam-image-viewport" tabindex="0"><img src="${q.contextImage}" alt="${esc(label(q))} için ortak metin ve şekil" decoding="async"></div>`:''}
       ${q.images.map((src,i)=>`<div class="exam-image-viewport" tabindex="0"><img class="exam-source-image" src="${src}" alt="${esc(label(q))} · özgün soru${i?' devamı':''}" decoding="async"></div>`).join('')}
+     <section class="exam-answer-controls">
+      <div class="exam-answer-heading"><h2>Yanıtını seç</h2><span>Çözümü doğrudan da açabilirsin.</span></div>
+      <div class="exam-letter-options" role="group" aria-label="Özgün sorunun yanıtı">${letters.map((l,i)=>`<button data-original-answer="${l}" aria-pressed="false"><span class="exam-answer-letter">${l}</span><span class="exam-answer-text">${esc(Array.isArray(q.options)&&q.options.length===5&&q.options.every(o=>typeof o==='string'&&o.trim())?q.options[i]:'Görseldeki '+l+' seçeneği')}</span><span class="exam-answer-radio" aria-hidden="true"></span></button>`).join('')}</div>
+      <div id="original-feedback" role="status" aria-live="polite"></div>
+     </section>
       <details class="exam-accessible-text"><summary>Sorunun çıkarılmış metni</summary><p>Altı çizili ifadeler, yazım, noktalama, formüller ve şekiller için özgün görseli esas al. PDF’den çıkarılan metin, görseldeki ayrıntıları her zaman korumayabilir.</p><pre>${esc(q.text)}</pre></details>
       <div class="exam-source-links">${sourceLinks(q)}</div>
      </section>
      ${warning?`<aside class="exam-source-warning"><b>Kaynak notu</b><p>${esc(q.numberingNote||q.sourceNote||'')}${(q.numberingNote||q.sourceNote)&&a?.note?' ':''}${esc(a?.note||'')}</p>${a?.verification?.url?`<a href="${esc(a.verification.url)}" target="_blank" rel="noopener noreferrer">Doğrulama kaynağı ↗</a>`:''}</aside>`:''}
-     <section class="exam-answer-controls">
-      <div class="exam-answer-heading"><h2>Yanıtını seç</h2><span>Çözümü doğrudan da açabilirsin.</span></div>
-      <div class="exam-letter-options" role="group" aria-label="Özgün sorunun yanıtı">${letters.map(l=>`<button data-original-answer="${l}" aria-pressed="false">${l}</button>`).join('')}</div>
-      <div id="original-feedback" role="status" aria-live="polite"></div>
-     </section>
-     <div class="lesson-actions exam-study-actions"><button class="button ${saved[id]?.studied?'lesson-done':''}" id="exam-studied">${saved[id]?.studied?'✓ Çalışıldı · Geri al':'Soruyu ve bağlantılarını çalıştım'}</button></div>
+
+     <div class="lesson-actions exam-study-actions">${a?'<button type="button" class="button" data-exam-solution-toggle aria-expanded="false">Çözüm ve analizi göster</button>':''}<button class="button secondary ${saved[id]?.studied?'lesson-done':''}" id="exam-studied">${saved[id]?.studied?'✓ Çalışıldı · Geri al':'Soruyu ve bağlantılarını çalıştım'}</button></div>
      <aside class="exam-question-aside panel">
       <h3>Kaynak izi</h3>
       <p class="exam-numbering-note">Numara, derlemenin konu sırasıdır; özgün ÖSYM kitapçık numarasıyla aynı olmayabilir.</p>
@@ -80,15 +80,19 @@ window.ExamStudy=(()=>{
       <section class="exam-prerequisites"><div class="exam-section-title"><h2>Gereken bilgiler</h2><span>ÖN BİLGİ</span></div><p class="exam-tests">${esc(a.tests)}</p>${list(a.knowledge)}</section>
       <details class="exam-solution"><summary><span>Adım adım çözüm</span><small>${a.reasoning.length} çözüm adımı</small></summary>
        <p class="exam-key-label">${effective?`${a.keyCheck==='conflict'?'Derleme anahtarı':'Yanıt'}: <b>${effective}</b>`:'Yanıt doğrulanamadı.'} · ${a.keyCheck==='matches'?'Derlemedeki anahtarla uyumlu':a.keyCheck==='verified_solution'?'Çözüm / belirtilen kaynakla doğrulandı':a.keyCheck==='conflict'?'Kaynakta tutarsızlık var':'Doğrulama notunu incele'}</p>
-       ${list(a.reasoning,true)}<div class="exam-trap"><h3>Çeldirici neden yanlış?</h3><p>${esc(a.trap)}</p></div>
+       ${`<ol>${a.reasoning.map((step,i)=>`<li><h3 class="exam-step-heading">${i+1}. Adım</h3><p>${esc(step)}</p></li>`).join('')}</ol>`}
       </details>
+      <section class="exam-trap exam-misconception-panel" hidden><h3>Çeldirici neden yanlış?</h3><p class="exam-trap-caption">Sorudaki ayrımı koru; çeldiricinin dayandığı varsayımı incele.</p><div class="exam-trap-reading"><p>${esc(a.trap)}</p></div></section>
       <section class="exam-topic-connections"><div class="exam-section-title"><h2>Konu bağlantıları</h2><span>KİTABA DÖN</span></div>${studyLinks(a)}<details class="exam-concept-details"><summary>Kavramların sorudaki ilişkisi</summary>${connectionMap(a)}</details></section>
      </section>${variant(a,q)}`:'<p class="notice">Bu sorunun özgün görseli hazır; ayrıntılı çözüm incelemesi henüz tamamlanmadı.</p>'}
     </aside>
    </div>
    ${related.length?`<section class="exam-related"><div class="exam-section-title"><h2>Bağlantılı diğer sorular</h2><span>KARŞILAŞTIRARAK ÇALIŞ</span></div><p>Kartta belirtilen ortak kavram, kaynak başlığı veya anlatım üzerinden karşılaştır.</p><div class="exam-grid">${related.map(x=>card(x.q,x.link.label)).join('')}</div></section>`:''}`;
+  const solution=root.querySelector('.exam-solution'),trap=root.querySelector('.exam-misconception-panel'),solutionToggle=root.querySelector('[data-exam-solution-toggle]');
+  function syncSolutionView(){if(!solution)return;if(trap)trap.hidden=!solution.open;if(solutionToggle){solutionToggle.setAttribute('aria-expanded',String(solution.open));solutionToggle.textContent=solution.open?'Çözüm ve analizi gizle':'Çözüm ve analizi göster';}}
+  if(solution)solution.addEventListener('toggle',syncSolutionView);if(solutionToggle)solutionToggle.onclick=()=>{solution.open=!solution.open;syncSolutionView();if(solution.open)solution.scrollIntoView({behavior:'smooth',block:'start'});};syncSolutionView();
   root.querySelector('[data-question-zoom]').onclick=ev=>{const zoomed=ev.target.getAttribute('aria-pressed')!=='true';ev.target.setAttribute('aria-pressed',String(zoomed));ev.target.textContent=zoomed?'Normal boyuta dön −':'Görseli büyüt ＋';root.querySelectorAll('.exam-image-viewport').forEach(el=>{el.classList.toggle('zoomed',zoomed);el.querySelector('img').style.width=zoomed?'200%':'';el.querySelector('img').style.maxWidth=zoomed?'none':'';});};
-  root.querySelectorAll('[data-original-answer]').forEach(btn=>btn.onclick=()=>{const choice=btn.dataset.originalAnswer;remember(id,{choice});root.querySelectorAll('[data-original-answer]').forEach(b=>{b.setAttribute('aria-pressed',String(b===btn));b.classList.toggle('selected',b===btn);});root.querySelector('#original-feedback').textContent=answerFeedback(q,a,choice);root.querySelector('.exam-solution')?.setAttribute('open','');});
+  root.querySelectorAll('[data-original-answer]').forEach(btn=>btn.onclick=()=>{const choice=btn.dataset.originalAnswer;remember(id,{choice});root.querySelectorAll('[data-original-answer]').forEach(b=>{b.setAttribute('aria-pressed',String(b===btn));b.classList.toggle('selected',b===btn);});root.querySelector('#original-feedback').textContent=answerFeedback(q,a,choice);root.querySelector('.exam-solution')?.setAttribute('open','');syncSolutionView();});
   root.querySelectorAll('[data-variant-answer]').forEach(btn=>btn.onclick=()=>{const i=Number(btn.dataset.variantAnswer);remember(id,{variantChoice:i});root.querySelectorAll('[data-variant-answer]').forEach(b=>{b.classList.remove('correct','wrong');if(Number(b.dataset.variantAnswer)===a.variation.answer)b.classList.add('correct');});if(i!==a.variation.answer)btn.classList.add('wrong');root.querySelector('#variant-feedback').textContent=(i===a.variation.answer?'Doğru. ':'Yanıt '+letters[a.variation.answer]+'. ')+a.variation.explanation;});
   if(letters.includes(saved[id]?.choice))root.querySelector('[data-original-answer="'+saved[id].choice+'"]')?.click();if(Number.isInteger(saved[id]?.variantChoice))root.querySelector('[data-variant-answer="'+saved[id].variantChoice+'"]')?.click();
   root.querySelector('#exam-studied').onclick=ev=>{const value=!saved[id]?.studied;remember(id,{studied:value});ev.target.textContent=value?'✓ Çalışıldı · Geri al':'Soruyu ve bağlantılarını çalıştım';ev.target.classList.toggle('lesson-done',value);};

@@ -11,8 +11,10 @@
   function save(){try{localStorage.setItem(key,JSON.stringify(settings));}catch{}paint();}
   document.getElementById('reading-size').onclick=()=>{settings.large=!settings.large;save();};
   document.getElementById('focus-mode').onclick=()=>{settings.focus=!settings.focus;save();};
-  function route(){const name=location.hash.slice(1).split('/')[0]||'kesfet';document.body.dataset.route=name;for(const a of document.querySelectorAll('.mobile-study-nav>a')){const group=['ders','kitap'].includes(name)?'dersler':['soru','baglantilar'].includes(name)?'sorular':name;a.classList.toggle('active',a.dataset.mobileNav===group);}}
+  function route(){const parts=location.hash.slice(1).split('/'),name=parts[0]||'kesfet';document.body.dataset.route=name;const l=(window.LESSONS||[]).find(l=>l.id===parts[1]);const context=document.getElementById('mobile-course-context');context.textContent=name==='ders'&&l?l.exam+' · '+({turkce:'Türkçe',tarih:'Tarih',cografya:'Coğrafya',felsefe:'Felsefe',din:'Din',matematik:'Matematik',fizik:'Fizik',kimya:'Kimya',biyoloji:'Biyoloji'}[l.subject]):'';for(const a of document.querySelectorAll('.mobile-study-nav>a')){const group=['ders','kitap'].includes(name)?'dersler':['soru','baglantilar'].includes(name)?'sorular':name;a.classList.toggle('active',a.dataset.mobileNav===group);}}
   window.addEventListener('hashchange',route);
   document.addEventListener('keydown',ev=>{if(ev.key==='Escape'&&settings.focus){settings.focus=false;save();}});
+  document.addEventListener('keydown',ev=>{if((ev.ctrlKey||ev.metaKey)&&ev.key.toLowerCase()==='k'){ev.preventDefault();document.getElementById('sidebar').classList.add('open');document.getElementById('menu-button').setAttribute('aria-expanded','true');document.getElementById('global-search').focus();}});
+  document.getElementById('header-book-link').onclick=ev=>{const link=document.querySelector('.book-study-head>a');if(link){ev.preventDefault();location.hash=link.hash;}};
   paint();route();
 })();
