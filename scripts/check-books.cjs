@@ -1,8 +1,6 @@
 'use strict';
 const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),assert=require('node:assert/strict');
-const root=path.resolve(__dirname,'..'),ctx={window:{}};
-for(const name of ['sources','turkish','social','thought','biology','chemistry','physics','source-resources','exam-sources','biology-reading','core-reading','applied-reading','book-verbal','book-physics','book-biology','book-chemistry','math-tyt','math-ayt','math-geometry','book-math-tyt','book-math-ayt','book-math-geometry'])vm.runInNewContext(fs.readFileSync(path.join(root,'data',name+'.js'),'utf8'),ctx,{filename:name+'.js'});
-for(const name of ['source-reader','book-study','reading-room'])vm.runInNewContext(fs.readFileSync(path.join(root,name+'.js'),'utf8'),ctx,{filename:name+'.js'});
+const {load,root}=require('./content-context.cjs'),ctx=load();
 const w=ctx.window,lessons=w.LESSONS,guides=w.BOOK_GUIDES;
 assert.equal(Object.keys(guides).length,lessons.length,'Every lesson must start from its book');
 let sections=0,scienceSections=0,mathSections=0,words=0;const sourcePages=new Set();

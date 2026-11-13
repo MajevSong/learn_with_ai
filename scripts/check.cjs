@@ -1,9 +1,6 @@
 'use strict';
 const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),assert=require('node:assert/strict');
-const root=path.resolve(__dirname,'..'),context={window:{}};
-for(const f of ['sources.js','turkish.js','social.js','thought.js','biology.js','chemistry.js','physics.js','math-tyt.js','math-ayt.js','math-geometry.js'])vm.runInNewContext(fs.readFileSync(path.join(root,'data',f),'utf8'),context,{filename:f});
-for(const f of ['source-resources.js','exam-sources.js','biology-reading.js','core-reading.js','applied-reading.js','book-math-tyt.js','book-math-ayt.js','book-math-geometry.js'])vm.runInNewContext(fs.readFileSync(path.join(root,'data',f),'utf8'),context,{filename:f});
-vm.runInNewContext(fs.readFileSync(path.join(root,'source-reader.js'),'utf8'),context,{filename:'source-reader.js'});
+const {load,root}=require('./content-context.cjs'),context=load();
 const lessons=context.window.LESSONS,books=context.window.SOURCE_BOOKS;
 assert(lessons.length>=128,'Expected verbal and science lesson libraries');
 assert.equal(new Set(lessons.map(l=>l.id)).size,lessons.length,'Duplicate lesson ID');
@@ -30,6 +27,7 @@ for(const l of lessons){
   else assert(/^https:\/\//.test(l.source.url),`${l.id}: official source URL`);
   if(l.subject==='matematik'){assert(context.window.BOOK_GUIDES?.[l.id]?.sections.length,`${l.id}: missing book-based mathematics explanation`);continue;}
   const reading=context.window.READING[l.id];
+  if(!reading){assert(context.window.BOOK_GUIDES?.[l.id]?.sections.length&&context.window.TOPIC_DOSSIERS?.[l.id]?.chapters.length,`${l.id}: missing source guide / detailed study`);continue;}
   assert(reading&&reading.lead&&reading.blocks.length>=2,`${l.id}: missing source-based reading`);
   assert(reading.sources.length>=1,`${l.id}: reading sources`);
   for(const block of reading.blocks){
@@ -44,7 +42,7 @@ for(const l of lessons){
     readingBlocks++;readingWords+=words;
   }
 }
-assert.equal(Object.keys(context.window.READING).length,lessons.filter(l=>l.subject!=='matematik').length,'Legacy reading and non-math lesson IDs must match');
+assert(Object.keys(context.window.READING).length>=128&&Object.keys(context.window.READING).every(id=>lessons.some(l=>l.id===id)),'Legacy reading IDs must remain valid');
 assert.equal(books.length,13,'Expected thirteen main source books');
 for(const l of lessons)assert(context.window.SourceReader.lessonRef(l),`${l.id}: no in-site source reader`);
 const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
@@ -53,7 +51,7 @@ new vm.Script(fs.readFileSync(path.join(root,'app.js'),'utf8'),{filename:'app.js
 new vm.Script(fs.readFileSync(path.join(root,'science-visuals.js'),'utf8'),{filename:'science-visuals.js'});
 new vm.Script(fs.readFileSync(path.join(root,'reading-room.js'),'utf8'),{filename:'reading-room.js'});
 new vm.Script(fs.readFileSync(path.join(root,'lesson-figures.js'),'utf8'),{filename:'lesson-figures.js'});
-for(const name of ['math-visuals.js','math-exam-links.js'])new vm.Script(fs.readFileSync(path.join(root,name),'utf8'),{filename:name});
+for(const name of ['math-visuals.js','math-exam-links.js','curriculum.js','topic-dossiers.js','topic-study-links.js'])new vm.Script(fs.readFileSync(path.join(root,name),'utf8'),{filename:name});
 assert(!/Sayısal yolculuğun|HEDEF: SAYISAL DERECE|Sayısal hedefin/.test(html),'Unwanted personal target labels');
 assert(!fs.existsSync(path.join(root,'node_modules')),'Static site should not require installed packages');
 console.log(JSON.stringify({lessons:lessons.length,readingBlocks,readingWords,inlineFigures:readingBlocks,sourceBooks:books.length,cards:lessons.reduce((n,l)=>n+l.cards.length,0),questions:lessons.length,subjects:counts,exams:{TYT:lessons.filter(l=>(l.exam||'TYT')==='TYT').length,AYT:lessons.filter(l=>l.exam==='AYT').length},interactiveModels:new Set(lessons.filter(l=>l.visual.demo).map(l=>l.visual.demo)).size,sourceTopics:books.reduce((n,b)=>n+b.toc.length,0)},null,2));

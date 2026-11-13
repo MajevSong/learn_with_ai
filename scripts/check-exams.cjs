@@ -1,8 +1,6 @@
 'use strict';
 const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),assert=require('node:assert/strict');
-const root=path.resolve(__dirname,'..'),context={window:{}},partial=process.argv.includes('--partial');
-for(const file of ['sources','source-resources','exam-sources','turkish','social','thought','biology','chemistry','physics','exam-questions','exam-analyses','exam-synthesis','math-tyt','math-ayt','math-geometry','book-math-tyt','book-math-ayt','book-math-geometry'])vm.runInNewContext(fs.readFileSync(path.join(root,'data',file+'.js'),'utf8'),context,{filename:file});
-vm.runInNewContext(fs.readFileSync(path.join(root,'math-exam-links.js'),'utf8'),context,{filename:'math-exam-links.js'});
+const {load,root}=require('./content-context.cjs'),context=load(),partial=process.argv.includes('--partial');
 assert.equal(context.window.MATH_LINKS_REPORT.questions,708,'Expected all mathematics originals');
 assert.equal(context.window.MATH_LINKS_REPORT.mapped,708,'Every mathematics question needs a page-matched lesson');
 const {EXAM_QUESTIONS:qs,EXAM_ANALYSES:analyses,EXAM_META:meta,LESSONS:lessons,SOURCE_RESOURCES:resources}=context.window;

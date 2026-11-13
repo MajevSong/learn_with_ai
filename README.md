@@ -1,8 +1,20 @@
 # Net Atlası · learn_with_ai
 
-**TYT Türkçe, Sosyal, matematik ve TYT/AYT Fen** kaynaklarını siteden çıkmadan okuyup anlatım içindeki görsellerle çalışmak için hazırlanmış bir öğrenme alanı.
+**TYT Türkçe ve Sosyal ile TYT/AYT matematik ve fen** kaynaklarını siteden çıkmadan okuyup anlatım içindeki görsellerle çalışmak için hazırlanmış bir öğrenme alanı.
 
 **Site:** https://majevsong.github.io/learn_with_ai/
+
+## 2027 için konu konu çalışma
+
+`#mufredat` ekranı, yüklenen TYT ve AYT konu dağılımı dosyalarındaki **228 başlığı, 15 tabloyu** kitap bölümlerine ve ayrıntılı çalışmalara bağlar. Matematik filtresi geometri tablolarını da içerir. Dosyalarda ayrı satır olmayan 11 tamamlayıcı çalışma ayrıca listelenir. Kaynakların özgün 11 sayfası site içinde açılır.
+
+Bu tablolar **2018–2025** kayıtlarıdır; 2027 için resmî soru dağılımı değildir. AYT fen tablolarında 2018 yer almaz. Toplam 95 boş/eksik hücre `null` olarak korunur; kaynakta çizgi bulunan hücreler açıklanmış hesaplama tercihiyle 0 sayılır. Kaynaktaki toplam ile hücre toplamının uyuşmadığı yedi kayıt silinmez veya sessizce düzeltilmez. Dosya kimliği, kaynak sayfası ve özgün işaretler veride saklanır. Bu tablolar, 2018–2026 soru derlemesinin kendi sayımlarından ayrıdır.
+
+**197 dersin tamamında 505 ayrıntılı anlatım bölümü ve çözümlü durum** bulunur: 59 matematik, 60 fen, 78 Türkçe/sosyal çalışması. Her çalışmada ön bilgiler, öğrenilecek noktalar, kaynak kitap sayfaları, açıklamalar, gerekçeli çözüm, yanılgı ve karşı örnekler, kontrol soruları ve diğer konularla bağlantılar vardır. Bağıntılar kullanım koşullarıyla açıklanır. Her kaynak sayfası düğmesi ilgili özgün görüntüyü açar. Kitap bölümlerinin tamamında sayfaya bağlı öğretmen açıklaması veya çalışma notu bulunur.
+
+`#meb` ekranında **13 Kasım 2026 tarihinde kontrol edilmiş 44 seçilmiş MEB/ÖSYM kaynağı** yer alır. Program, ders kitabı, özet, çıkmış soru, test, deneme ve etkileşimli kataloglar; ders, sınav ve türle süzülür. Kaynağın erişim koşulu ve kontrol sınırı gösterilir; katalogdaki bütün kitapların tek tek incelendiği iddia edilmez. Ders sayfaları da ilgili resmî kaynaklara bağlanır.
+
+[OGM’nin 2026–2027 uygulama açıklamasına](https://ogm.meb.gov.tr/www/2026-2027-egitim-ogretim-yili-turkiye-yuzyili-maarif-modeli-taslak-cerceve-planlar-yayimlandi/icerik/2633) göre 12. sınıfta önceki program sürer. 2027’ye özel kesin konu/kazanım belgesi bu taramada doğrulanamadı; doğrulanan sınava özel TTKB referansı 2026 yılına aittir. Yeni model ve okul yazılısı belgeleri bağlam kaynağı olarak ayrıca işaretlenir. Kaynak kontrol tarihi bir otomatik güncelleme hizmeti değildir.
 
 ## Sorularla çalışma
 
@@ -69,11 +81,17 @@ npm test
 
 Kontrol; derslerin yapısını, kitapla çalışma bölümlerinin sırasını, sayfa eşlemesini, kaynakla açıklamanın birlikte gösterimini, 1.780 sorunun bire bir analiz kapsamını, benzersiz kimlikleri, seçenekleri, alıştırmaları, kaynak sayfalarını, görsel dosyalarını ve bağlantıları doğrular. İçerik doğruluğu ayrıca gözden geçirilmelidir.
 
+`scripts/check-curriculum.cjs` ayrıca 197 ayrıntılı çalışmanın açıklama/örnek/koşul yapısını, kitap sayfası sınırlarını, 228 dağılım bağlantısını, boş hücrelerin korunmasını, özgün tablo görsellerini ve resmî kaynakların kapsam ayrımını denetler. Bu yapısal kontrol bilimsel doğruluk incelemesinin yerine geçmez.
+
 ## Kaynaklar ve içerik
 
 Türkçe, tarih ve coğrafya için yerel TYT kitapları; fizik, kimya ve biyoloji için yerel TYT ve AYT kitapları kullanıldı. Dokuz kitabın konu dizinleri `data/sources.js`, güncel resmî kitap görüntüsü adresleri `data/source-resources.js` içindedir. Felsefe ve din kültürü için resmî MEBİ kitapları da okuyucuya eklendi. Özgün konu kitabı sayfaları MEB'nin içerik sunucusundan görüntülenir. Matematik kitapları ve soru derlemelerinin kaynak tanımları `data/exam-sources.js` içindedir. Kullanıcının yüklediği soru derlemelerinden alınan WebP sayfa ve soru görselleri `assets/exams/` altında tutulur; PDF dosyaları depoya alınmaz.
 
 `science-visuals.js` içindeki modeller şematiktir; her biri varsayımlarını ve sınırlarını belirtir. Mevcut ders kimlikleri ve tarayıcı kayıt anahtarı korunduğu için önceki ilerleme kayıtları çalışmaya devam eder.
+
+Yeni çalışmalar `data/topic-dossiers-{math,science,verbal}.js`, dağılımlar `data/topic-distributions.js`, resmî kaynaklar `data/official-sources.js` içindedir. `curriculum.js` konu/kaynak ekranlarını, `topic-dossiers.js` ayrıntılı anlatımı oluşturur. Yeni dersler ve boş kitap bölümleri ayrı ek dosyalarla tamamlanır; eski notlar korunur. Kaynakta doğrulanan bölüm adı ve coğrafya sırası düzeltmeleri, başlıkla eşleşen açıklama ekleri yüklendikten sonra `data/book-section-labels.js` ile uygulanır. Bu yükleme sırası korunmalıdır.
+
+Felsefede eski konu dizininin mantıksal numaraları ve kayıtları korunur; özgün görüntüye ve ekranda basılı numaraya dönüşüm +2'dir. Diğer derslerde görüntü ofsetiyle basılı numara ayrı hesaplanır. Felsefe tarihi derslerinden gerçek sorulara ek bağlantıları `topic-study-links.js` kurar; soru analizlerinin özgün metni değişmez.
 
 Kitapla çalışma akışı `book-study.js` ve `book-study.css` içindedir. Fen açıklamaları `data/book-physics.js`, `data/book-biology.js`, `data/book-chemistry.js` dosyalarında başlık, basılı sayfa, bakılacak şekil/tablo, açıklama ve kontrol sorusu olarak tutulur. `data/book-verbal.js`, gerçek kitap içindekilerinden ve tanımlanmış bölüm aralıklarından `node scripts/build_book_guides.cjs` ile üretilir. Eski çalışma notları `data/biology-reading.js`, `data/core-reading.js`, `data/applied-reading.js` içinde korunur; fen konularında bunların yerine yeni kitap açıklamaları gösterilir. Matematik dersleri `data/math-tyt.js`, `data/math-ayt.js`, `data/math-geometry.js`; kitap açıklamaları karşılık gelen `data/book-math-*.js` dosyalarındadır. `math-visuals.js` üç matematik modelini oluşturur. `source-reader.js` özgün sayfayı büyütür ve sayfa değişimini açıklamayla eşler. Kitabın tamamı ve tüm içindekiler ayrıca okuyucudan erişilebilir.
 

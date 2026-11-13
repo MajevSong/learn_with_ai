@@ -19,9 +19,12 @@ window.SOURCE_RESOURCES = {
     "pages": 130,
     "officialUrl": "https://ogmmateryal.eba.gov.tr/mebi-konu-ozeti-kitaplari",
     "pageOffset": 2,
+    "printedPageOffset": 2,
+    "paginationNote": "Sayfa numaraları özgün sayfanın üzerinde basılı olan numaraya göre gösterilir.",
     "subject": "felsefe",
     "exam": "TYT",
     "toc": [
+      [0, "Felsefenin Anlamı", 9, null],
       [
         1,
         "Felsefi Düşüncenin Ortaya Çıkışı ve Özellikleri - Felsefe Sorusu Nedir?",

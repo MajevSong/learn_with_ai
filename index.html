@@ -7,11 +7,12 @@
   <meta name="description" content="TYT/AYT matematik ve fen ile TYT Türkçe ve sosyal kaynaklarını, çıkmış soruların açıklamalı çözümleri ve görsel konu bağlantılarıyla çalış.">
   <title>Net Atlası · Görerek öğren</title>
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="./styles.css?v=1.5.0">
-  <link rel="stylesheet" href="./reading.css?v=1.5.0">
-  <link rel="stylesheet" href="./exams.css?v=1.5.0">
-  <link rel="stylesheet" href="./book-study.css?v=1.5.0">
-  <link rel="stylesheet" href="./math.css?v=1.5.0">
+  <link rel="stylesheet" href="./styles.css?v=1.6.0">
+  <link rel="stylesheet" href="./reading.css?v=1.6.0">
+  <link rel="stylesheet" href="./exams.css?v=1.6.0">
+  <link rel="stylesheet" href="./book-study.css?v=1.6.0">
+  <link rel="stylesheet" href="./math.css?v=1.6.0">
+  <link rel="stylesheet" href="./curriculum.css?v=1.6.0">
 </head>
 <body>
   <a class="skip" href="#main">İçeriğe geç</a>
@@ -20,7 +21,9 @@
     <p class="nav-label">ÇALIŞMA ALANIN</p>
     <nav aria-label="Ana menü">
       <a href="#kesfet" data-nav="kesfet"><span data-icon="compass"></span>Keşfet</a>
-      <a href="#dersler" data-nav="dersler"><span data-icon="grid"></span>Konu anlatımları<span class="nav-count" id="nav-count">185</span></a>
+      <a href="#dersler" data-nav="dersler"><span data-icon="grid"></span>Konu anlatımları<span class="nav-count" id="nav-count">197</span></a>
+      <a href="#mufredat" data-nav="mufredat"><span data-icon="grid"></span>Konu haritası</a>
+      <a href="#meb" data-nav="meb"><span data-icon="book"></span>MEB kaynakları</a>
       <a href="#sorular" data-nav="sorular"><span data-icon="search"></span>ÖSYM soruları<span class="nav-count">1780</span></a>
       <a href="#tekrar" data-nav="tekrar"><span data-icon="cards"></span>Hafıza kartları<span id="due-badge" class="nav-count"></span></a>
       <a href="#ilerleme" data-nav="ilerleme"><span data-icon="chart"></span>İlerlemem</a>
@@ -37,39 +40,55 @@
     <footer><span>net atlası <span class="footer-dot">·</span> learn with ai</span><span>Gör → Bağ kur → Hatırla</span><a href="https://github.com/MajevSong/learn_with_ai" target="_blank" rel="noopener noreferrer">GitHub ↗</a></footer>
   </div>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
-  <script src="./data/sources.js?v=1.5.0"></script>
-  <script src="./data/turkish.js?v=1.5.0"></script>
-  <script src="./data/social.js?v=1.5.0"></script>
-  <script src="./data/thought.js?v=1.5.0"></script>
-  <script src="./data/biology.js?v=1.5.0"></script>
-  <script src="./data/chemistry.js?v=1.5.0"></script>
-  <script src="./data/physics.js?v=1.5.0"></script>
-  <script src="./data/math-tyt.js?v=1.5.0"></script>
-  <script src="./data/math-ayt.js?v=1.5.0"></script>
-  <script src="./data/math-geometry.js?v=1.5.0"></script>
-  <script src="./data/source-resources.js?v=1.5.0"></script>
-  <script src="./data/exam-sources.js?v=1.5.0"></script>
-  <script src="./data/biology-reading.js?v=1.5.0"></script>
-  <script src="./data/core-reading.js?v=1.5.0"></script>
-  <script src="./data/applied-reading.js?v=1.5.0"></script>
-  <script src="./data/book-verbal.js?v=1.5.0"></script>
-  <script src="./data/book-physics.js?v=1.5.0"></script>
-  <script src="./data/book-biology.js?v=1.5.0"></script>
-  <script src="./data/book-chemistry.js?v=1.5.0"></script>
-  <script src="./data/book-math-tyt.js?v=1.5.0"></script>
-  <script src="./data/book-math-ayt.js?v=1.5.0"></script>
-  <script src="./data/book-math-geometry.js?v=1.5.0"></script>
-  <script src="./science-visuals.js?v=1.5.0"></script>
-  <script src="./math-visuals.js?v=1.5.0"></script>
-  <script src="./source-reader.js?v=1.5.0"></script>
-  <script src="./lesson-figures.js?v=1.5.0"></script>
-  <script src="./book-study.js?v=1.5.0"></script>
-  <script src="./reading-room.js?v=1.5.0"></script>
-  <script src="./data/exam-questions.js?v=1.5.0"></script>
-  <script src="./data/exam-analyses.js?v=1.5.0"></script>
-  <script src="./data/exam-synthesis.js?v=1.5.0"></script>
-  <script src="./math-exam-links.js?v=1.5.0"></script>
-  <script src="./exam-study.js?v=1.5.0"></script>
-  <script src="./app.js?v=1.5.0"></script>
+  <script src="./data/sources.js?v=1.6.0"></script>
+  <script src="./data/turkish.js?v=1.6.0"></script>
+  <script src="./data/social.js?v=1.6.0"></script>
+  <script src="./data/thought.js?v=1.6.0"></script>
+  <script src="./data/biology.js?v=1.6.0"></script>
+  <script src="./data/chemistry.js?v=1.6.0"></script>
+  <script src="./data/physics.js?v=1.6.0"></script>
+  <script src="./data/math-tyt.js?v=1.6.0"></script>
+  <script src="./data/math-ayt.js?v=1.6.0"></script>
+  <script src="./data/math-geometry.js?v=1.6.0"></script>
+  <script src="./data/math-supplement.js?v=1.6.0"></script>
+  <script src="./data/verbal-supplement.js?v=1.6.0"></script>
+  <script src="./data/source-resources.js?v=1.6.0"></script>
+  <script src="./data/exam-sources.js?v=1.6.0"></script>
+  <script src="./data/biology-reading.js?v=1.6.0"></script>
+  <script src="./data/core-reading.js?v=1.6.0"></script>
+  <script src="./data/applied-reading.js?v=1.6.0"></script>
+  <script src="./data/book-verbal.js?v=1.6.0"></script>
+  <script src="./data/book-physics.js?v=1.6.0"></script>
+  <script src="./data/book-biology.js?v=1.6.0"></script>
+  <script src="./data/book-chemistry.js?v=1.6.0"></script>
+  <script src="./data/book-math-tyt.js?v=1.6.0"></script>
+  <script src="./data/book-math-ayt.js?v=1.6.0"></script>
+  <script src="./data/book-math-geometry.js?v=1.6.0"></script>
+  <script src="./data/book-math-supplement.js?v=1.6.0"></script>
+  <script src="./data/book-verbal-depth.js?v=1.6.0"></script>
+  <script src="./data/book-verbal-section-depth.js?v=1.6.0"></script>
+  <script src="./data/book-din-section-depth.js?v=1.6.0"></script>
+  <script src="./data/topic-dossiers-math.js?v=1.6.0"></script>
+  <script src="./data/topic-dossiers-science.js?v=1.6.0"></script>
+  <script src="./data/topic-dossiers-verbal.js?v=1.6.0"></script>
+  <script src="./data/topic-distributions.js?v=1.6.0"></script>
+  <script src="./data/book-section-labels.js?v=1.6.0"></script>
+  <script src="./data/official-sources.js?v=1.6.0"></script>
+  <script src="./data/distribution-resources.js?v=1.6.0"></script>
+  <script src="./science-visuals.js?v=1.6.0"></script>
+  <script src="./math-visuals.js?v=1.6.0"></script>
+  <script src="./source-reader.js?v=1.6.0"></script>
+  <script src="./lesson-figures.js?v=1.6.0"></script>
+  <script src="./book-study.js?v=1.6.0"></script>
+  <script src="./reading-room.js?v=1.6.0"></script>
+  <script src="./data/exam-questions.js?v=1.6.0"></script>
+  <script src="./data/exam-analyses.js?v=1.6.0"></script>
+  <script src="./data/exam-synthesis.js?v=1.6.0"></script>
+  <script src="./math-exam-links.js?v=1.6.0"></script>
+  <script src="./topic-study-links.js?v=1.6.0"></script>
+  <script src="./exam-study.js?v=1.6.0"></script>
+  <script src="./curriculum.js?v=1.6.0"></script>
+  <script src="./topic-dossiers.js?v=1.6.0"></script>
+  <script src="./app.js?v=1.6.0"></script>
 </body>
 </html>
