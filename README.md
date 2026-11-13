@@ -4,6 +4,14 @@
 
 **Site:** https://majevsong.github.io/learn_with_ai/
 
+## Tasarım ve okuma görünümü
+
+Arayüz, kullanıcının sağladığı beş Google Stitch ekranından uyarlandı: çalışma masası, konu haritası, kitap üzerinden çalışma, mobil okuyucu ve ÖSYM soru incelemesi. Fildişi zemin, koyu yeşil ayrıntılar, Newsreader başlıklar ve Plus Jakarta Sans okuma yazısı kullanılır. Tasarım dosyalarındaki örnek sayılar, kazanım iddiaları ve eski tarihler aktarılmaz; içerik ve ilerleme gerçek uygulama verilerinden gelir.
+
+Masaüstünde özgün kitap görüntüsü, o sayfanın açıklaması ve ayrıntılı anlatım sürekli iki sütunda okunur. Telefonda **Kitap / Anlatım** düğmeleri aynı bölüm ve sayfa üzerinde geçiş yapar; anlatımdaki kaynak düğmesi ilgili kitap sayfasını açar. Yazı büyütme ve odak görünümü üst çubuktan değiştirilebilir. Ana sayfadaki devam kartı, geçerli kayıtlı kitap konumunu ve varsa en son erişim zamanını kullanır. ÖSYM ekranında soru ve çözüm panelleri yan yana yer alır; telefon görünümünde sırayla gösterilir.
+
+Tema `stitch.css`, ana sayfa `stitch-home.css`, konu haritası `stitch-curriculum.css`, soru ekranları `stitch-exams.css` içindedir. `stitch-ui.js` okuma tercihlerini ve mobil gezinmeyi yönetir. Hazır Tailwind çalıştırıcısı veya Stitch hesabına canlı bağlantı gerekmez.
+
 ## 2027 için konu konu çalışma
 
 `#mufredat` ekranı, yüklenen TYT ve AYT konu dağılımı dosyalarındaki **228 başlığı, 15 tabloyu** kitap bölümlerine ve ayrıntılı çalışmalara bağlar. Matematik filtresi geometri tablolarını da içerir. Dosyalarda ayrı satır olmayan 11 tamamlayıcı çalışma ayrıca listelenir. Kaynakların özgün 11 sayfası site içinde açılır.
@@ -115,6 +123,8 @@ npm test
 Üyelik, sunucu, API anahtarı veya ücretli AI bağlantısı gerektirmez. Ders ilerlemesi `net-atlasi-v1`, çıkmış soru çalışması `net-atlasi-exams-v1` anahtarıyla `localStorage` içinde bu tarayıcıya kaydedilir. JSON yedeği iki kayıt grubunu da içerir; eski ders yedekleri de yüklenebilir. Kitapla çalışma konumu ayrıca `net-atlasi-book-study-v1` anahtarında saklanır; bu okuma konumu ilerleme yedeğinin parçası değildir. Tarayıcı verileri silinirse ilerleme kaybolabilir. Cihazlar arasında otomatik eşitleme yoktur; yedek dosyasını indirip diğer cihazda yükleyebilirsin.
 
 Google Fonts yüklenemezse sistem yazı tipleri kullanılır. Dersler ve uygulama haricî JavaScript bağımlılığı içermez. İlk çevrim içi yüklemeden sonra garantili çevrim dışı kullanım sağlayan bir servis çalışanı bu sürümde yoktur.
+
+Yazı büyüklüğü ve odak tercihi `net-atlasi-ui-v1` anahtarında saklanır. Kitap konumuna eklenen `updatedAt` yalnız cihazdaki devam kartını sıralamak içindir. Bu görünüm tercihleri ilerleme yedeğine dahil değildir.
 
 ## GitHub Pages
 

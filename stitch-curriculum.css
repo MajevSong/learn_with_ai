@@ -1,0 +1,147 @@
+/* Editorial curriculum and source workspace, adapted from the supplied Stitch design. */
+.curriculum-workspace{color:var(--ink,#0a3428);min-width:0}
+.curriculum-masthead{display:flex;align-items:flex-end;justify-content:space-between;gap:28px;padding:6px 0 28px;border-bottom:1px solid var(--line,#e2e6df)}
+.curriculum-masthead .eyebrow{display:flex;align-items:center;flex-wrap:wrap;gap:13px;margin:0 0 15px;font-size:10px;letter-spacing:.08em;color:#536d60}
+.curriculum-masthead .eyebrow>span{border:1px solid #dfe5dc;background:#edf3ea;padding:5px 8px;letter-spacing:.04em;font-weight:600}
+.curriculum-masthead .eyebrow>i{font:italic 17px/1.4 var(--font-heading,'Newsreader',Georgia,serif);letter-spacing:0;color:#557166}
+.curriculum-masthead h1{font:500 clamp(36px,3.2vw,48px)/1.15 var(--font-heading,'Newsreader',Georgia,serif);letter-spacing:-.025em;color:var(--ink,#0a3428);margin:0 0 15px}
+.curriculum-masthead>div>p:last-child{font-size:14px;line-height:1.9;max-width:720px;color:#587065;margin:0}
+.curriculum-masthead-meta{display:flex;gap:20px;white-space:nowrap;padding-bottom:5px;font-size:11px;color:#65786c}
+.curriculum-masthead-meta>span+span{padding-left:20px;border-left:1px solid var(--line,#e2e6df)}
+.curriculum-masthead-meta b{color:#173e30;font-weight:600;margin-right:3px;font-size:14px}
+.curriculum-filters{border-color:var(--line,#e2e6df);border-radius:3px;background:#fff;box-shadow:none;padding:20px;gap:14px;margin:25px 0 0}
+.curriculum-filters label{color:#526a5f;font-size:10px;line-height:1.5;letter-spacing:.03em;gap:6px;min-width:120px}
+.curriculum-filters select,.curriculum-filters input[type=search]{background:#f7f8f4;border:1px solid #dce3d9;border-radius:2px;color:#244b3e;font:400 12px/1.4 var(--font-body,'Plus Jakarta Sans',sans-serif);padding:11px;min-height:43px;box-shadow:none}
+.curriculum-filters input[type=search]::placeholder{color:#758579;opacity:1}
+.curriculum-filters .button{min-height:43px;padding:10px 16px;border-radius:2px;background:#0a3428;color:white;gap:16px;font-size:11px;box-shadow:none}
+.curriculum-filters .curriculum-search{min-width:190px}
+.curriculum-exam-switch{display:flex;align-self:flex-end;padding:3px;background:#f6f7f3;border:1px solid #dce3d9;border-radius:2px;min-height:43px;box-sizing:border-box}
+.curriculum-exam-switch button{border:0;background:transparent;color:#596e62;font:600 12px var(--font-body,'Plus Jakarta Sans',sans-serif);min-height:35px;min-width:53px;padding:8px 14px;border-radius:2px;cursor:pointer}
+.curriculum-exam-switch button[aria-pressed=true]{background:#0a3428;color:#fff;box-shadow:0 1px 2px #142a161a}
+.map-filters .curriculum-select-exam,.map-filters .curriculum-select-subject{display:none}
+.curriculum-subject-switch{display:flex;flex-wrap:wrap;gap:7px;width:100%;padding-top:5px}
+.curriculum-subject-switch button{border:1px solid #dfe5dc;background:#f7f8f4;border-radius:2px;padding:8px 11px;min-height:36px;font:500 11px/1.3 var(--font-body,'Plus Jakarta Sans',sans-serif);color:#536b5e;cursor:pointer}
+.curriculum-subject-switch button[aria-pressed=true]{color:#0a3428;background:#edf3ea;border-color:#8da996;font-weight:700}
+.curriculum-subject-switch button:hover,.curriculum-exam-switch button:hover{background:#e9f0e6;color:#153e2d}
+.curriculum-result{display:flex;flex-wrap:wrap;justify-content:space-between;gap:9px;font-size:11px;color:#687c70;padding:15px 0 21px;margin:0}
+.curriculum-result a{font-size:10px;letter-spacing:.01em;color:#365e4c;text-underline-offset:3px}
+.curriculum-body{display:grid;grid-template-columns:minmax(0,1fr) 264px;gap:28px;align-items:start;min-width:0}
+.curriculum-main{min-width:0}
+.curriculum-table{margin-bottom:42px;scroll-margin-top:100px}
+.curriculum-table:focus{outline:none}
+.curriculum-table:focus-visible{outline:2px solid #547c65;outline-offset:5px}
+.curriculum-table>.section-top{margin:0 0 19px;padding:0 0 13px;border-bottom:1px solid #dce3d8;display:flex;justify-content:space-between;align-items:center;gap:18px}
+.curriculum-table .section-top h2{font:500 24px/1.35 var(--font-heading,'Newsreader',Georgia,serif);color:#123d2e;margin:0 0 4px}
+.curriculum-table .section-top h2>span{font-size:9px;color:#4f735c;display:inline-block;vertical-align:middle;margin:0 5px 3px 0}
+.curriculum-table .section-top p{font-size:10px;line-height:1.6;color:#718174;margin:0}
+.curriculum-table .section-top>a{font-size:10px;white-space:nowrap;color:#466553}
+.curriculum-topic-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:19px}
+.curriculum-topic{background:#fff;border:1px solid #dfe5dc;border-radius:3px;padding:25px 26px 19px;box-shadow:0 1px 2px #19332209;scroll-margin-top:95px}
+.curriculum-topic.topic-complete{border-left:3px solid #648774}
+.topic-type{font-size:9px;line-height:1.6;letter-spacing:.04em;margin:0 0 12px;align-items:center;color:#687e6e}
+.topic-type>span:first-child{text-transform:uppercase;display:inline-block;background:#edf3ea;color:#426653;padding:4px 8px;border-radius:2px;font-weight:600}
+.topic-type>span:last-child{font-size:9px;letter-spacing:0}
+.curriculum-topic h3{font:500 28px/1.2 var(--font-heading,'Newsreader',Georgia,serif);letter-spacing:-.015em;color:#123d2e;margin:0 0 12px}
+.topic-description{font-size:12px;line-height:1.95;color:#597065;margin:0 0 16px;max-width:82ch}
+.topic-tags{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 16px}
+.topic-tags>span{padding:4px 7px;border:1px solid #e0e5dd;background:#f7f8f4;border-radius:2px;font-size:9px;line-height:1.4;color:#607266}
+.topic-source-strip{display:flex;align-items:baseline;flex-wrap:wrap;gap:7px 12px;border:1px solid #e0e6dd;background:#fafbf8;border-radius:2px;padding:10px 12px;margin-bottom:15px;color:#355a48;font-size:11px;line-height:1.7}
+.topic-source-strip>span:first-child{font-size:17px;line-height:1;color:#466957;align-self:center}
+.topic-source-strip small{color:#7a877e;font-size:10px;margin-left:5px;overflow-wrap:anywhere}
+.topic-lesson-links{gap:6px}
+.topic-lesson-links>a{border:0;border-radius:2px;background:#f5f7f2;padding:9px 11px;font-size:11px;line-height:1.6;color:#3f6350;gap:16px}
+.topic-lesson-links>a small{font-size:9px;white-space:nowrap;color:#506f5e}
+.topic-lesson-links>a small>span{font-size:14px;margin-left:7px}
+.topic-lesson-links>a.topic-primary-study{background:#0a3428;color:#fff;border:1px solid #0a3428;padding:11px 13px}
+.topic-lesson-links>a.topic-primary-study small{color:#fff;font-weight:600}
+.topic-lesson-links>a:hover{background:#e9efe4;color:#1d4d36}
+.topic-lesson-links>a.topic-primary-study:hover{background:#244b3e;color:white}
+.topic-coverage-note{font-size:10px;line-height:1.9;color:#788475;margin:14px 0 0}
+.topic-reference-actions{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:13px}
+.topic-book-sections,.topic-question-links{border-top:1px solid #e3e8df;padding-top:12px;margin-top:0;min-width:0}
+.topic-book-sections>summary,.topic-question-links>summary{font-size:10px;line-height:1.65;color:#446754;cursor:pointer;min-height:25px;overflow-wrap:anywhere}
+.topic-question-links summary b{display:inline-block;min-width:20px;padding:1px 5px;background:#edf3ea;border:1px solid #d8e2d4;border-radius:2px;margin-left:5px;color:#234d38;font-size:10px;font-weight:600;text-align:center}
+.topic-question-links summary>span{margin-left:7px;font-size:13px}
+.topic-book-sections>a,.topic-question-links>a{display:flex;gap:12px;justify-content:space-between;align-items:baseline;padding:9px 0;border-bottom:1px solid #edf0e9;color:#526e5b;font-size:10px;line-height:1.9;overflow-wrap:anywhere}
+.topic-book-sections>a span,.topic-question-links>a b{font-size:9px;white-space:nowrap;font-weight:500;flex:none;color:#7a8c7c}
+.topic-history{margin:13px 0 0;padding-top:12px;border-top:1px solid #e2e7de}
+.topic-history>summary{display:flex;gap:12px;justify-content:space-between;align-items:center;list-style:none;cursor:pointer;font-size:11px;font-weight:500;line-height:1.7;color:#3c614d}
+.topic-history>summary::-webkit-details-marker{display:none}
+.topic-history>summary:before{content:'▥';font-size:15px;color:#9a6427}
+.topic-history>summary>span{margin-left:auto;font-size:9px;font-weight:400;color:#7c897e}
+.topic-history>summary:after{content:'+';font-size:15px;font-weight:400;color:#627b69;margin-left:3px}
+.topic-history[open]>summary:after{content:'−'}
+.topic-history .history-context{font:italic 15px/1.6 var(--font-heading,'Newsreader',Georgia,serif);color:#738173;margin:12px 0}
+.history-year-grid{grid-template-columns:repeat(8,minmax(0,1fr));gap:6px;margin-top:13px}
+.history-year-grid>div{padding:10px 3px;background:#f9faf7;border:1px solid #e2e7de;border-radius:2px}
+.history-year-grid b{font-size:9px;font-weight:500;color:#637b6a}
+.history-year-grid span{font:500 25px/1.1 var(--font-heading,'Newsreader',Georgia,serif);color:#214f3b;margin:7px 0;overflow-wrap:anywhere}
+.history-year-grid small{font-size:7px;color:#859084;line-height:1.5}
+.topic-history>p:not(.history-context){color:#7c897b;font-size:9px;line-height:1.9;margin-top:12px}
+.topic-history>small{display:block;font-size:8px;color:#8a9587;margin-top:8px;overflow-wrap:anywhere}
+.distribution-issues{border:1px solid #e7dcc9;border-left:2px solid #a47a39;background:#fbf5eb;border-radius:2px;padding:11px 14px;margin:0 0 17px}
+.distribution-issues summary{font-size:10px;line-height:1.6;color:#8a6b3e}
+.distribution-issues li{font-size:10px;line-height:1.9;color:#806c4e}
+.curriculum-rail{position:sticky;top:92px;display:grid;gap:19px;min-width:0}
+.curriculum-rail-card{background:#fff;border:1px solid #dfe5dc;border-radius:3px;padding:21px;box-shadow:0 1px 2px #19332209}
+.curriculum-rail-card>.eyebrow{font-size:9px;letter-spacing:.05em;color:#65806b;border-bottom:1px solid #e3e7de;padding-bottom:12px;margin:0 0 17px}
+.curriculum-rail-card h2{font:500 28px/1.2 var(--font-heading,'Newsreader',Georgia,serif);color:#123d2e;margin:0 0 9px}
+.curriculum-rail-card>p:not(.eyebrow){font:italic 16px/1.7 var(--font-heading,'Newsreader',Georgia,serif);color:#6c8070;margin:0 0 21px}
+.curriculum-progress{margin-bottom:15px}
+.curriculum-progress>div{display:flex;justify-content:space-between;gap:10px;font-size:10px;line-height:1.6;color:#6c7f6f;margin-bottom:7px}
+.curriculum-progress b{font-weight:600;color:#365d47}
+.curriculum-progress progress{display:block;width:100%;height:5px;appearance:none;border:0;border-radius:2px;overflow:hidden;background:#edf1e8}
+.curriculum-progress progress::-webkit-progress-bar{background:#edf1e8}
+.curriculum-progress progress::-webkit-progress-value{background:#638873}
+.curriculum-progress progress::-moz-progress-bar{background:#638873}
+.curriculum-rail nav{display:grid;padding-top:8px;border-top:1px solid #e4e9e0;max-height:340px;overflow:auto;scrollbar-width:thin;scrollbar-color:#c8d4c5 transparent}
+.curriculum-rail nav button{border:0;border-bottom:1px solid #edf0e9;background:#fff;display:flex;align-items:center;gap:14px;justify-content:space-between;min-height:34px;padding:8px 0;text-align:left;color:#5e7965;font:400 10px/1.5 var(--font-body,'Plus Jakarta Sans',sans-serif);cursor:pointer}
+.curriculum-rail nav button:hover{color:#0a3428;background:#f7f9f4}
+.curriculum-rail nav button b{font-weight:500;font-size:9px;color:#82937f}
+.curriculum-rail .curriculum-context-note{padding:20px;background:#fbf5eb;border:1px solid #ebdfcd;border-left:2px solid #845825;border-radius:3px;color:#7b613f}
+.curriculum-context-note>.eyebrow{font-size:9px;letter-spacing:.04em;color:#937344;margin:0 0 13px}
+.curriculum-context-note h2{font:500 22px/1.25 var(--font-heading,'Newsreader',Georgia,serif);color:#74532b;margin:0 0 12px}
+.curriculum-context-note p:not(.eyebrow){font-size:11px;line-height:1.9;color:#8a765a;margin:10px 0}
+.curriculum-context-note>a{display:inline-block;font-size:10px;color:#8a6636;margin-top:8px;line-height:1.7;text-underline-offset:3px}
+.curriculum-context-note small{font-size:9px;line-height:1.8;color:#9a8b74;margin-top:13px;border-top:1px solid #e6dccd;padding-top:13px}
+.curriculum-resource-link{position:relative;display:block;background:#fff;border:1px solid #dfe5dc;border-radius:3px;padding:20px;color:#42634e}
+.curriculum-resource-link>span{display:block;font-size:9px;letter-spacing:.05em;color:#7d8d7c;margin-bottom:10px}
+.curriculum-resource-link>b{display:block;font:500 20px/1.35 var(--font-heading,'Newsreader',Georgia,serif);max-width:175px}
+.curriculum-resource-link>i{font-style:normal;position:absolute;right:17px;bottom:20px;font-size:17px}
+.curriculum-complete{margin:31px 0;background:#f4f6ef;border:1px solid #dde5d6;border-radius:3px;padding:25px}
+.curriculum-complete>.eyebrow{font-size:9px;letter-spacing:.06em;color:#829278;margin:0 0 12px}
+.curriculum-complete h2{font:500 28px/1.2 var(--font-heading,'Newsreader',Georgia,serif);color:#315440;margin:0 0 10px}
+.curriculum-complete>p:not(.eyebrow){font-size:11px;line-height:1.9;color:#6e8065;margin:0 0 20px}
+.additional-study-links{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.additional-study-links>a{position:relative;background:white;border:1px solid #dfe6d6;border-radius:2px;padding:15px 29px 15px 15px}
+.additional-study-links span{font-size:8px;letter-spacing:.03em;color:#85967a}
+.additional-study-links b{display:block;font-size:11px;line-height:1.8;font-weight:500;color:#506e44}
+.additional-study-links i{font-size:13px;font-style:normal;position:absolute;right:12px;top:50%;color:#7b8f70}
+.curriculum-complete .button{border-radius:2px;font-size:10px;box-shadow:none}
+.curriculum-no-results{padding:35px 25px;background:white;border:1px solid #dfe5dc;border-radius:3px}
+.curriculum-no-results h2{font:500 27px/1.3 var(--font-heading,'Newsreader',Georgia,serif);color:#315440;margin:0 0 12px}
+.curriculum-no-results p{font-size:13px;line-height:1.9;color:#788977;margin:0}
+/* The official-source directory uses the same quiet editorial surfaces. */
+.official-status{border-radius:3px;background:#fbf5eb;border-color:#e9ddc8;padding:27px;box-shadow:none}
+.official-status h2{font:500 27px/1.25 var(--font-heading,'Newsreader',Georgia,serif);color:#76572e}
+.official-status>p:not(.eyebrow){font-size:12px;line-height:1.95;color:#88775b}
+.official-status a{font-size:10px;color:#896637}
+.official-status .exam-dates{border-color:#e7dccb}
+.official-grid{gap:18px}
+.official-card{padding:25px;border:1px solid #e0e6dc;border-radius:3px;box-shadow:0 1px 2px #19332209}
+.official-card-meta{font-size:9px;color:#7c917f;letter-spacing:.02em}
+.official-card-meta>span:first-child{padding:4px 7px;background:#eef3ea;color:#54745e}
+.official-card h3{font:500 25px/1.3 var(--font-heading,'Newsreader',Georgia,serif);margin:15px 0 12px}
+.official-card h3 a{color:#244f39}
+.official-card p,.official-card li{font-size:12px;line-height:1.95;color:#69806e}
+.official-card>small{font-size:9px;color:#8c9a88;line-height:1.8}
+.official-card summary{font-size:10px;color:#6b836f;min-height:22px}
+.official-card details p{font-size:11px;line-height:1.9}
+.source-scan-note{border-radius:3px;border-color:#dfe6d9;background:#f5f7f1}
+.source-scan-note summary{font-size:12px;color:#617d64}
+.source-scan-note p{font-size:11px;line-height:1.95}
+.curriculum-filters :is(button,select,input):focus-visible,.curriculum-workspace a:focus-visible,.curriculum-workspace summary:focus-visible{outline:2px solid #638b70;outline-offset:3px}
+@media(min-width:1600px){.curriculum-body{grid-template-columns:minmax(0,1fr) 310px;gap:32px}.curriculum-topic{padding:30px 32px 23px}.curriculum-topic h3{font-size:32px}.topic-description{font-size:14px}.topic-tags>span{font-size:10px}.topic-source-strip{font-size:12px}.topic-lesson-links>a{font-size:12px}.curriculum-rail-card{padding:25px}}
+@media(max-width:1180px){.curriculum-body{grid-template-columns:minmax(0,1fr) 235px;gap:20px}.curriculum-masthead{display:block}.curriculum-masthead-meta{margin-top:20px}.curriculum-rail-card{padding:17px}.curriculum-topic{padding:22px}.curriculum-topic h3{font-size:26px}.history-year-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.curriculum-table .section-top h2{font-size:22px}}
+@media(max-width:1000px){.curriculum-body{grid-template-columns:minmax(0,1fr)}.curriculum-rail{position:static;grid-template-columns:repeat(2,minmax(0,1fr));order:-1}.curriculum-rail nav{display:flex;flex-wrap:wrap;gap:5px;max-height:120px;overflow:auto}.curriculum-rail nav button{font-size:9px;background:#f7f9f4;border:1px solid #e4e9df;padding:5px 7px;min-height:30px;gap:7px}.curriculum-rail-card{grid-column:1/-1;padding:18px}.curriculum-rail-card h2,.curriculum-rail-card>p:not(.eyebrow),.curriculum-rail .curriculum-context-note,.curriculum-resource-link{display:none}.curriculum-rail-card>.eyebrow{border:0;padding:0;margin-bottom:12px}.curriculum-progress{max-width:400px;margin-bottom:12px}.curriculum-body{gap:22px}.curriculum-table{margin-bottom:31px}.curriculum-masthead h1{font-size:40px}.official-grid{grid-template-columns:1fr}}
+@media(max-width:650px){.curriculum-masthead{padding-bottom:21px}.curriculum-masthead h1{font-size:35px}.curriculum-masthead .eyebrow{font-size:8px;gap:9px}.curriculum-masthead .eyebrow>i{font-size:14px}.curriculum-masthead>div>p:last-child{font-size:12px;line-height:1.9}.curriculum-masthead-meta{font-size:10px;gap:14px;margin-top:16px}.curriculum-masthead-meta b{font-size:12px}.curriculum-masthead-meta>span+span{padding-left:14px}.curriculum-filters{padding:15px;gap:12px;margin-top:19px}.curriculum-exam-switch{width:100%;justify-content:space-between}.curriculum-exam-switch button{flex:1;min-height:38px}.map-filters .curriculum-select-exam{min-width:0;max-width:none}.curriculum-filters .curriculum-search{flex-basis:100%;min-width:0}.curriculum-filters label{font-size:9px}.curriculum-filters .button{width:100%;justify-content:center;min-height:44px}.curriculum-filters select,.curriculum-filters input[type=search]{min-height:44px;font-size:12px}.curriculum-subject-switch{gap:6px;padding-top:0}.curriculum-subject-switch button{font-size:10px;padding:8px 10px;min-height:38px}.curriculum-result{font-size:10px;line-height:1.9;padding:14px 0}.curriculum-rail-card{padding:15px}.curriculum-rail nav button{min-height:36px}.curriculum-topic{padding:20px 17px 16px}.curriculum-topic h3{font-size:27px}.topic-type{gap:8px;font-size:8px;margin-bottom:13px}.topic-type>span:last-child{font-size:8px}.topic-description{font-size:12px;line-height:1.95}.topic-tags{gap:5px}.topic-tags>span{font-size:9px;padding:4px 6px}.topic-source-strip{padding:9px 10px;font-size:10px;gap:6px 9px}.topic-source-strip small{font-size:9px}.topic-lesson-links>a{display:flex;font-size:11px;padding:11px;gap:12px;align-items:center;min-height:44px;box-sizing:border-box}.topic-lesson-links>a small{display:block;max-width:100px;font-size:9px;text-align:right;white-space:normal;margin:0;flex:none}.topic-lesson-links>a small>span{margin-left:3px}.topic-reference-actions{gap:11px;grid-template-columns:1fr}.topic-book-sections>summary,.topic-question-links>summary{font-size:11px;min-height:28px;padding:3px 0}.topic-book-sections>a,.topic-question-links>a{font-size:10px;min-height:30px}.topic-book-sections>a span,.topic-question-links>a b{font-size:8px}.topic-history>summary{font-size:10px;gap:8px;flex-wrap:wrap}.topic-history>summary>span{font-size:8px;margin-left:0}.topic-history>summary:after{margin-left:auto}.topic-history .history-context{font-size:15px;line-height:1.7}.history-year-grid{gap:6px;grid-template-columns:repeat(4,minmax(0,1fr))}.history-year-grid>div{padding:10px 4px}.history-year-grid span{font-size:24px}.history-year-grid small{font-size:7px}.curriculum-table>.section-top{gap:12px;margin-bottom:15px;align-items:start}.curriculum-table .section-top h2{font-size:22px}.curriculum-table .section-top p{font-size:9px}.curriculum-table .section-top>a{font-size:9px;white-space:normal;text-align:right;max-width:70px;line-height:1.8}.curriculum-complete{padding:20px 17px}.curriculum-complete h2{font-size:25px}.curriculum-complete>p:not(.eyebrow){font-size:11px}.additional-study-links{grid-template-columns:1fr}.official-status{padding:22px}.official-status h2{font-size:25px}.official-status>p:not(.eyebrow){font-size:12px}.official-card{padding:22px}.official-card h3{font-size:25px}.official-card p,.official-card li{font-size:12px}.official-filters .curriculum-context{max-width:none;line-height:1.8}.source-scan-note{padding:20px}}
