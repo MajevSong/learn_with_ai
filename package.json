@@ -1,11 +1,11 @@
 {
   "name": "learn-with-ai",
-  "version": "1.8.0",
+  "version": "1.9.0",
   "private": true,
-  "description": "TYT/AYT kaynak okuyucu ve anlatım içinde görsellerle konu çalışması",
+  "description": "TYT/AYT kaynak okuyucu, sayfa özetleri ve ÖSYM soru arşivi",
   "scripts": {
     "start": "node scripts/serve.cjs",
-    "test": "node scripts/build_exam_data.cjs && node scripts/check.cjs && node scripts/check-books.cjs && node scripts/check-curriculum.cjs && node scripts/check-exams.cjs",
+    "test": "node scripts/build_exam_data.cjs && node scripts/check.cjs && node scripts/check-books.cjs && node scripts/check-page-notes.cjs && node scripts/check-curriculum.cjs && node scripts/check-exams.cjs",
     "build:exams": "node scripts/build_exam_data.cjs"
   }
 }

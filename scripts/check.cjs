@@ -25,24 +25,8 @@ for(const l of lessons){
   assert.equal(new Set(l.question.options).size,l.question.options.length,`${l.id}: duplicate answer options`);
   if(l.source.book){const b=books.find(b=>b.id===l.source.book);assert(b&&l.source.page>0&&l.source.page<=b.pages,`${l.id}: PDF page`);assert(b.exam===exam&&b.subject===l.subject,`${l.id}: source exam/subject mismatch`);}
   else assert(/^https:\/\//.test(l.source.url),`${l.id}: official source URL`);
-  if(l.subject==='matematik'){assert(context.window.BOOK_GUIDES?.[l.id]?.sections.length,`${l.id}: missing book-based mathematics explanation`);continue;}
-  const reading=context.window.READING[l.id];
-  if(!reading){assert(context.window.BOOK_GUIDES?.[l.id]?.sections.length&&context.window.TOPIC_DOSSIERS?.[l.id]?.chapters.length,`${l.id}: missing source guide / detailed study`);continue;}
-  assert(reading&&reading.lead&&reading.blocks.length>=2,`${l.id}: missing source-based reading`);
-  assert(reading.sources.length>=1,`${l.id}: reading sources`);
-  for(const block of reading.blocks){
-    const words=block.text.trim().split(/\s+/).length;
-    assert(words>=60,`${l.id}: reading is too short (${words} words)`);
-    assert(block.heading&&block.caption,`${l.id}: reading heading/caption`);
-    assert(['process','compare','cycle','hierarchy','cause','timeline'].includes(block.figure.kind),`${l.id}: figure kind`);
-    assert(block.figure.labels.length>=3&&block.figure.labels.length<=6&&block.figure.labels.every(x=>x.title&&x.text),`${l.id}: figure labels`);
-    assert(block.source,`${l.id}: block source missing`);
-    if(block.source.book){const resource=context.window.SOURCE_RESOURCES[block.source.book];assert(resource&&block.source.page>0&&block.source.page+resource.pageOffset<=resource.pages,`${l.id}: block source page`);}
-    else assert(/^https:\/\//.test(block.source.url),`${l.id}: block external source`);
-    readingBlocks++;readingWords+=words;
-  }
+  assert(context.window.BOOK_GUIDES?.[l.id]?.sections.length,`${l.id}: missing source-page index`);
 }
-assert(Object.keys(context.window.READING).length>=128&&Object.keys(context.window.READING).every(id=>lessons.some(l=>l.id===id)),'Legacy reading IDs must remain valid');
 assert.equal(books.length,13,'Expected thirteen main source books');
 for(const l of lessons)assert(context.window.SourceReader.lessonRef(l),`${l.id}: no in-site source reader`);
 const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
@@ -51,8 +35,8 @@ new vm.Script(fs.readFileSync(path.join(root,'app.js'),'utf8'),{filename:'app.js
 new vm.Script(fs.readFileSync(path.join(root,'science-visuals.js'),'utf8'),{filename:'science-visuals.js'});
 new vm.Script(fs.readFileSync(path.join(root,'reading-room.js'),'utf8'),{filename:'reading-room.js'});
 new vm.Script(fs.readFileSync(path.join(root,'lesson-figures.js'),'utf8'),{filename:'lesson-figures.js'});
-for(const name of ['math-visuals.js','math-exam-links.js','curriculum.js','topic-dossiers.js','topic-study-links.js'])new vm.Script(fs.readFileSync(path.join(root,name),'utf8'),{filename:name});
+for(const name of ['math-visuals.js','math-exam-links.js','curriculum.js','topic-study-links.js'])new vm.Script(fs.readFileSync(path.join(root,name),'utf8'),{filename:name});
 assert(!/Sayısal yolculuğun|HEDEF: SAYISAL DERECE|Sayısal hedefin/.test(html),'Unwanted personal target labels');
 assert(!fs.existsSync(path.join(root,'node_modules')),'Static site should not require installed packages');
-console.log(JSON.stringify({lessons:lessons.length,readingBlocks,readingWords,inlineFigures:readingBlocks,sourceBooks:books.length,cards:lessons.reduce((n,l)=>n+l.cards.length,0),questions:lessons.length,subjects:counts,exams:{TYT:lessons.filter(l=>(l.exam||'TYT')==='TYT').length,AYT:lessons.filter(l=>l.exam==='AYT').length},interactiveModels:new Set(lessons.filter(l=>l.visual.demo).map(l=>l.visual.demo)).size,sourceTopics:books.reduce((n,b)=>n+b.toc.length,0)},null,2));
+console.log(JSON.stringify({lessons:lessons.length,sourcePages:Object.values(context.window.BOOK_PAGE_NOTES).reduce((n,p)=>n+Object.keys(p).length,0),sourceBooks:books.length,cards:lessons.reduce((n,l)=>n+l.cards.length,0),questions:lessons.length,subjects:counts,exams:{TYT:lessons.filter(l=>(l.exam||'TYT')==='TYT').length,AYT:lessons.filter(l=>l.exam==='AYT').length},interactiveModels:new Set(lessons.filter(l=>l.visual.demo).map(l=>l.visual.demo)).size,sourceTopics:books.reduce((n,b)=>n+b.toc.length,0)},null,2));
 console.log('Content, scope, source references and static assets verified.');

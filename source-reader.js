@@ -3,6 +3,7 @@ window.SourceReader=(()=>{
  const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  const resources=window.SOURCE_RESOURCES||{};
  const pageNotes={
+'AYT-mat:131':'<b>Kitap s. 129 · İşaret düzeltmesi</b> x² + y² + Dx + Ey + F = 0 denkleminde D² + E² − 4F = 0 ise şekil bir noktadır. Kaynaktaki bu satırda ≥ yerine = olmalıdır; pozitif değer çemberi belirtir.',
 'AYT-mat:23':'<b>Kitap s. 21 · Dikey ölçekleme düzeltmesi</b> y = c·f(x) dönüşümünde y koordinatları c ile çarpılır. c &gt; 1 ise grafik x ekseninden dikey olarak uzaklaşır; 0 &lt; c &lt; 1 ise eksene yaklaşır. Kaynaktaki bu iki açıklama ters yazılmıştır.',
 'AYT-mat:25':'<b>Kitap s. 23 · Katsayı işareti düzeltmesi</b> a ≠ 0 için ax² + bx + c ifadesinin bütün gerçek x değerlerinde negatif olması a &lt; 0 ve Δ &lt; 0 koşullarını gerektirir. Örneğin −x² − 1 her yerde negatiftir. Kaynaktaki ilgili satırda a &gt; 0 yazılması baskı hatasıdır.',
 'TYT-cog:36':'<b>Kavram ayrımı</b> Isı, sıcaklık farkı nedeniyle aktarılan enerjidir. Sıcaklık ısının çevreye yaydığı enerji değildir; termal durumu belirten bir büyüklüktür. Bir cismin depoladığı enerji için iç enerji kavramını kullan.',
